@@ -16,10 +16,10 @@ TextureImporter:
     21300018: main_perso_L
     21300020: pied_perso_L
     21300022: corps_champi
-    21300024: jambe_champi_R
-    21300026: jambe_champi_L
-    21300028: pied_champi_R
-    21300030: pied_champi_L
+    21300024: jambe_champi_L
+    21300026: jambe_champi_R
+    21300028: pied_champi_L
+    21300030: pied_champi_R
     21300032: main_perso_R
     21300034: visage_champi_1
     21300036: visage_champi_2
@@ -212,7 +212,7 @@ TextureImporter:
       name: corps_perso
       rect:
         serializedVersion: 2
-        x: 441
+        x: 443
         y: 543
         width: 111
         height: 118
@@ -279,10 +279,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: jambe_champi_R
+      name: jambe_champi_L
       rect:
         serializedVersion: 2
-        x: 291
+        x: 289
         y: 345
         width: 32
         height: 59
@@ -293,7 +293,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: jambe_champi_L
+      name: jambe_champi_R
       rect:
         serializedVersion: 2
         x: 375
@@ -307,29 +307,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_champi_R
+      name: pied_champi_L
       rect:
         serializedVersion: 2
-        x: 249
+        x: 259
         y: 266
-        width: 79
-        height: 70
+        width: 69
+        height: 39
       alignment: 9
-      pivot: {x: 0.7253113, y: 0.87850255}
+      pivot: {x: 0.7004925, y: 0.84557086}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_champi_L
+      name: pied_champi_R
       rect:
         serializedVersion: 2
         x: 341
         y: 268
         width: 66
-        height: 68
+        height: 39
       alignment: 9
-      pivot: {x: 0.70793337, y: 0.89008194}
+      pivot: {x: 0.7144202, y: 0.858249}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
