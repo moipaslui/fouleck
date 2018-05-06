@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ennemi
+  - player
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Player
+  - Ennemi
   - 
   - 
   - 
@@ -41,6 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ennemi
+  - name: Personnages
     uniqueID: 924506427
     locked: 0
