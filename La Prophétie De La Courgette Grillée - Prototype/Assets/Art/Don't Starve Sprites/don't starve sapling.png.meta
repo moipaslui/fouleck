@@ -1,30 +1,29 @@
 fileFormatVersion: 2
-guid: a96c4296c3c734f4da5a40af6d335cbb
-timeCreated: 1524423436
+guid: 5c6635df1df600f4c9b999ba3ea40a3e
+timeCreated: 1525729488
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cheveux
-    21300002: tete_perso
-    21300004: visage_perso
-    21300006: bras_perso_R
-    21300008: bras_perso_L
-    21300010: jambe_perso_R
-    21300012: jambe_perso_L
-    21300014: corps_perso
-    21300016: pied_perso_R
-    21300018: main_perso_R
-    21300020: pied_perso_L
-    21300022: corps_champi
-    21300024: jambe_champi_L
-    21300026: jambe_champi_R
-    21300028: pied_champi_L
-    21300030: pied_champi_R
-    21300032: main_perso_L
-    21300034: visage_champi_1
-    21300036: visage_champi_2
-    21300038: visage_champi_4
-    21300040: visage_champi_3
+    21300000: don't starve sapling_0
+    21300002: don't starve sapling_1
+    21300004: don't starve sapling_2
+    21300006: don't starve sapling_3
+    21300008: don't starve sapling_4
+    21300010: don't starve sapling_5
+    21300012: don't starve sapling_6
+    21300014: don't starve sapling_7
+    21300016: don't starve sapling_8
+    21300018: don't starve sapling_9
+    21300020: don't starve sapling_10
+    21300022: don't starve sapling_11
+    21300024: don't starve sapling_12
+    21300026: don't starve sapling_13
+    21300028: don't starve sapling_14
+    21300030: don't starve sapling_15
+    21300032: don't starve sapling_16
+    21300034: don't starve sapling_17
+    21300036: don't starve sapling_18
+    21300038: don't starve sapling_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +51,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -78,7 +77,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -88,7 +87,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -98,7 +97,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -111,295 +110,281 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cheveux
+      name: don't starve sapling_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 717
-        width: 339
-        height: 307
-      alignment: 9
-      pivot: {x: 0.2955117, y: 0.0974815}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tete_perso
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 734
-        width: 252
-        height: 238
-      alignment: 9
-      pivot: {x: 0.31461638, y: 0.03144003}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: visage_perso
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 599
-        width: 140
-        height: 84
-      alignment: 9
-      pivot: {x: 0.4435211, y: 0.51344806}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bras_perso_R
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 604
-        width: 33
-        height: 82
-      alignment: 9
-      pivot: {x: 0.50554264, y: 0.8742171}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: bras_perso_L
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 602
-        width: 31
-        height: 83
-      alignment: 9
-      pivot: {x: 0.5382769, y: 0.8695807}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: jambe_perso_R
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 621
-        width: 34
-        height: 59
-      alignment: 9
-      pivot: {x: 0.5208641, y: 0.8536584}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: jambe_perso_L
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 622
-        width: 34
-        height: 60
-      alignment: 9
-      pivot: {x: 0.5694185, y: 0.83619386}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: corps_perso
-      rect:
-        serializedVersion: 2
-        x: 443
-        y: 543
-        width: 111
-        height: 118
+        x: 2
+        y: 159
+        width: 108
+        height: 96
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_perso_R
+      name: don't starve sapling_1
       rect:
         serializedVersion: 2
-        x: 272
-        y: 524
-        width: 66
-        height: 78
-      alignment: 9
-      pivot: {x: 0.63605523, y: 0.86710066}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: main_perso_R
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 526
-        width: 35
-        height: 72
-      alignment: 9
-      pivot: {x: 0.56965333, y: 0.9010781}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pied_perso_L
-      rect:
-        serializedVersion: 2
-        x: 339
-        y: 523
-        width: 65
-        height: 78
-      alignment: 9
-      pivot: {x: 0.6499038, y: 0.8733364}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: corps_champi
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 209
-        width: 218
-        height: 256
+        x: 113
+        y: 170
+        width: 106
+        height: 79
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: jambe_champi_L
+      name: don't starve sapling_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 132
+        width: 69
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 186
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_4
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 199
+        width: 76
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_5
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 192
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 125
+        width: 58
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 127
+        width: 52
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_8
       rect:
         serializedVersion: 2
         x: 289
-        y: 345
-        width: 32
-        height: 59
-      alignment: 9
-      pivot: {x: 0.53255177, y: 0.8246227}
+        y: 133
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: jambe_champi_R
+      name: don't starve sapling_9
       rect:
         serializedVersion: 2
-        x: 375
-        y: 347
-        width: 30
-        height: 55
-      alignment: 9
-      pivot: {x: 0.49216512, y: 0.8604198}
+        x: 362
+        y: 149
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_champi_L
+      name: don't starve sapling_10
       rect:
         serializedVersion: 2
-        x: 259
-        y: 266
-        width: 69
-        height: 71
-      alignment: 9
-      pivot: {x: 0.6672602, y: 0.8724842}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pied_champi_R
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 268
+        x: 425
+        y: 150
         width: 66
-        height: 69
-      alignment: 9
-      pivot: {x: 0.6854678, y: 0.87486553}
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: main_perso_L
+      name: don't starve sapling_11
       rect:
         serializedVersion: 2
-        x: 230
-        y: 526
+        x: 2
+        y: 119
+        width: 45
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 122
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_13
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 116
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 110
         width: 37
-        height: 75
-      alignment: 9
-      pivot: {x: 0.51131254, y: 0.88541585}
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: visage_champi_1
+      name: don't starve sapling_15
       rect:
         serializedVersion: 2
-        x: 12
-        y: 102
-        width: 105
-        height: 80
+        x: 309
+        y: 109
+        width: 25
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: visage_champi_2
+      name: don't starve sapling_16
       rect:
         serializedVersion: 2
-        x: 137
-        y: 106
-        width: 87
-        height: 70
+        x: 346
+        y: 113
+        width: 40
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: visage_champi_4
+      name: don't starve sapling_17
       rect:
         serializedVersion: 2
-        x: 137
-        y: 0
-        width: 98
-        height: 88
+        x: 385
+        y: 118
+        width: 43
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: visage_champi_3
+      name: don't starve sapling_18
       rect:
         serializedVersion: 2
-        x: 9
-        y: 23
-        width: 105
-        height: 65
+        x: 429
+        y: 119
+        width: 43
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: don't starve sapling_19
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 117
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

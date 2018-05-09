@@ -46,3 +46,6 @@ TagManager:
   - name: Personnages
     uniqueID: 924506427
     locked: 0
+  - name: World
+    uniqueID: 872352461
+    locked: 0

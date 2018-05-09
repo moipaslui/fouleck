@@ -1499,6 +1499,7 @@ MonoBehaviour:
   - {fileID: 120002587}
   - {fileID: 946938398}
   - {fileID: 1198220177}
+  randomSpots: 0
 --- !u!50 &1834597003
 Rigidbody2D:
   serializedVersion: 4
