@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof (IsometricObject))]
+[CanEditMultipleObjects]
 public class IsometricObjectEditor : Editor
 {
 	public void OnSceneGUI()
