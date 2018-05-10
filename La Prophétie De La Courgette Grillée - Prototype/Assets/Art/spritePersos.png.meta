@@ -12,19 +12,24 @@ TextureImporter:
     21300010: jambe_perso_R
     21300012: jambe_perso_L
     21300014: corps_perso
-    21300016: pied_perso_R
+    21300016: mollet_perso_R
     21300018: main_perso_R
-    21300020: pied_perso_L
+    21300020: mollet_perso_L
     21300022: corps_champi
     21300024: jambe_champi_L
     21300026: jambe_champi_R
-    21300028: pied_champi_L
+    21300028: mollet_champi_L
     21300030: pied_champi_R
     21300032: main_perso_L
     21300034: visage_champi_1
     21300036: visage_champi_2
     21300038: visage_champi_4
     21300040: visage_champi_3
+    21300042: mollet_champi_R
+    21300044: spritePersos_1
+    21300046: pied_champi_L
+    21300048: pied_perso_R
+    21300050: pied_perso_L
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -223,15 +228,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_perso_R
+      name: mollet_perso_R
       rect:
         serializedVersion: 2
-        x: 272
-        y: 524
-        width: 66
-        height: 78
+        x: 291
+        y: 555
+        width: 38
+        height: 47
       alignment: 9
-      pivot: {x: 0.63605523, y: 0.86710066}
+      pivot: {x: 0.5002465, y: 0.8592581}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,15 +256,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_perso_L
+      name: mollet_perso_L
       rect:
         serializedVersion: 2
-        x: 339
-        y: 523
-        width: 65
-        height: 78
+        x: 362
+        y: 556
+        width: 41
+        height: 45
       alignment: 9
-      pivot: {x: 0.6499038, y: 0.8733364}
+      pivot: {x: 0.4790776, y: 0.881528}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,29 +312,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pied_champi_L
+      name: mollet_champi_L
       rect:
         serializedVersion: 2
-        x: 259
-        y: 266
-        width: 69
-        height: 71
+        x: 290
+        y: 293
+        width: 33
+        height: 42
       alignment: 9
-      pivot: {x: 0.6672602, y: 0.8724842}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pied_champi_R
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 268
-        width: 66
-        height: 69
-      alignment: 9
-      pivot: {x: 0.6854678, y: 0.87486553}
+      pivot: {x: 0.5081517, y: 0.9073762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -400,6 +391,90 @@ TextureImporter:
         height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mollet_champi_R
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 294
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5081517, y: 0.9073762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritePersos_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 294
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5081517, y: 0.9073762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pied_champi_R
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 245
+        width: 76
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6812282, y: 0.8321991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pied_champi_L
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 247
+        width: 68
+        height: 39
+      alignment: 9
+      pivot: {x: 0.68601453, y: 0.881994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pied_perso_R
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 512
+        width: 65
+        height: 41
+      alignment: 9
+      pivot: {x: 0.6584191, y: 0.9380553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pied_perso_L
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 511
+        width: 68
+        height: 43
+      alignment: 9
+      pivot: {x: 0.66199493, y: 0.9009726}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
