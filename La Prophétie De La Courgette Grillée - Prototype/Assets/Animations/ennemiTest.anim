@@ -32,6 +32,21 @@ AnimationClip:
     path: Skeleton/SpineBone/corps_champi/visage_champi
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300036, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - time: 1
+      value: {fileID: 21300034, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - time: 2
+      value: {fileID: 21300040, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - time: 3
+      value: {fileID: 21300038, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - time: 4
+      value: {fileID: 21300036, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    attribute: m_Sprite
+    path: Skeleton/SpineBone/corps_champi_back/visage_champi_back
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -46,7 +61,19 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 442270506
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: 21300036, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - {fileID: 21300034, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - {fileID: 21300040, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - {fileID: 21300038, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
+    - {fileID: 21300036, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
     - {fileID: 21300036, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
     - {fileID: 21300034, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}
     - {fileID: 21300040, guid: a96c4296c3c734f4da5a40af6d335cbb, type: 3}

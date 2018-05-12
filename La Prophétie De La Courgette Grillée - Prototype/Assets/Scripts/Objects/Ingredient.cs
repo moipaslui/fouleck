@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Ingredient : MonoBehaviour
 	public int quality;
 	public int cost;
 
-	void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.tag == "player")
 		{

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114660969217862804}
   - component: {fileID: 114773825843715672}
   - component: {fileID: 70246585284156226}
+  - component: {fileID: 95183747917936612}
   m_Layer: 0
   m_Name: Tomate
   m_TagString: ingredient
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505162249781038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -4.47, z: -3.420199}
+  m_LocalPosition: {x: -0.98, y: -4.47, z: -2.7409701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,6 +59,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.023493826, y: -0.020137614}
   m_Size: {x: 0.5652381, y: 0.45112658}
   m_Direction: 1
+--- !u!95 &95183747917936612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1505162249781038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bf427eeeedd052489c7c98147bfb1b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114660969217862804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1bdd2a260c6854b8f937b67c512b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorHeight: 0.04
-  isStatic: 0
+  floorHeight: 0
+  isStatic: 1
   spriteLowerBound: 0.2775
   spriteHalfWidth: 0.32625002
 --- !u!114 &114773825843715672
@@ -101,6 +120,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
