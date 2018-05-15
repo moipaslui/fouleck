@@ -22,9 +22,8 @@ GameObject:
   - component: {fileID: 212261316897462260}
   - component: {fileID: 114660969217862804}
   - component: {fileID: 114773825843715672}
-  - component: {fileID: 70246585284156226}
-  - component: {fileID: 95183747917936612}
-  m_Layer: 0
+  - component: {fileID: 70776403468058572}
+  m_Layer: 11
   m_Name: Tomate
   m_TagString: ingredient
   m_Icon: {fileID: 0}
@@ -37,14 +36,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505162249781038}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -4.47, z: -2.7409701}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.1000004, y: -0.9399996, z: -0.025980473}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &70246585284156226
+--- !u!70 &70776403468058572
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,27 +55,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.023493826, y: -0.020137614}
-  m_Size: {x: 0.5652381, y: 0.45112658}
+  m_Offset: {x: 0.018247515, y: -0.012165401}
+  m_Size: {x: 0.56734574, y: 0.45768124}
   m_Direction: 1
---- !u!95 &95183747917936612
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1505162249781038}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0bf427eeeedd052489c7c98147bfb1b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114660969217862804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorHeight: 0
-  isStatic: 1
+  isStatic: 0
   spriteLowerBound: 0.2775
   spriteHalfWidth: 0.32625002
 --- !u!114 &114773825843715672
@@ -103,10 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5dff05d758dc447afc7f5496fcccf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Tomate
-  description: "Une superbe tomate ! L'ingr\xE9dient de base de toute bonne pizza."
-  quality: 2
-  cost: 1
+  offsetIcon: {x: 0.24, y: 0.17}
+  itemToInventory: {fileID: 11400000, guid: c673ba34473828148a6d6d001924d154, type: 2}
 --- !u!212 &212261316897462260
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,7 +101,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
