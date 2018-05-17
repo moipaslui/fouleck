@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2520ae39a648b6a418c95402c81cf4eb, type: 3}
+  m_Name: Oeuf
+  m_EditorClassIdentifier: 
+  name: Oeuf
+  icon: {fileID: 21300000, guid: f49fe1257db82634587cd9f40450cd9d, type: 3}
+  description: Ce magnifique oeuf ira parfaitement dans une superbe pizza de chez
+    Fouleck !
+  cost: 5
+  quality: 3

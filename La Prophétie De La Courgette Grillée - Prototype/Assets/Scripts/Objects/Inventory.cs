@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -66,6 +65,7 @@ public class Inventory : MonoBehaviour
 
     public void Remove(Item item)
     {
+        int itemPos = -1;
         for (int i = 0; i < items.Count; i++)
         {
             if (item == items[i])
@@ -76,9 +76,16 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
-                    items.Remove(item);
-                    countItems.Remove(i);
+                    items.RemoveAt(i);
+                    countItems.RemoveAt(i);
                 }
+
+                if (itemPos != -1) // On équilibre aves les autres slots contennants le même Item
+                {
+                    countItems[itemPos] += 1;
+                }
+
+                itemPos = i;
             }
         }
 
