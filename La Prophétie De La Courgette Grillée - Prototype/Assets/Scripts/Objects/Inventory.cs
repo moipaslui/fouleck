@@ -80,7 +80,7 @@ public class Inventory : MonoBehaviour
                     countItems.RemoveAt(i);
                 }
 
-                if (itemPos != -1) // On équilibre aves les autres slots contennants le même Item
+                if (itemPos != -1) // On équilibre aves les autres slots contenants le même Item
                 {
                     countItems[itemPos] += 1;
                 }
