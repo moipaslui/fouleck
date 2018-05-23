@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HurtEnemy : MonoBehaviour
 {
@@ -17,11 +15,11 @@ public class HurtEnemy : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.gameObject.tag == "ennemi")
+        if(other.tag == "ennemi")
         {
-            Destroy(collision.gameObject);
+            Debug.Log("Ennemi touché.");
         }
     }
 }
