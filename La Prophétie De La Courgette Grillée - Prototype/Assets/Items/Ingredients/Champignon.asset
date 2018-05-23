@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: Champignon
   m_EditorClassIdentifier: 
   name: Champignon
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f88e9751f1729bb4ca8166ecd291fcae, type: 3}
   description: 'Un superbe champignon ! Il aura parfaitement sa place dans une pizza
     de fouleck !
 
     L''abondance des champignons se justifie par la taille de la famille Champignax.'
+  floorHeight: 0.02
   cost: 4
+  offsetIcon: {x: 0.18, y: 0.21}
   quality: 2

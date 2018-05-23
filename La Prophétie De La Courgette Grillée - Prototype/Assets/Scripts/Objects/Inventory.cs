@@ -20,10 +20,12 @@ public class Inventory : MonoBehaviour
 
     #endregion
 
-    public List<Item> items = new List<Item>();
-    public List<int> countItems = new List<int>();
+    public GameObject itemPrefab;
+
     public int space = 5;
     public int spacePerSlot = 10;
+    public List<Item> items = new List<Item>();
+    public List<int> countItems = new List<int>();
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
@@ -80,7 +82,7 @@ public class Inventory : MonoBehaviour
                     countItems.RemoveAt(i);
                 }
 
-                if (itemPos != -1) // On équilibre aves les autres slots contennants le même Item
+                if (itemPos != -1) // On équilibre aves les autres slots contenants le même Item
                 {
                     countItems[itemPos] += 1;
                 }
