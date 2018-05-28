@@ -5,8 +5,18 @@ public class CameraController : MonoBehaviour
 	public GameObject player;
 	public float YOffset;
 
-	void Update ()
+    private PlayerHealthManager health;
+
+    private void Start()
+    {
+        health = FindObjectOfType<PlayerHealthManager>();
+    }
+
+    void Update ()
 	{
-		transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, player.transform.position.z - 10f);
+        if (health.playerAlive)
+        {
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, player.transform.position.z - 10f);
+        }
 	}
 }
