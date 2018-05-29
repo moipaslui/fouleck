@@ -2,11 +2,14 @@
 
 public class HurtEnemy : MonoBehaviour
 {
+    public int degatsArme;
+
+    private EnemyHealthManager enemyHealth;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        enemyHealth = FindObjectOfType<EnemyHealthManager>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +23,7 @@ public class HurtEnemy : MonoBehaviour
         if(other.tag == "ennemi")
         {
             Debug.Log("Ennemi touché.");
+            enemyHealth.health -= degatsArme;
         }
     }
 }
