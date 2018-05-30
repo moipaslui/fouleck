@@ -14,9 +14,6 @@ public class CameraController : MonoBehaviour
 
     void Update ()
 	{
-        if (health.playerAlive)
-        {
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, player.transform.position.z - 10f);
-        }
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + YOffset, player.transform.position.z - 10f);
 	}
 }

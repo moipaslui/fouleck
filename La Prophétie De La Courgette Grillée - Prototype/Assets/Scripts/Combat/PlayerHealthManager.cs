@@ -1,112 +1,146 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthManager : MonoBehaviour 
+public class PlayerHealthManager : MonoBehaviour
 {
-    private int maxHP;
-    public float currentHP;
-
-    private int maxHearts = 10;
+    [Range(0,10)]
+    public int startingTotalHearts = 3;
+    [Range(0, 10)]
     public int startingHearts = 3;
-
-    private int healthPerHeart = 2;
-
-    public bool playerAlive;
+    
+    public int numberOfBlink;
+    public float blinkTime;
 
     public Image[] healthImages;
-    public Sprite[] healthSprites;
 
-    public int HealthPerHeart
-    {
-        get
-        {
-            return healthPerHeart;
-        }
+    public Sprite healthSpriteEmpty;
+    public Sprite healthSpriteHalf;
+    public Sprite healthSpriteFull;
 
-        set
-        {
-            healthPerHeart = value;
-        }
-    }
+    // 1 HEART = 2 HPs
 
+    private int totalHearts;
+    private int maxHP;
+    private int healthPerHeart = 2;
+    private int maxHearts = 10;
+    private float currentHP;
+    private bool isBlinking = false;
 
-    // Use this for initialization
     void Start () 
 	{
-        playerAlive = true;
+        maxHearts = healthImages.Length;
+
+        if (startingHearts > startingTotalHearts)
+            startingHearts = startingTotalHearts;
 
         currentHP = startingHearts * healthPerHeart;
         maxHP = maxHearts * healthPerHeart;
 
-        CheckHealthAmount();
+        totalHearts = startingTotalHearts;
+
+        UpdateUIHearts();
 	}
 
-	// Update is called once per frame
-	void Update () 
-	{
-        if (currentHP == 0)
-        {
-            playerAlive = false;
-            Destroy(gameObject);
-        }
-	}
-
-    void CheckHealthAmount()
+    private void UpdateUIHearts()
     {
         for (int i = 0; i < maxHearts; i++)
         {
-            if (startingHearts <= i)
-            {
-                healthImages[i].enabled = false;
-            }
-            else
+            if (i < startingTotalHearts)
             {
                 healthImages[i].enabled = true;
-            }
-        }
-        UpdateHearts();
-    }
 
-    public void UpdateHearts()
-    {
-        bool empty = false;
-        int i = 0;
-
-        foreach (Image image in healthImages)
-        {
-            if(empty)
-            {
-                image.sprite = healthSprites[0];
-            }
-            else
-            {
-                i++;
-                if (currentHP >= i * healthPerHeart) 
+                if (i+1 <= (float)currentHP / 2)
                 {
-                    image.sprite = healthSprites[healthSprites.Length-1];
+                    healthImages[i].sprite = healthSpriteFull;
                 }
                 else
                 {
-                    int currentHeartHealth = (int)(healthPerHeart - (healthPerHeart * i - currentHP));
-                    int healthPerImage = healthPerHeart / (healthSprites.Length - 1);
-                    int imageIndex = currentHeartHealth / healthPerImage;
-                    image.sprite = healthSprites[imageIndex];
-                    empty = true;
+                    if ((float)(i+1) - (float)currentHP / 2 == 0.5f) // If there is not a full heart
+                    {
+                        healthImages[i].sprite = healthSpriteHalf;
+                    }
+                    else
+                    {
+                        healthImages[i].sprite = healthSpriteEmpty;
+                    }
                 }
+            }
+            else
+            {
+                healthImages[i].enabled = false;
             }
         }
     }
 
     public void AddHeartContainer()
     {
-        startingHearts++;
-        startingHearts = Mathf.Clamp(startingHearts, 0, maxHearts);
+        if (++totalHearts > maxHearts)
+        {
+            totalHearts--;
+        }
+        else
+        {
+            currentHP = totalHearts * healthPerHeart;
+            maxHP = maxHearts * healthPerHeart;
 
-        currentHP = startingHearts * healthPerHeart;
-        maxHP = maxHearts * healthPerHeart;
+            UpdateUIHearts();
+        }
+    }
 
-        CheckHealthAmount();
+
+    public void HurtPlayer(int damage)
+    {
+        if (!isBlinking)
+        {
+            currentHP -= damage;
+            Debug.Log("Joueur touché !");
+
+            StartCoroutine("Blink");
+
+            UpdateUIHearts();
+
+            if (currentHP <= 0)
+            {
+                Debug.Log("The player is dead.");
+                Time.timeScale = 0f;
+            }
+        }
+    }
+
+    public void HealPlayer(int heal)
+    {
+        currentHP += heal;
+        Debug.Log("Joueur soigné !");
+        UpdateUIHearts();
+    }
+
+    private IEnumerator Blink()
+    {
+        isBlinking = true;
+        SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
+
+        for (int nbBlink = 0; nbBlink < numberOfBlink; nbBlink++)
+        {
+            for (float countDown = blinkTime; countDown >= 0; countDown -= Time.deltaTime)
+            {
+                foreach (SpriteRenderer sprite in enemySprites)
+                {
+                    sprite.enabled = false;
+                }
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            for (float countDown = 0; countDown <= blinkTime; countDown += Time.deltaTime)
+            {
+                foreach (SpriteRenderer sprite in enemySprites)
+                {
+                    sprite.enabled = true;
+                }
+
+                yield return new WaitForSeconds(0.01f);
+            }
+        }
+        isBlinking = false;
     }
 }
