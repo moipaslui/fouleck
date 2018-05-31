@@ -26,13 +26,18 @@ public class PlayerHealthManager : MonoBehaviour
     private int maxHearts = 10;
     private float currentHP;
     private bool isBlinking = false;
+    private float knockback = 1.5f;
+
+    private PlayerControllerIsometric movement;
 
     void Start () 
 	{
         maxHearts = healthImages.Length;
 
         if (startingHearts > startingTotalHearts)
+        {
             startingHearts = startingTotalHearts;
+        }
 
         currentHP = startingHearts * healthPerHeart;
         maxHP = maxHearts * healthPerHeart;
@@ -40,6 +45,8 @@ public class PlayerHealthManager : MonoBehaviour
         totalHearts = startingTotalHearts;
 
         UpdateUIHearts();
+
+        movement = FindObjectOfType<PlayerControllerIsometric>();
 	}
 
     private void UpdateUIHearts()
@@ -95,6 +102,8 @@ public class PlayerHealthManager : MonoBehaviour
         {
             currentHP -= damage;
             Debug.Log("Joueur touché !");
+
+            transform.Translate(Vector2.right * knockback);
 
             StartCoroutine("Blink");
 

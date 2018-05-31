@@ -5171,7 +5171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d956ce04c31e241b0a9d516f9915ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1000
   enemyDamage: 1
   numberOfBlink: 3
   blinkTime: 0.05
