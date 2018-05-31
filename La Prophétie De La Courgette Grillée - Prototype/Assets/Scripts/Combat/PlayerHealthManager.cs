@@ -26,9 +26,6 @@ public class PlayerHealthManager : MonoBehaviour
     private int maxHearts = 10;
     private float currentHP;
     private bool isBlinking = false;
-    private float knockback = 1.5f;
-
-    private PlayerControllerIsometric movement;
 
     void Start () 
 	{
@@ -45,8 +42,6 @@ public class PlayerHealthManager : MonoBehaviour
         totalHearts = startingTotalHearts;
 
         UpdateUIHearts();
-
-        movement = FindObjectOfType<PlayerControllerIsometric>();
 	}
 
     private void UpdateUIHearts()
@@ -96,14 +91,14 @@ public class PlayerHealthManager : MonoBehaviour
     }
 
 
-    public void HurtPlayer(int damage)
+    public void HurtPlayer(int damage, Vector2 knockback)
     {
         if (!isBlinking)
         {
             currentHP -= damage;
             Debug.Log("Joueur touché !");
 
-            transform.Translate(Vector2.right * knockback);
+            GetComponent<Rigidbody2D>().velocity = knockback;
 
             StartCoroutine("Blink");
 
@@ -126,6 +121,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     private IEnumerator Blink()
     {
+        GetComponent<PlayerControllerIsometric>().canMove = false;
         isBlinking = true;
         SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
 
@@ -151,5 +147,6 @@ public class PlayerHealthManager : MonoBehaviour
             }
         }
         isBlinking = false;
+        GetComponent<PlayerControllerIsometric>().canMove = true;
     }
 }

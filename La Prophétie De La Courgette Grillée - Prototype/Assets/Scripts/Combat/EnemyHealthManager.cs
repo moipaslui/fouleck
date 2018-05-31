@@ -5,6 +5,7 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int health;
     public int enemyDamage;
+    public float knockbackForce = 2f;
 
     public int numberOfBlink;
     public float blinkTime;
@@ -13,11 +14,12 @@ public class EnemyHealthManager : MonoBehaviour
 
     private bool isBlinking = false;
 
-    public void HurtEnemy(int damage)
+    public void HurtEnemy(int damage, Vector2 knockback)
     {
         if (!isBlinking)
         {
             health -= damage;
+            GetComponent<Rigidbody2D>().velocity = knockback;
             StartCoroutine("Blink");
             if (health <= 0)
             {
@@ -27,16 +29,18 @@ public class EnemyHealthManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "player")
         {
-            other.GetComponent<PlayerHealthManager>().HurtPlayer(enemyDamage);
+            Vector2 knockback = ((Vector2)other.transform.position - (Vector2)transform.position).normalized * knockbackForce;
+            other.GetComponent<PlayerHealthManager>().HurtPlayer(enemyDamage, knockback);
         }
     }
 
     private IEnumerator Blink()
     {
+        // Can move = false
         isBlinking = true;
         SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
 
@@ -62,5 +66,9 @@ public class EnemyHealthManager : MonoBehaviour
             }
         }
         isBlinking = false;
+        // Can move = true
+        /* temporaire */
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        /* ---------- */
     }
 }
