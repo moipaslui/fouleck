@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 5d041aa32b473b44194261a410ad9e93
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: visage_Mauricio_2
+    21300002: visage_Mauricio_1
+    21300004: "t\xEAte_Mauricio"
+    21300006: jambe_Mauricio_R
+    21300008: jambe_Mauricio_L
+    21300010: bras_Mauricio_R
+    21300012: bras_Mauricio_L
+    21300014: corps_Mauricio
+    21300016: mollet_Mauricio_R
+    21300018: mollet_Mauricio_L
+    21300020: main_Mauricio_R
+    21300022: main_Mauricio_L
+    21300024: pied_Mauricio_R
+    21300026: pied_Mauricio_L
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: visage_Mauricio_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 659
+        width: 127
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31ab51cee07ebc4ba88c96852529de7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_Mauricio_1
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 641
+        width: 159
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08afca74dddc114185ff39eb3c810bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "t\xEAte_Mauricio"
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 595
+        width: 291
+        height: 308
+      alignment: 9
+      pivot: {x: 0.2972733, y: 0.109701775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfdb28891bc6714e8892129a5746cdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_Mauricio_R
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 550
+        width: 36
+        height: 62
+      alignment: 9
+      pivot: {x: 0.4840071, y: 0.8435817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef71208fe7848ca408f5a3106091857a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_Mauricio_L
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 551
+        width: 35
+        height: 60
+      alignment: 9
+      pivot: {x: 0.516449, y: 0.84543866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbcffcb1caf4104dbe66f6ff6fcd243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bras_Mauricio_R
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 518
+        width: 30
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8515768}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b59e6e6e1e8cb48850d7cc3a9884d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bras_Mauricio_L
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 517
+        width: 30
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5166524, y: 0.8515768}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3583ea85edf8c40bf976b63a8efd4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corps_Mauricio
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 436
+        width: 122
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e3f02666bc87c49a409871e25e7726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_Mauricio_R
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 486
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5338664, y: 0.87945974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95f136cdb340b14ea87657de0482382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_Mauricio_L
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 486
+        width: 34
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8663746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e614eadd478e0df4a86ab3109eea6dbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_Mauricio_R
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 441
+        width: 33
+        height: 70
+      alignment: 9
+      pivot: {x: 0.56055796, y: 0.921099}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3049e885158052343b409743e315b965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_Mauricio_L
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 442
+        width: 33
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5495735, y: 0.908858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4576c8f8cb209714e9edbcba35472878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_Mauricio_R
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 442
+        width: 65
+        height: 41
+      alignment: 9
+      pivot: {x: 0.65943277, y: 0.8931818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f007072d2880848ac31f58e3742caa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_Mauricio_L
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 442
+        width: 63
+        height: 41
+      alignment: 9
+      pivot: {x: 0.6553558, y: 0.8931825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee20e292181578439ac13abba4f2dec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2708bd96c7b30b040b32b0a83703eca3
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
