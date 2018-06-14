@@ -6,7 +6,6 @@ public class InteractionController : MonoBehaviour
     public LayerMask interactibleLayerMask;
     public GameObject ButtonIconInteractable;
     public GameObject NPCIconInteractable;
-    public Vector2 dialogueOffset;
 
     [HideInInspector]
     public GameObject focus;
@@ -82,6 +81,5 @@ public class InteractionController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, interactibleRadius);
 
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position + (Vector3)dialogueOffset, 0.03f);
     }
 }

@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -299,6 +299,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -513,6 +514,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -687,6 +689,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -760,6 +763,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -902,6 +906,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -975,6 +980,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -1290,6 +1296,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -1363,6 +1370,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -1890,6 +1898,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -1963,6 +1972,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2037,6 +2047,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2326,6 +2337,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2400,6 +2412,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2678,6 +2691,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2751,6 +2765,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -2958,22 +2973,22 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 39.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -261.625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -2983,7 +2998,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -2993,7 +3008,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -3182,6 +3197,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -3303,6 +3319,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -3378,6 +3395,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -3451,6 +3469,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -3645,7 +3664,7 @@ RectTransform:
   - {fileID: 426371828}
   - {fileID: 426242389}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3790,6 +3809,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -3863,6 +3883,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -4125,6 +4146,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -4184,7 +4206,7 @@ Transform:
   - {fileID: 488233854}
   - {fileID: 1574390184}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &913082596
 Prefab:
@@ -4236,22 +4258,22 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 39.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -206.625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -4261,7 +4283,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -4271,7 +4293,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -4480,6 +4502,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -4758,6 +4781,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -4831,6 +4855,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5024,6 +5049,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5105,22 +5131,22 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 39.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -96.625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -5130,7 +5156,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -5140,7 +5166,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -5281,6 +5307,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5354,6 +5381,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5427,6 +5455,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5626,6 +5655,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5699,6 +5729,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -5868,6 +5899,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6086,6 +6118,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6280,6 +6313,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6495,6 +6529,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6526,6 +6561,67 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1414631522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1414631525}
+  - component: {fileID: 1414631524}
+  - component: {fileID: 1414631523}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1414631523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414631522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a878edd65459ee488898cc0e43540d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  isDialoguing: 0
+--- !u!114 &1414631524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414631522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d600aed3027564fbbb483abbe703d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1683215840461406, guid: d99b64b3a7362414aa4292c0202abcc2, type: 2}
+  space: 5
+  spacePerSlot: 10
+  items: []
+  countItems: 
+--- !u!4 &1414631525
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414631522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.31153378, y: -6.7311654, z: -5.341797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415630848
 GameObject:
   m_ObjectHideFlags: 0
@@ -6568,6 +6664,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6641,6 +6738,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6714,6 +6812,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6787,6 +6886,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -6860,6 +6960,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7001,6 +7102,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7074,6 +7176,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7294,6 +7397,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7415,6 +7519,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7571,6 +7676,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1574390186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7584,6 +7690,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7693,6 +7800,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &1605681257
 Rigidbody2D:
   serializedVersion: 4
@@ -7741,6 +7849,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7784,7 +7893,7 @@ Transform:
   m_Children:
   - {fileID: 985355542}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1615147326
 GameObject:
@@ -7901,6 +8010,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -7974,6 +8084,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -8055,22 +8166,22 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 39.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -41.625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -8080,7 +8191,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -8090,7 +8201,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -8285,6 +8396,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -8400,6 +8512,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -8447,8 +8560,8 @@ GameObject:
   - component: {fileID: 1794243707}
   - component: {fileID: 1794243706}
   - component: {fileID: 1794243705}
-  - component: {fileID: 1794243709}
   - component: {fileID: 1794243710}
+  - component: {fileID: 1794243709}
   - component: {fileID: 1794243704}
   - component: {fileID: 1794243703}
   - component: {fileID: 1794243702}
@@ -8518,6 +8631,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &1794243703
 Rigidbody2D:
   serializedVersion: 4
@@ -8608,6 +8722,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -8651,7 +8766,7 @@ Transform:
   m_Children:
   - {fileID: 1674455436}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1794243709
 MonoBehaviour:
@@ -8681,7 +8796,6 @@ MonoBehaviour:
     m_Bits: 2048
   ButtonIconInteractable: {fileID: 1574390183}
   NPCIconInteractable: {fileID: 488233853}
-  dialogueOffset: {x: 0, y: 0}
   focus: {fileID: 0}
 --- !u!1 &1807169048
 GameObject:
@@ -8725,6 +8839,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9272,6 +9387,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9345,6 +9461,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9418,6 +9535,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9632,6 +9750,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9706,6 +9825,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -9816,7 +9936,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050124382
 GameObject:
@@ -10049,6 +10169,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -10130,22 +10251,22 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 39.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -151.625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -10155,7 +10276,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -10165,7 +10286,7 @@ Prefab:
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224091703986271260, guid: aadf8cabe73039b43a4d2e44ba4441db,
         type: 2}
@@ -10306,6 +10427,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
@@ -10379,6 +10501,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 29013973695368548ba361da7a1bee90, type: 2}
   m_StaticBatchInfo:
