@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: f49fe1257db82634587cd9f40450cd9d, type: 3}
   description: Ce magnifique oeuf ira parfaitement dans une superbe pizza de chez
     Fouleck !
-  floorHeight: 0.01
+  floorHeight: 0
   cost: 5
   offsetIcon: {x: 0.2, y: 0.18}
   quality: 3

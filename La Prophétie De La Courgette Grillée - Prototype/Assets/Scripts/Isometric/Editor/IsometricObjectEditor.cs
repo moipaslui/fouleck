@@ -11,7 +11,7 @@ public class IsometricObjectEditor : Editor
         {
             IsometricObject obj = (IsometricObject)target;
 
-            SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = obj.GetComponentInChildren<SpriteRenderer>();
             obj.spriteLowerBound = spriteRenderer.bounds.size.y * 0.5f;
             obj.spriteHalfWidth = spriteRenderer.bounds.size.x * 0.5f;
 

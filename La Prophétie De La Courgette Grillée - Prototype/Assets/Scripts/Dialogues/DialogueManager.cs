@@ -41,7 +41,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueSentence sentence = sentences.Dequeue();
-        nameText.text = sentence.speaker.name;
+        nameText.text = sentence.speaker;
         dialogueText.text = sentence.text;
         return false;
     }

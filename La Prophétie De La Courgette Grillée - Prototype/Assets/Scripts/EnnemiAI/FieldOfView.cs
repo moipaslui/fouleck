@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-	public float viewRadius;
+	public float viewRadius = 10f;
 	[Range(0,360)]
-	public float viewAngle;
-	public float delayToFindTarget;
+	public float viewAngle = 80f;
+	public float delayToFindTarget = 0.05f;
 
 	public LayerMask targetMask;
 	public LayerMask obstacleMask;
@@ -37,23 +37,15 @@ public class FieldOfView : MonoBehaviour
 
 		if(targetInViewRadius != null)
 		{
-			Vector3[] dirToTarget = new Vector3[5];
-			dirToTarget[0] = (targetInViewRadius.transform.position - transform.position).normalized;
-			dirToTarget[1] = (targetInViewRadius.transform.position - targetInViewRadius.transform.localScale / 2 - transform.position).normalized;
-			dirToTarget[2] = (targetInViewRadius.transform.position + targetInViewRadius.transform.localScale / 2 - transform.position).normalized;
-			dirToTarget[3] = (targetInViewRadius.transform.position + new Vector3(-targetInViewRadius.transform.localScale.x, targetInViewRadius.transform.localScale.y, 0f) / 2 - transform.position).normalized;
-			dirToTarget[4] = (targetInViewRadius.transform.position + new Vector3(targetInViewRadius.transform.localScale.x, -targetInViewRadius.transform.localScale.y, 0f) / 2 - transform.position).normalized;
+			Vector3 dirToTarget = (targetInViewRadius.transform.position - transform.position).normalized;
 
-			foreach(Vector3 dir in dirToTarget)
+			if(Vector2.Angle(-transform.right, dirToTarget) < viewAngle / 2f) // The target is in the view Angle
 			{
-				if(Vector3.Angle(transform.up, dir) < viewAngle / 2f) // The target is in the view Angle
-				{
-					float dstToTarget = Vector2.Distance((Vector2)targetInViewRadius.transform.position, (Vector2)transform.position);
+				float dstToTarget = Vector2.Distance((Vector2)targetInViewRadius.transform.position, (Vector2)transform.position);
 
-					if(!Physics2D.Raycast(transform.position, dir, dstToTarget, obstacleMask)) // There is no obstacle to the target
-					{
-						target = targetInViewRadius.transform;
-					}
+				if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) // There is no obstacle to the target
+				{
+					target = targetInViewRadius.transform;
 				}
 			}
 		}

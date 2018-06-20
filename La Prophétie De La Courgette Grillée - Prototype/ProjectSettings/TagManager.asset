@@ -45,7 +45,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Personnages
+  - name: Ground
     uniqueID: 924506427
     locked: 0
   - name: World

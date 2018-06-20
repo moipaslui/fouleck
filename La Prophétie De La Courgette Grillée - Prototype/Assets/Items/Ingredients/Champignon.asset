@@ -17,7 +17,7 @@ MonoBehaviour:
     de fouleck !
 
     L''abondance des champignons se justifie par la taille de la famille Champignax.'
-  floorHeight: 0.02
+  floorHeight: 0
   cost: 4
   offsetIcon: {x: 0.18, y: 0.21}
   quality: 2

@@ -10,6 +10,8 @@ public class EnemyHealthManager : MonoBehaviour
     public int numberOfBlink;
     public float blinkTime;
 
+    public GameObject itemPrefab;
+    public Item itemToPop;
     public ParticleSystem effectOnDying;
 
     private bool isBlinking = false;
@@ -18,12 +20,18 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (!isBlinking)
         {
+            GetComponent<EnnemiController>().ennemiFace.sprite = GetComponent<EnnemiController>().hurtFace;
             health -= damage;
             GetComponent<Rigidbody2D>().velocity = knockback;
             StartCoroutine("Blink");
             if (health <= 0)
             {
                 Instantiate(effectOnDying, transform.position, transform.rotation);
+                if (itemToPop != null)
+                {
+                    GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
+                    clone.GetComponent<ItemPickup>().changeItem(itemToPop);
+                }
                 Destroy(gameObject);
             }
         }
@@ -40,7 +48,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     private IEnumerator Blink()
     {
-        // Can move = false
+        GetComponent<EnnemiController>().canMove = false;
         isBlinking = true;
         SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
 
@@ -66,9 +74,6 @@ public class EnemyHealthManager : MonoBehaviour
             }
         }
         isBlinking = false;
-        // Can move = true
-        /* temporaire */
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        /* ---------- */
+        GetComponent<EnnemiController>().canMove = true;
     }
 }
