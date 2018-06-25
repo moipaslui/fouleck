@@ -196,7 +196,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1671,8 +1671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: -0.57
   isStatic: 0
-  spriteLowerBound: 0.89610755
-  spriteHalfWidth: 0.7631264
+  spriteLowerBound: 0.8961558
+  spriteHalfWidth: 0.76318294
 --- !u!4 &78687481
 Transform:
   m_ObjectHideFlags: 0
@@ -1680,7 +1680,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 78687474}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -11.3, y: -1.51, z: -1.7182565}
+  m_LocalPosition: {x: -7.06, y: -0.48, z: -1.1236135}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 1482565491}
@@ -5621,7 +5621,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336316156}
-  m_LocalRotation: {x: 0, y: 0, z: 0.011264269, w: 0.9999366}
+  m_LocalRotation: {x: 0, y: 0, z: 0.011436891, w: 0.9999346}
   m_LocalPosition: {x: -0.05, y: -1.221, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5789,6 +5789,11 @@ Prefab:
     - target: {fileID: 1344257698645822, guid: b7d89d51d812bdc49b2b9add800f5a56, type: 2}
       propertyPath: m_Name
       value: lampadaire 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114461253302610122, guid: b7d89d51d812bdc49b2b9add800f5a56,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d89d51d812bdc49b2b9add800f5a56, type: 2}
@@ -6303,7 +6308,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362796849}
-  m_LocalRotation: {x: 0.99993646, y: -0.011275335, z: -0.000000043708617, w: 4.924244e-10}
+  m_LocalRotation: {x: 0.9999352, y: -0.0113851195, z: -0.00000004370856, w: 4.9724386e-10}
   m_LocalPosition: {x: 0.138, y: 0.079, z: 0}
   m_LocalScale: {x: 0.99999964, y: 0.99999964, z: 1}
   m_Children:
@@ -9263,7 +9268,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555637493}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9996026, w: 0.028188981}
+  m_LocalRotation: {x: 0, y: 0, z: 0.99960107, w: 0.028244153}
   m_LocalPosition: {x: -0.106, y: 0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11095,7 +11100,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11442,7 +11447,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681466627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0104988, y: 10.1621475, z: 5.189681}
+  m_LocalPosition: {x: -3.0104988, y: 10.43, z: 5.344326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1162329567}
@@ -12052,7 +12057,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717484731}
-  m_LocalRotation: {x: 0, y: 0, z: 0.00061313715, w: 0.9999998}
+  m_LocalRotation: {x: 0, y: 0, z: -0.000026987294, w: 1}
   m_LocalPosition: {x: -0.0000000058207648, y: 0.2014133, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -12354,7 +12359,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -12468,7 +12473,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761874882}
-  m_LocalRotation: {x: 0, y: 0, z: 0.00034650962, w: 0.99999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0008515664, w: 0.99999964}
   m_LocalPosition: {x: -4.6566118e-10, y: 0.24518405, z: -4.931262e-10}
   m_LocalScale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
   m_Children:
@@ -12928,7 +12933,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolSpot (4)
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13030,7 +13035,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolSpot (3)
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -15562,7 +15567,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -15738,7 +15743,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17269,7 +17274,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolSpot (2)
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20284,7 +20289,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281295643}
-  m_LocalRotation: {x: 0.008931431, y: -0.9999601, z: -3.8796155e-10, w: 0.000000043709665}
+  m_LocalRotation: {x: 0.008991748, y: -0.9999596, z: -3.9052095e-10, w: 0.000000043709644}
   m_LocalPosition: {x: -0.0000000037252916, y: 0.37151313, z: 7.4745143e-10}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_Children:
@@ -22684,7 +22689,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolSpot (6)
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26964,7 +26969,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolSpot (5)
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30374,7 +30379,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatroSpot (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34193,7 +34198,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131501029}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0060452977, w: 0.99998176}
+  m_LocalRotation: {x: 0, y: 0, z: 0.006239094, w: 0.99998057}
   m_LocalPosition: {x: 0, y: 0.3894253, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_Children:

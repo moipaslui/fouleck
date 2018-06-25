@@ -6,5 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/isometricTest.unity
-    guid: c52c948fdcdf870478361e2b7b17659f
+    path: Assets/Scenes/main.unity
+    guid: d46a6061aa1bb234897fa287cf4e8045
+  m_configObjects: {}
