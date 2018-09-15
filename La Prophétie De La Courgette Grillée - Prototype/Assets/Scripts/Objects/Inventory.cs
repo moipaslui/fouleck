@@ -94,4 +94,16 @@ public class Inventory : MonoBehaviour
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
     }
+
+    public bool ItemExists(Item item) // Si il y a au moins nb fois l'item, on return true
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (item == items[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

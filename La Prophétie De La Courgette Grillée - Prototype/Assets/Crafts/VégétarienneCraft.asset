@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9274fb4fff77a7d4987c27ffb8bd094c, type: 3}
+  m_Name: "V\xE9g\xE9tarienneCraft"
+  m_EditorClassIdentifier: 
+  craftNeeds:
+  - {fileID: 11400000, guid: ce51b6c674411714b9e1b0f87bf43a1d, type: 2}
+  - {fileID: 11400000, guid: dec7e6f2e1ecea5418d51f74a9ac4d8e, type: 2}
+  - {fileID: 11400000, guid: bf14c12dead85c24ea9f35a13549f54f, type: 2}
+  - {fileID: 11400000, guid: c673ba34473828148a6d6d001924d154, type: 2}
+  craftResult: {fileID: 11400000, guid: 57cc54e5c52b1c348a5195d0f0d4ba19, type: 2}
