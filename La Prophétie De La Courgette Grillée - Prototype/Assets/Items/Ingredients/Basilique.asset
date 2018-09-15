@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Basilique
   icon: {fileID: 21300000, guid: fdab19f52520f2c4ea6dcaf7a5a1e27a, type: 3}
   description: 
-  floorHeight: 0.78
+  floorHeight: 0.085
   cost: 0
-  offsetIcon: {x: 0.22, y: 0.24}
+  offsetIcon: {x: 0.15, y: 0.11}
   quality: 0

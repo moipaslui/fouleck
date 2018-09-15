@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: a96c4296c3c734f4da5a40af6d335cbb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cheveux
+    21300002: tete_perso
+    21300004: visage_perso
+    21300006: bras_perso_R
+    21300008: bras_perso_L
+    21300010: jambe_perso_R
+    21300012: jambe_perso_L
+    21300014: corps_perso
+    21300016: mollet_perso_R
+    21300018: main_perso_R
+    21300020: mollet_perso_L
+    21300022: corps_champi
+    21300024: jambe_champi_L
+    21300026: jambe_champi_R
+    21300028: mollet_champi_L
+    21300030: pied_champi_R
+    21300032: main_perso_L
+    21300034: visage_champi_1
+    21300036: visage_champi_2
+    21300038: visage_champi_4
+    21300040: visage_champi_3
+    21300042: mollet_champi_R
+    21300044: spritePersos_1
+    21300046: pied_champi_L
+    21300048: pied_perso_R
+    21300050: pied_perso_L
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cheveux
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717
+        width: 339
+        height: 307
+      alignment: 9
+      pivot: {x: 0.2955117, y: 0.0974815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08336edc97166cb43a16ef174087dcf9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tete_perso
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 734
+        width: 252
+        height: 238
+      alignment: 9
+      pivot: {x: 0.31461638, y: 0.03144003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dcb978013203b41822cfee44221720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_perso
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 599
+        width: 140
+        height: 84
+      alignment: 9
+      pivot: {x: 0.4435211, y: 0.51344806}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21a7872e7472e540a7a9d9a8acc7fc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bras_perso_R
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 604
+        width: 33
+        height: 82
+      alignment: 9
+      pivot: {x: 0.50554264, y: 0.8742171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3658ab5563dce1429e03baf40252460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bras_perso_L
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 602
+        width: 31
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5382769, y: 0.8695807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6aa644bcd2c0f43b736847f63d6593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_perso_R
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 621
+        width: 34
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5208641, y: 0.8536584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733095b054361ca47b4a92efaed04c72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_perso_L
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 622
+        width: 34
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5694185, y: 0.83619386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf7d8fdf8d3cac409f473d40d07dad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corps_perso
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 543
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defc1ce311f4e15499e0640a54e1c21e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_perso_R
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 555
+        width: 38
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5002465, y: 0.8592581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8673ef9ce03a6af4b9f7fd554e568153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_perso_R
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 526
+        width: 35
+        height: 72
+      alignment: 9
+      pivot: {x: 0.56965333, y: 0.9010781}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc371590f0549834c9109ba3057c7bb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_perso_L
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 556
+        width: 41
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4790776, y: 0.881528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b118055cd6deb9947afa768c2971a495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corps_champi
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 209
+        width: 218
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e8a73887a8c1342962cf0d56b5fcd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_champi_L
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 345
+        width: 32
+        height: 59
+      alignment: 9
+      pivot: {x: 0.53255177, y: 0.8246227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd99e905bf0e8cb47917d34c7a983006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jambe_champi_R
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 347
+        width: 30
+        height: 55
+      alignment: 9
+      pivot: {x: 0.49216512, y: 0.8604198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66690ab32cd415b42b20b85482138527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_champi_L
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 293
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5081517, y: 0.9073762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8193e8d22f848724c8f69032c699a3aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_perso_L
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 526
+        width: 37
+        height: 75
+      alignment: 9
+      pivot: {x: 0.51131254, y: 0.88541585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cbdfde0e8ea404a899972d1e0580c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_champi_1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 122
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3bc202c2420fe46a2e5927d3f2ad35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_champi_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 121
+        width: 74
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f0f588bdea95149b5540bbacfafce9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_champi_4
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 114
+        width: 76
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ab29435ed73af4d885a39100a372f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: visage_champi_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 122
+        width: 80
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4636b7957d1fc0443a22a8c625c3c40f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mollet_champi_R
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 295
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5081517, y: 0.9073762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55339300815dcac49992ae6bdbcd85ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_champi_R
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 245
+        width: 76
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6812282, y: 0.8321991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902452e1ab7d9c24c8386025a35047f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_champi_L
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 247
+        width: 68
+        height: 39
+      alignment: 9
+      pivot: {x: 0.68601453, y: 0.881994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12578a01caad3a445bac286a5deb1cf9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_perso_R
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 512
+        width: 65
+        height: 41
+      alignment: 9
+      pivot: {x: 0.6584191, y: 0.9380553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f990d6384b7646b4ea1fe648a6d13ef0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_perso_L
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 511
+        width: 68
+        height: 43
+      alignment: 9
+      pivot: {x: 0.66199493, y: 0.9009726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed046e163019754bad65f6e2a9ef898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: aced1d6f60367504d8955c3e3414d14a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

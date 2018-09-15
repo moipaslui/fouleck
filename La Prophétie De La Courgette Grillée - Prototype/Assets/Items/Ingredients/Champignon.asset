@@ -19,5 +19,5 @@ MonoBehaviour:
     L''abondance des champignons se justifie par la taille de la famille Champignax.'
   floorHeight: 0
   cost: 4
-  offsetIcon: {x: 0.31, y: 0.21}
+  offsetIcon: {x: 0.21, y: 0.18}
   quality: 2

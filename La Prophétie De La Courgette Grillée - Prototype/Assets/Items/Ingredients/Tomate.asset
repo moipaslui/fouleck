@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Tomate
   icon: {fileID: 21300000, guid: 4cafccd95db308d458b3b6d4f449331b, type: 3}
   description: "Une superbe tomate ! L'ingr\xE9dient de base de toute bonne pizza."
-  floorHeight: 0.02
+  floorHeight: 0.03
   cost: 2
-  offsetIcon: {x: 0.13, y: 0.1}
+  offsetIcon: {x: 0.16, y: 0.09}
   quality: 1
