@@ -21,7 +21,7 @@ public class CraftManager : MonoBehaviour
         {
             foreach(Ingredient ingredient in c.craftNeeds)
             {
-                Inventory.instance.Remove(ingredient);
+                Inventory.instance.Remove(ingredient, false);
             }
             
             Inventory.instance.Add(c.craftResult);

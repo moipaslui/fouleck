@@ -21,7 +21,7 @@ public class UIController : MonoBehaviour
                 if (ES.currentSelectedGameObject.GetComponent<InventorySlot>())
                 {
                     Item selectedItem = ES.currentSelectedGameObject.GetComponent<InventorySlot>().item;
-                    Inventory.instance.Remove(selectedItem);
+                    Inventory.instance.Remove(selectedItem, true);
                     IUI.UpdateUI();
                 }
             }

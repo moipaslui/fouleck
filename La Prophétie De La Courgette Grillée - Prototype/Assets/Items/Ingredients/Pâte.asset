@@ -14,7 +14,7 @@ MonoBehaviour:
   name: 
   icon: {fileID: 21300000, guid: 8653aaa8545d7b6438b75840dc70bce0, type: 3}
   description: 
-  floorHeight: 0.03
+  floorHeight: 0.12
   cost: 0
   offsetIcon: {x: 0.15, y: 0.13}
   quality: 0

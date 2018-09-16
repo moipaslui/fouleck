@@ -25,7 +25,7 @@ public class Mauricio1 : Quest
         if (invent.items.Contains(BoiteAOutil.item))
         {
             base.EndQuest();
-            invent.Remove(BoiteAOutil.item);
+            invent.Remove(BoiteAOutil.item, false);
             StartDialogue(endDialogue);
         }
     }

@@ -6,5 +6,5 @@ using UnityEngine;
 public class Craft : ScriptableObject
 {
     public List<Ingredient> craftNeeds;
-    public Item craftResult;
+    public Repas craftResult;
 }

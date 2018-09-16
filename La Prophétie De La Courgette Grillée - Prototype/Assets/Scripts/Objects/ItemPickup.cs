@@ -22,8 +22,6 @@ public class ItemPickup : Interactable
     {
         base.Interact();
 
-        Debug.Log("Picking up " + item.name);
-
         bool wasPickedUp = Inventory.instance.Add(item);
 
         if (wasPickedUp)

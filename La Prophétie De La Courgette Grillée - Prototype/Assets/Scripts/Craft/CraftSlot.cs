@@ -9,7 +9,7 @@ public class CraftSlot : MonoBehaviour
 
     private Button button;
 
-    void Start()
+    void Awake()
     {
         icon.sprite = craft.craftResult.icon;
         button = GetComponent<Button>();

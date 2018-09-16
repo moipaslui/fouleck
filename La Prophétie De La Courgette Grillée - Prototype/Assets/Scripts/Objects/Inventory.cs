@@ -27,6 +27,8 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
     public List<int> countItems = new List<int>();
 
+    public GameObject itemGameobject;
+
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
@@ -65,7 +67,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void Remove(Item item)
+    public void Remove(Item item, bool instanciate)
     {
         int itemPos = -1;
         for (int i = 0; i < items.Count; i++)
@@ -93,6 +95,12 @@ public class Inventory : MonoBehaviour
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+
+        if (instanciate)
+        {
+            GameObject clone = Instantiate(itemGameobject, FindObjectOfType<PlayerControllerIsometric>().transform.position, FindObjectOfType<PlayerControllerIsometric>().transform.rotation);
+            clone.GetComponent<ItemPickup>().changeItem(item);
+        }
     }
 
     public bool ItemExists(Item item) // Si il y a au moins nb fois l'item, on return true
