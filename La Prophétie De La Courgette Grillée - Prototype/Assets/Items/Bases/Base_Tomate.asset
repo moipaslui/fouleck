@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ad9527c18d2624fbe7e020ea0520ca, type: 3}
+  m_Name: Base_Tomate
+  m_EditorClassIdentifier: 
+  name: Base Tomate
+  icon: {fileID: 21300000, guid: c9b0e9c9114fd2d4f94641c304f06c46, type: 3}
+  description: 
+  floorHeight: 0.3
+  cost: 5
+  offsetIcon: {x: 0.49, y: 0.21}
+  craftNeed:
+  - {fileID: 11400000, guid: bf14c12dead85c24ea9f35a13549f54f, type: 2}
+  - {fileID: 11400000, guid: c673ba34473828148a6d6d001924d154, type: 2}

@@ -2,29 +2,29 @@
 
 public class CraftManager : MonoBehaviour
 {
-    public bool isCraftable(Craft c)
+    public bool isCraftable(Craftable itemToCraft)
     {
-        foreach (Ingredient ingredient in c.craftNeeds)
+        foreach (Item item in itemToCraft.craftNeed)
         {
-            if(!Inventory.instance.ItemExists(ingredient))
+            if(!Inventory.instance.ItemExists(item))
             {
-                Debug.Log("Missing required ingredients");
+                Debug.Log("Missing required items");
                 return false;
             }
         }
         return true;
     }
 
-    public void CraftItem(Craft c)
+    public void CraftItem(Craftable itemToCraft)
     {
-        if(isCraftable(c))
+        if(isCraftable(itemToCraft))
         {
-            foreach(Ingredient ingredient in c.craftNeeds)
+            foreach(Item item in itemToCraft.craftNeed)
             {
-                Inventory.instance.Remove(ingredient, false);
+                Inventory.instance.Remove(item, false);
             }
             
-            Inventory.instance.Add(c.craftResult);
+            Inventory.instance.Add(itemToCraft);
         }
     }
 }

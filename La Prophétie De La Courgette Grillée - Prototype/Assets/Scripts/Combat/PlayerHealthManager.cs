@@ -21,7 +21,6 @@ public class PlayerHealthManager : MonoBehaviour
     // 1 HEART = 2 HPs
 
     private int totalHearts;
-    private int maxHP;
     private int healthPerHeart = 2;
     private int maxHearts = 10;
     private float currentHP;
@@ -37,7 +36,6 @@ public class PlayerHealthManager : MonoBehaviour
         }
 
         currentHP = startingHearts * healthPerHeart;
-        maxHP = maxHearts * healthPerHeart;
 
         totalHearts = startingTotalHearts;
 
@@ -84,7 +82,6 @@ public class PlayerHealthManager : MonoBehaviour
         else
         {
             currentHP = totalHearts * healthPerHeart;
-            maxHP = maxHearts * healthPerHeart;
 
             UpdateUIHearts();
         }

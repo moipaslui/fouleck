@@ -29,8 +29,8 @@ public class UIController : MonoBehaviour
             {
                 if (ES.currentSelectedGameObject.GetComponent<CraftSlot>())
                 {
-                    Craft craft = ES.currentSelectedGameObject.GetComponent<CraftSlot>().craft;
-                    FindObjectOfType<CraftManager>().CraftItem(craft);
+                    Craftable itemToCraft = ES.currentSelectedGameObject.GetComponent<CraftSlot>().itemToCraft;
+                    FindObjectOfType<CraftManager>().CraftItem(itemToCraft);
                     FindObjectOfType<CraftMenu>().RefreshUI();
                 }
             }

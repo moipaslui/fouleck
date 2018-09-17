@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CraftSlot : MonoBehaviour
 {
-    public Craft craft;
+    public Craftable itemToCraft;
     public Image icon;
     public Image cross;
 
@@ -11,13 +11,13 @@ public class CraftSlot : MonoBehaviour
 
     void Awake()
     {
-        icon.sprite = craft.craftResult.icon;
+        icon.sprite = itemToCraft.icon;
         button = GetComponent<Button>();
     }
 
     public void refreshUI()
     {
-        if(FindObjectOfType<CraftManager>().isCraftable(craft))
+        if(FindObjectOfType<CraftManager>().isCraftable(itemToCraft))
         {
             cross.enabled = false;
             button.interactable = true;
