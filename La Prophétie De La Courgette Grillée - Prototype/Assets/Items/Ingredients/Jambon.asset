@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2520ae39a648b6a418c95402c81cf4eb, type: 3}
-  m_Name: Basilique
+  m_Name: Jambon
   m_EditorClassIdentifier: 
-  name: Basilique
-  icon: {fileID: 21300000, guid: fdab19f52520f2c4ea6dcaf7a5a1e27a, type: 3}
-  description: "un ingr\xE9dient magique, qui peut se rajouter a une pizza pour l'am\xE9liorer
-    !"
-  floorHeight: 0.085
+  name: Jambon
+  icon: {fileID: 21300000, guid: ff1ae014dc4b0be4ab17cc009dc9d2a8, type: 3}
+  description: 
+  floorHeight: 0.19
   cost: 0
-  offsetIcon: {x: 0.15, y: 0.11}
+  offsetIcon: {x: 0.34, y: 0.2}
   quality: 0

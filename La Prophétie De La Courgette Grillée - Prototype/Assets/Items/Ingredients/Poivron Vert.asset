@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Poivron Vert
   icon: {fileID: 21300000, guid: 7dd70c64829e339498d37bdc24f056ea, type: 3}
-  description: 
+  description: "C'est bien connu, chez Fouleck Pizza, l'ingr\xE9dient secret, c'est
+    le poivron, et celui-ci est vert en l'occurence !"
   floorHeight: 0
   cost: 2
   offsetIcon: {x: 0.19, y: 0.2}

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2520ae39a648b6a418c95402c81cf4eb, type: 3}
-  m_Name: Basilique
+  m_Name: Pepperonis
   m_EditorClassIdentifier: 
-  name: Basilique
-  icon: {fileID: 21300000, guid: fdab19f52520f2c4ea6dcaf7a5a1e27a, type: 3}
-  description: "un ingr\xE9dient magique, qui peut se rajouter a une pizza pour l'am\xE9liorer
-    !"
-  floorHeight: 0.085
+  name: 
+  icon: {fileID: 0}
+  description: Meme nous on sait pas ce que sait, si vous savez, envoyer nous un mail
+    a ulysse.regnier@hotmail.fr
+  floorHeight: 0
   cost: 0
-  offsetIcon: {x: 0.15, y: 0.11}
+  offsetIcon: {x: 0, y: 0}
   quality: 0
