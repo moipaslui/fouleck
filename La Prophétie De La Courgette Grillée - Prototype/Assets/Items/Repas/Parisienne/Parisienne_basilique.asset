@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
+  m_Name: Parisienne_basilique
+  m_EditorClassIdentifier: 
+  name: Parisienne (+basilique)
+  icon: {fileID: 21300000, guid: fa9ba3d3c2651ec43bbede249480f697, type: 3}
+  description: "Une am\xE9lioration de la Parisienne classique, bien mieux appr\xE9ci\xE9
+    des parisiens que sa grande soeur"
+  floorHeight: 0.31
+  cost: 0
+  offsetIcon: {x: 0.33, y: 0.27}
+  craftNeed:
+  - {fileID: 11400000, guid: 3adeaeb7e691a7f43914da191afa2a59, type: 2}
+  - {fileID: 11400000, guid: ce51b6c674411714b9e1b0f87bf43a1d, type: 2}
+  heal: 0

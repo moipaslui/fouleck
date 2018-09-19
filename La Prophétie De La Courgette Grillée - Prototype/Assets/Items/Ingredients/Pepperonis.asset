@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: Pepperonis
   m_EditorClassIdentifier: 
   name: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: d90166859b55f764590bceb548f208be, type: 3}
   description: Meme nous on sait pas ce que sait, si vous savez, envoyer nous un mail
     a ulysse.regnier@hotmail.fr
-  floorHeight: 0
+  floorHeight: 0.05
   cost: 0
-  offsetIcon: {x: 0, y: 0}
+  offsetIcon: {x: -0.09, y: 0.18}
   quality: 0

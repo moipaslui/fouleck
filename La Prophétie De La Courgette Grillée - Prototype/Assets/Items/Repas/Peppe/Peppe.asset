@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
+  m_Name: Peppe
+  m_EditorClassIdentifier: 
+  name: Peppe
+  icon: {fileID: 21300000, guid: d874eb57b7b0f8548b988bced1c3cffe, type: 3}
+  description: 
+  floorHeight: 0.31
+  cost: 0
+  offsetIcon: {x: 0.33, y: 0.27}
+  craftNeed:
+  - {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
+  - {fileID: 11400000, guid: ab66051eb003f6f47a59a8a2f32f355b, type: 2}
+  - {fileID: 11400000, guid: 8ccb3feca0fd2e140a8c7600240f641b, type: 2}
+  - {fileID: 11400000, guid: b261f7fdb9c0f4848b45b249f04ce24e, type: 2}
+  heal: 0

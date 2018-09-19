@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
-  m_Name: "V\xE9g\xE9tarienne_basilique"
+  m_Name: Carnivore_basilique
   m_EditorClassIdentifier: 
-  name: "V\xE9g\xE9tarienne (basilique)"
-  icon: {fileID: 21300000, guid: d739c41680b8e174b9978e66ff401210, type: 3}
-  description: "Une superbe pizza qui saura raviver vos papilles de v\xE9g\xE9tariens."
-  floorHeight: 0.3
-  cost: 10
-  offsetIcon: {x: 0.74, y: 0.33}
+  name: Carnivore (+basilique)
+  icon: {fileID: 21300000, guid: a34e7bfa43ec2df459cbc7d4ccb3ed3a, type: 3}
+  description: 
+  floorHeight: 0.31
+  cost: 0
+  offsetIcon: {x: 0.33, y: 0.27}
   craftNeed:
-  - {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
+  - {fileID: 11400000, guid: 523903ee4ea1a67469cf3771fcc2ea72, type: 2}
   - {fileID: 11400000, guid: ce51b6c674411714b9e1b0f87bf43a1d, type: 2}
-  heal: 7
+  heal: 0
