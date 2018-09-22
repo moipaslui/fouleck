@@ -17,14 +17,20 @@ public class CraftSlot : MonoBehaviour
 
     public void refreshUI()
     {
-        if(FindObjectOfType<CraftManager>().isCraftable(itemToCraft))
+        if(Inventory.instance.isCraftable(itemToCraft))
         {
-            cross.enabled = false;
+            if(cross)
+            {
+                cross.enabled = false;
+            }
             button.interactable = true;
         }
         else
         {
-            cross.enabled = true;
+            if (cross)
+            {
+                cross.enabled = true;
+            }
             button.interactable = false;
         }
     }

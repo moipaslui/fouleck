@@ -114,4 +114,30 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    public bool isCraftable(Craftable itemToCraft)
+    {
+        foreach (Item item in itemToCraft.craftNeed)
+        {
+            if (!ItemExists(item))
+            {
+                Debug.Log("Missing required items");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void CraftItem(Craftable itemToCraft)
+    {
+        if (isCraftable(itemToCraft))
+        {
+            foreach (Item item in itemToCraft.craftNeed)
+            {
+                Remove(item, false);
+            }
+
+            Add(itemToCraft);
+        }
+    }
 }
