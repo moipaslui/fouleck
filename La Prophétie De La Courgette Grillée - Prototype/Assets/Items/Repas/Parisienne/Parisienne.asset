@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Name: Parisienne
   m_EditorClassIdentifier: 
   name: Parisienne
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f203abb626c01064b9b97b5c247f8951, type: 3}
   description: 
-  floorHeight: 0
+  floorHeight: 0.31
   cost: 0
-  offsetIcon: {x: 0, y: 0}
-  craftNeed: []
+  offsetIcon: {x: 0.33, y: 0.27}
+  craftNeed:
+  - {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
+  - {fileID: 11400000, guid: ab66051eb003f6f47a59a8a2f32f355b, type: 2}
+  - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
   heal: 0
