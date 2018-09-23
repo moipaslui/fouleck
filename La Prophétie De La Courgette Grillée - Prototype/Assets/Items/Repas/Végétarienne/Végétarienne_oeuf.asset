@@ -11,11 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: "V\xE9g\xE9tarienne_oeuf"
   m_EditorClassIdentifier: 
-  name: 
+  name: "V\xE9g\xE9tarienne (+oeuf)"
   icon: {fileID: 21300000, guid: 72cc349e250cf2144b74f749f1387501, type: 3}
   description: 
-  floorHeight: 0
+  floorHeight: 0.31
   cost: 0
-  offsetIcon: {x: 0, y: 0}
-  craftNeed: []
+  offsetIcon: {x: 0.33, y: 0.27}
+  craftNeed:
+  - {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
+  - {fileID: 11400000, guid: c670b5639e52a3141bc764e1f477b8fd, type: 2}
   heal: 0

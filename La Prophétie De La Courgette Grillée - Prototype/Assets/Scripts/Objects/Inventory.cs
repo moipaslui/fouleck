@@ -99,7 +99,7 @@ public class Inventory : MonoBehaviour
         if (instanciate)
         {
             GameObject clone = Instantiate(itemGameobject, FindObjectOfType<PlayerControllerIsometric>().transform.position, FindObjectOfType<PlayerControllerIsometric>().transform.rotation);
-            clone.GetComponent<ItemPickup>().changeItem(item);
+            clone.GetComponent<ItemPickup>().ChangeItem(item);
         }
     }
 
@@ -121,7 +121,6 @@ public class Inventory : MonoBehaviour
         {
             if (!ItemExists(item))
             {
-                Debug.Log("Missing required items");
                 return false;
             }
         }

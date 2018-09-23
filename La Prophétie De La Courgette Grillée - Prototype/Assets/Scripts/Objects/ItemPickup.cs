@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
+[RequireComponent(typeof(IsometricObject))]
 public class ItemPickup : Interactable
 {
     [Header("Item")]
@@ -28,7 +29,7 @@ public class ItemPickup : Interactable
             Destroy(gameObject);
     }
 
-    public void changeItem(Item item)
+    public void ChangeItem(Item item)
     {
         this.item = item;
         Refresh();
