@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Parisienne_miel
   m_EditorClassIdentifier: 
-  name: 
+  name: Parisienne (+miel)
   icon: {fileID: 21300000, guid: c48fe75ead98172478f310064341f93d, type: 3}
-  description: 
+  description: Le parisien aime le miel et il le fait savoir ! Voici l'histoire de
+    la Parisienne-miel.
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

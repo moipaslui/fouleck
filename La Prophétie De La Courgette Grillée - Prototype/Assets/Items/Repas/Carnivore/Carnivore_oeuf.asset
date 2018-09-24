@@ -11,11 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Carnivore_oeuf
   m_EditorClassIdentifier: 
-  name: 
+  name: Carnivore (+oeuf)
   icon: {fileID: 21300000, guid: bb64f175d4a1a9a4a8f7b6b21be15e27, type: 3}
-  description: 
-  floorHeight: 0
+  description: "Pour ceux qui n'en on jamais assez, un supplement de prot\xE9\xEFne
+    est pr\xE9vue sur cette carnivore-oeuf"
+  floorHeight: 0.31
   cost: 0
-  offsetIcon: {x: 0, y: 0}
+  offsetIcon: {x: 0.33, y: 0.27}
   craftNeed: []
   heal: 0

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Parisienne
   icon: {fileID: 21300000, guid: f203abb626c01064b9b97b5c247f8951, type: 3}
-  description: 
+  description: "Une pizza sortant tout droit de Paris en France, bizarrement, les
+    parisiens n'appr\xE9cie pas vraiment cette pizza, en raison de l'image qu'elle
+    donerait d'eux !"
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}
