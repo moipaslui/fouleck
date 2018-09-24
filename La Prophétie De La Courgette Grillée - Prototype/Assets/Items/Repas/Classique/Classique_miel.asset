@@ -10,18 +10,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Classique_miel
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   name: Classique (+miel)
   icon: {fileID: 21300000, guid: 92081f5c909bf2c40a0c17ab662cbf18, type: 3}
-  description: 
+  description:
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}
-<<<<<<< HEAD
-  craftNeed: []
-=======
   craftNeed:
   - {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
   - {fileID: 11400000, guid: 414f5501b7f28ba43824c2455c38ad34, type: 2}
->>>>>>> a74debf807edb27a09ea2032e0ed2b6bf5aaad46
   heal: 0
