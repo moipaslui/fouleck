@@ -30,7 +30,7 @@ public class EnemyHealthManager : MonoBehaviour
                 if (itemToPop != null)
                 {
                     GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
-                    clone.GetComponent<ItemPickup>().changeItem(itemToPop);
+                    clone.GetComponent<ItemPickup>().ChangeItem(itemToPop);
                 }
                 Destroy(gameObject);
             }

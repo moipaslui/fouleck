@@ -9,15 +9,11 @@ public class CraftSlot : MonoBehaviour
 
     private Button button;
 
-    void Awake()
+    public void RefreshUI()
     {
         icon.sprite = itemToCraft.icon;
         button = GetComponent<Button>();
-    }
-
-    public void refreshUI()
-    {
-        if(Inventory.instance.isCraftable(itemToCraft))
+        if (Inventory.instance.isCraftable(itemToCraft))
         {
             if(cross)
             {

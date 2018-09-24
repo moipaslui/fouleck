@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CraftMenu : MonoBehaviour
@@ -11,11 +12,20 @@ public class CraftMenu : MonoBehaviour
     public GameObject AmeliorationsPizzas;
 
     private CraftSlot[] craftSlots;
+    private CraftSlot[] ameliorationCraftSlots;
     private bool wasActive;
 
     private void Start()
     {
+        craftBases.SetActive(true);
+        craftPizzas.SetActive(true);
+
+        ameliorationCraftSlots = AmeliorationsPizzas.GetComponentsInChildren<CraftSlot>();
         craftSlots = GetComponentsInChildren<CraftSlot>();
+        RefreshUI();
+        
+        craftBases.SetActive(false);
+        craftPizzas.SetActive(false);
     }
 
     private void Update()
@@ -53,7 +63,12 @@ public class CraftMenu : MonoBehaviour
     {
         foreach (CraftSlot cs in craftSlots)
         {
-            cs.refreshUI();
+            cs.RefreshUI();
+        }
+
+        foreach(CraftSlot cs in ameliorationCraftSlots)
+        {
+            cs.RefreshUI();
         }
     }
 
@@ -70,29 +85,51 @@ public class CraftMenu : MonoBehaviour
         craftBases.SetActive(false);
         craftPizzas.SetActive(false);
         craftAmeliorations.SetActive(false);
+        RefreshUI();
     }
 
     public void GoCraftBases()
     {
         craftMenu.SetActive(false);
         craftBases.SetActive(true);
+        RefreshUI();
     }
 
     public void GoCraftPizzas()
     {
         craftMenu.SetActive(false);
         craftPizzas.SetActive(true);
+        RefreshUI();
     }
 
     public void GoCraftAmeliorations()
     {
         craftMenu.SetActive(false);
         craftAmeliorations.SetActive(true);
+        AmeliorationsMenu.SetActive(true);
+        RefreshUI();
+    }
+
+    public void SetAmeliorationBasilique(Repas pizza)
+    {
+        ameliorationCraftSlots[0].itemToCraft = pizza;
+        ameliorationCraftSlots[0].RefreshUI();
+    }
+
+    public void SetAmeliorationOeuf(Repas pizza)
+    {
+        ameliorationCraftSlots[1].itemToCraft = pizza;
+        ameliorationCraftSlots[1].RefreshUI();
+    }
+
+    public void SetAmeliorationMiel(Repas pizza)
+    {
+        ameliorationCraftSlots[2].itemToCraft = pizza;
+        ameliorationCraftSlots[2].RefreshUI();
     }
 
     public void GoAmeliorationsPizzas()
     {
         AmeliorationsMenu.SetActive(false);
-        AmeliorationsPizzas.SetActive(true);
     }
 }

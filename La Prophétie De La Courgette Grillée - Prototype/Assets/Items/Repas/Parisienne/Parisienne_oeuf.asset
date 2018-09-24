@@ -19,5 +19,7 @@ MonoBehaviour:
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}
-  craftNeed: []
+  craftNeed:
+  - {fileID: 11400000, guid: 3adeaeb7e691a7f43914da191afa2a59, type: 2}
+  - {fileID: 11400000, guid: c670b5639e52a3141bc764e1f477b8fd, type: 2}
   heal: 0
