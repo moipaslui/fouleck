@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Classique
   icon: {fileID: 21300000, guid: da5f7fc9677d80946aca43cf43402213, type: 3}
-  description: 
+  description: La classique, tout simplment !
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}
