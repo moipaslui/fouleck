@@ -10,10 +10,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Peppe_oeuf
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Peppe (+oeuf)
   icon: {fileID: 21300000, guid: 42439aedecab8e34d84849bb52f2852e, type: 3}
-  description:
+  description: "Les \xE9leveurs de poule ne sont pas l\xE9gion en Italie, Mauricio
+    fait donc importer les oeufs d'autre pays plus cl\xE9ment avec ces b\xEAtes d\xE9pourvus
+    de dent."
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}
