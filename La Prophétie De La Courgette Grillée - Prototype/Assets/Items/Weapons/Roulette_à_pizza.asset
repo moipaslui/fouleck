@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Cette roulette a pizza tranche aussi bien les pizzas que ... les veines
     de vos ennemies, faites-en donc bon usage !
   floorHeight: 0.26
-  cost: 0
+  cost: 10
   offsetIcon: {x: 0.31, y: -0.07}
   damage: 0

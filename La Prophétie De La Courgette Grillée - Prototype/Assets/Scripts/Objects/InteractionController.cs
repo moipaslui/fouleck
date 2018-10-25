@@ -7,6 +7,8 @@ public class InteractionController : MonoBehaviour
     public GameObject ButtonIconInteractable;
     public GameObject NPCIconInteractable;
 
+    public GameObject sellerMenu;
+
     [HideInInspector]
     public GameObject focus;
 
@@ -54,6 +56,8 @@ public class InteractionController : MonoBehaviour
                 NPCIconInteractable.SetActive(false);
                 if(DM.isDialoguing)
                     DM.EndDialogue();
+                if (sellerMenu.activeSelf)
+                    sellerMenu.SetActive(false);
             }
         }
         else
@@ -62,6 +66,8 @@ public class InteractionController : MonoBehaviour
             NPCIconInteractable.SetActive(false);
             if (DM.isDialoguing)
                 DM.EndDialogue();
+            if (sellerMenu.activeSelf)
+                sellerMenu.SetActive(false);
             focus = null;
         }
 

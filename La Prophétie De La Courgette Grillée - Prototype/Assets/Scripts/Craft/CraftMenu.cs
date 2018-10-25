@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CraftMenu : MonoBehaviour
@@ -13,7 +12,6 @@ public class CraftMenu : MonoBehaviour
 
     private CraftSlot[] craftSlots;
     private CraftSlot[] ameliorationCraftSlots;
-    private bool wasActive;
 
     private void Start()
     {
