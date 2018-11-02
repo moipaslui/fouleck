@@ -103,23 +103,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool ItemExists(Item item) // Si il y a au moins nb fois l'item, on return true
-    {
-        for (int i = 0; i < items.Count; i++)
-        {
-            if (item == items[i])
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool isCraftable(Craftable itemToCraft)
+    public bool IsCraftable(Craftable itemToCraft)
     {
         foreach (Item item in itemToCraft.craftNeed)
         {
-            if (!ItemExists(item))
+            if (!items.Contains(item))
             {
                 return false;
             }
@@ -129,7 +117,7 @@ public class Inventory : MonoBehaviour
 
     public void CraftItem(Craftable itemToCraft)
     {
-        if (isCraftable(itemToCraft))
+        if (IsCraftable(itemToCraft))
         {
             foreach (Item item in itemToCraft.craftNeed)
             {

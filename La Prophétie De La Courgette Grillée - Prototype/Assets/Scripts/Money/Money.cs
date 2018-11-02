@@ -14,7 +14,7 @@ public class Money : MonoBehaviour
 
     public void PickUp()
     {
-        FindObjectOfType<MoneyManager>().addMoney(amount);
+        FindObjectOfType<MoneyManager>().AddMoney(amount);
         Destroy(this.gameObject);
     }
 }
