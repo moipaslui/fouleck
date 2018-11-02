@@ -1,20 +1,23 @@
 fileFormatVersion: 2
-guid: 929cc3191b83c28469d9397035af75e2
+guid: 7751fff33e51f06409e95ad28ed6b0a9
 TextureImporter:
   fileIDToRecycleName:
     21300000: tete_villageois
     21300002: bras_villageois_R
-    21300004: spriteVillageois_8
-    21300006: bras_villageois_L
-    21300008: jambe_villageois_R
-    21300010: jambe_villageois_L
-    21300012: corps_villageois
-    21300014: main_villageois_R
+    21300004: bras_villageois_L
+    21300006: jambe_villageois_R
+    21300008: jambe_villageois_L
+    21300010: corps_villageois
+    21300012: main_villageois_R
+    21300014: spritevillageois mieux_13
     21300016: main_villageois_L
-    21300018: pied_villageois_R
-    21300020: pied_villageois_L
-    21300022: spriteVillageois_17
-    21300024: visage_villageois
+    21300018: spritevillageois mieux_15
+    21300020: spritevillageois mieux_16
+    21300022: visage_villageois
+    21300024: mollet_villageois_R
+    21300026: mollet_villageois_L
+    21300028: pied_villageois_R
+    21300030: pied_villageois_L
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -58,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 450
+  spritePixelsToUnits: 470
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,18 +103,18 @@ TextureImporter:
       name: tete_villageois
       rect:
         serializedVersion: 2
-        x: 476
-        y: 485
-        width: 604
-        height: 542
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1669
+        y: 1678
+        width: 607
+        height: 549
+      alignment: 9
+      pivot: {x: 0.50558144, y: -0.006090619}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67cca51e2b92b5945bd494937639fdf1
+      spriteID: 95c36cfed08a4b042a3c40603a0a9208
       vertices: []
       indices: 
       edges: []
@@ -120,18 +123,18 @@ TextureImporter:
       name: bras_villageois_R
       rect:
         serializedVersion: 2
-        x: 13
-        y: 245
-        width: 74
-        height: 196
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1207
+        y: 1437
+        width: 73
+        height: 202
+      alignment: 9
+      pivot: {x: 0.49999833, y: 0.9367458}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0450075b0a9c84d8ec4fe0e848d6fc
+      spriteID: 260c178349e57b349902299afe574b0b
       vertices: []
       indices: 
       edges: []
@@ -140,18 +143,18 @@ TextureImporter:
       name: bras_villageois_L
       rect:
         serializedVersion: 2
-        x: 148
-        y: 241
-        width: 72
-        height: 201
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1342
+        y: 1435
+        width: 74
+        height: 204
+      alignment: 9
+      pivot: {x: 0.51947516, y: 0.92385024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca574a6136d5f4346aeb5da64dfddbfc
+      spriteID: 4ce80a67b6110b644b53305ed7a39a79
       vertices: []
       indices: 
       edges: []
@@ -160,18 +163,18 @@ TextureImporter:
       name: jambe_villageois_R
       rect:
         serializedVersion: 2
-        x: 324
-        y: 233
-        width: 112
-        height: 127
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1546
+        y: 1482
+        width: 119
+        height: 129
+      alignment: 9
+      pivot: {x: 0.46216333, y: 0.8374128}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67df82bf53f4751498e24fd4b268d76a
+      spriteID: efeb90711a81005498c2ee4f46f020e1
       vertices: []
       indices: 
       edges: []
@@ -180,18 +183,18 @@ TextureImporter:
       name: jambe_villageois_L
       rect:
         serializedVersion: 2
-        x: 505
-        y: 230
-        width: 112
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1714
+        y: 1484
+        width: 118
+        height: 132
+      alignment: 9
+      pivot: {x: 0.4618427, y: 0.8297443}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac138e761f39b4147aeefb5bf6d3a372
+      spriteID: 3926cac936bca2547ac88a890f402e9b
       vertices: []
       indices: 
       edges: []
@@ -200,18 +203,18 @@ TextureImporter:
       name: corps_villageois
       rect:
         serializedVersion: 2
-        x: 711
-        y: 0
-        width: 314
-        height: 392
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1904
+        y: 1196
+        width: 317
+        height: 393
+      alignment: 9
+      pivot: {x: 0.49257103, y: 0.5659133}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1199e946329684381c505ade0cef36
+      spriteID: a733569af2de22e44a181ce10164b06b
       vertices: []
       indices: 
       edges: []
@@ -220,10 +223,30 @@ TextureImporter:
       name: main_villageois_R
       rect:
         serializedVersion: 2
-        x: 0
-        y: 55
+        x: 1194
+        y: 1249
         width: 88
-        height: 171
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5327523, y: 0.9555173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac0af5e746c69c468331eca8113c4ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritevillageois mieux_13
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 1281
+        width: 5
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,7 +254,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d00141b954a30c54ab9f66d6e1242520
+      spriteID: 85ffb7e96691b434f8aa33789f12ea34
       vertices: []
       indices: 
       edges: []
@@ -240,58 +263,18 @@ TextureImporter:
       name: main_villageois_L
       rect:
         serializedVersion: 2
-        x: 129
-        y: 61
-        width: 88
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1323
+        y: 1254
+        width: 91
+        height: 177
+      alignment: 9
+      pivot: {x: 0.5475082, y: 0.97222245}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a3649c5ceeafd145b995dba447d99a9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pied_villageois_R
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 62
-        width: 177
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 083dac69a625ea441a75b1e8753ee2ac
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pied_villageois_L
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 63
-        width: 178
-        height: 163
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0634087fc63d0734b9bd54549f72ff2c
+      spriteID: f3281842a086fde43ad98810d4f58fc0
       vertices: []
       indices: 
       edges: []
@@ -300,10 +283,10 @@ TextureImporter:
       name: visage_villageois
       rect:
         serializedVersion: 2
-        x: 4
-        y: 554
-        width: 308
-        height: 283
+        x: 1203
+        y: 1751
+        width: 311
+        height: 281
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,7 +294,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1f42a2160f03a046b07bf53f57207aa
+      spriteID: eee37bf4851af33478a395fb2b764b56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_villageois_R
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 1237
+        width: 176
+        height: 221
+      alignment: 9
+      pivot: {x: 0.3635545, y: 0.79882205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37abe4579f1d42478be62eadcf6879a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pied_villageois_L
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1236
+        width: 174
+        height: 219
+      alignment: 9
+      pivot: {x: 0.36742952, y: 0.80094177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379c3b32a86ad774b92071ab55d10d22
       vertices: []
       indices: 
       edges: []
@@ -319,7 +342,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8af1a1db357a9994eb51b1324fb990b2
+    spriteID: 7b7d28f80f5a61445afba1d6f447cfd0
     vertices: []
     indices: 
     edges: []
