@@ -5,15 +5,31 @@ public class Interactable : MonoBehaviour
     [Header("Interactable")]
     public Vector2 offsetIcon;
 
+
+    private NPC npc;
+
     private void Awake()
     {
         // Set to layer mask "Interactable"
         gameObject.layer = 11;
+
+        npc = GetComponent<NPC>();
     }
 
     public virtual void Interact()
     {
-        // This method is meant to be overwritten
+        if(npc != null)
+        {
+            npc.canMove = false;
+        }
+    }
+
+    public virtual void EndOfInteraction()
+    {
+        if (npc != null)
+        {
+            npc.canMove = true;
+        }
     }
 
     private void OnDrawGizmos()

@@ -16,12 +16,27 @@ public class Seller : Interactable
     public GameObject slotsPanel;
     public TextMeshProUGUI TMP;
 
+
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     override public void Interact()
     {
         base.Interact();
-
+        
         sellerMenu.SetActive(true);
         RefreshUI();
+    }
+
+    override public void EndOfInteraction()
+    {
+        sellerMenu.SetActive(false);
+
+        base.EndOfInteraction();
     }
 
     public void SellItem()
@@ -34,6 +49,7 @@ public class Seller : Interactable
             MoneyManager.instance.AddMoney(-i.cost);
             currentMoney += i.cost;
             RefreshUI();
+            anim.SetTrigger("Give");
         }
     }
 
