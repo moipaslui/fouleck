@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4136986208728336}
   - component: {fileID: 212800764893669266}
   - component: {fileID: 114971346941597060}
+  - component: {fileID: 114604185027564146}
   - component: {fileID: 114554510216737100}
   - component: {fileID: 61555722573904654}
   m_Layer: 11
@@ -80,6 +81,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetIcon: {x: 0, y: 0}
+  questTrigger: {fileID: 0}
+  doInteractAlso: 0
+--- !u!114 &114604185027564146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683215840461406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1747b3b72e8f645b7f1edf239045ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   item: {fileID: 0}
 --- !u!114 &114971346941597060
 MonoBehaviour:

@@ -73,7 +73,7 @@ public class CraftMenu : MonoBehaviour
     public void CraftClick()
     {
         Craftable itemToCraft = FindObjectOfType<EventSystem>().currentSelectedGameObject.GetComponent<CraftSlot>().itemToCraft;
-        Inventory.instance.CraftItem(itemToCraft);
+        GameManager.inventory.CraftItem(itemToCraft);
         RefreshUI();
     }
 

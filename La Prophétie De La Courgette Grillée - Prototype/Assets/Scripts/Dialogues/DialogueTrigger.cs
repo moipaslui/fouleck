@@ -1,51 +1,24 @@
-﻿using UnityEngine;
-
-public class DialogueTrigger : Interactable
+﻿public class DialogueTrigger : Interactable
 {
     public Dialogue dialogue;
-    
-    public void TriggerDialogue()
-    {
-        DialogueManager DM = FindObjectOfType<DialogueManager>();
 
-        if(!DM.isDialoguing)
+    public override bool Interact()
+    {
+        if (!base.Interact())
+            return false;
+
+        if(GameManager.dialogueManager.ShowDialogue(dialogue))
         {
-            if(DM.StartDialogue(dialogue))
-            {
-                DM.isDialoguing = false;
-                NPC npc = GetComponent<NPC>();
-                if (npc != null)
-                {
-                    npc.canMove = true;
-                }
-            }
-            else
-            {
-                DM.isDialoguing = true;
-                NPC npc = GetComponent<NPC>();
-                if(npc != null)
-                {
-                    npc.canMove = false;
-                }
-            }
+            EndOfInteraction();
         }
-        else
-        {
-            if(DM.DisplayNextSentence())
-            {
-                DM.isDialoguing = false;
-                NPC npc = GetComponent<NPC>();
-                if (npc != null)
-                {
-                    npc.canMove = true;
-                }
-            }
-        }
+
+        return true;
     }
 
-    public override void Interact()
+    public override void EndOfInteraction()
     {
-        base.Interact();
-        TriggerDialogue();
+        base.EndOfInteraction();
+
+        GameManager.dialogueManager.EndDialogue();
     }
 }

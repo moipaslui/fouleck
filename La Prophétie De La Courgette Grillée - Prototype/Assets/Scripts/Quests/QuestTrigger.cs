@@ -1,18 +1,89 @@
-﻿public class QuestTrigger : Interactable
-{
-    public Quest quest;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-    private void TriggerQuest()
+public class QuestTrigger : Interactable
+{
+    [Header("Quest Trigger")]
+    public bool isInteractable;
+    public List<QuestTrigger> triggersToDesactive;
+    public List<QuestTrigger> triggersToActive;
+
+    private Interactable oldActive;
+
+    private void Start()
     {
-        if (!quest.isStarted)
-            quest.StartQuest();
-        else
-            quest.EndQuest();
+        if(!isInteractable && !IsInteractableLayer())
+            ChangeInteractable(false);
     }
-	
-	public override void Interact()
+
+    public override bool Interact()
     {
-        base.Interact();
-        TriggerQuest();
+        // Si l'objet est interactible, on déclenche le trigger
+        if (isInteractable)
+        {
+            if (!base.Interact())
+                return false;
+
+            Trigger();
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public override void ChangeActivation(bool newIsActive)
+    {
+        if (isInteractable)
+            base.ChangeActivation(newIsActive);
+        else
+        {
+            isActive = newIsActive;
+            this.enabled = newIsActive;
+        }
+    }
+    
+    public virtual void Trigger()
+    {
+        // On désactive les triggers à désactiver
+        foreach (QuestTrigger questTrigger in triggersToDesactive)
+        {
+            questTrigger.DesactiveTrigger();
+        }
+
+        // On active les triggers suivants
+        foreach (QuestTrigger questTrigger in triggersToActive)
+        {
+            questTrigger.ActiveTrigger();
+        }
+    }
+
+    public virtual void ActiveTrigger()
+    {
+        // On cherche l'interactable qui est activé
+        foreach (Interactable inter in GetComponents<Interactable>())
+        {
+            if (inter.isActive)
+            {
+                // On le desactive
+                inter.ChangeActivation(false);
+                oldActive = inter;
+            }
+        }
+        
+        // On active le trigger
+        ChangeActivation(true);
+    }
+
+    public virtual void DesactiveTrigger()
+    {
+        // On désactive le trigger
+        ChangeActivation(false);
+        
+        EndOfInteraction();
+
+        // On active celui qui l'était avant
+        if (oldActive != null)
+            oldActive.ChangeActivation(true);
     }
 }

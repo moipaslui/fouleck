@@ -26,13 +26,7 @@ public class EnemyHealthManager : MonoBehaviour
             StartCoroutine("Blink");
             if (health <= 0)
             {
-                Instantiate(effectOnDying, transform.position, transform.rotation);
-                if (itemToPop != null)
-                {
-                    GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
-                    clone.GetComponent<ItemPickup>().ChangeItem(itemToPop);
-                }
-                Destroy(gameObject);
+                Die();
             }
         }
     }
@@ -75,5 +69,16 @@ public class EnemyHealthManager : MonoBehaviour
         }
         isBlinking = false;
         GetComponent<EnnemiController>().canMove = true;
+    }
+
+    private void Die()
+    {
+        Instantiate(effectOnDying, transform.position, transform.rotation);
+        if (itemToPop != null)
+        {
+            GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
+            clone.GetComponent<ItemOnObject>().ChangeItem(itemToPop);
+        }
+        Destroy(gameObject);
     }
 }

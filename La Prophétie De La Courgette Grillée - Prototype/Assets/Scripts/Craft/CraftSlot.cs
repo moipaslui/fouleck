@@ -13,7 +13,7 @@ public class CraftSlot : MonoBehaviour
     {
         icon.sprite = itemToCraft.icon;
         button = GetComponent<Button>();
-        if (Inventory.instance.IsCraftable(itemToCraft))
+        if (GameManager.inventory.IsCraftable(itemToCraft))
         {
             if(cross)
             {

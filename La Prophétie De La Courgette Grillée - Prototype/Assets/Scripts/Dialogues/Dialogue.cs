@@ -1,5 +1,9 @@
-﻿[System.Serializable]
+﻿using UnityEngine;
+
+[System.Serializable]
 public class Dialogue
 {
-    public DialogueSentence[] sentences;
+    [TextArea(3, 10)]
+    public string[] sentences;
+    public string speaker;
 }

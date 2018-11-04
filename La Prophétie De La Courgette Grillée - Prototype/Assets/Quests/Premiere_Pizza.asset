@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1beda00664546145b84cc565bf9e45a, type: 3}
+  m_Name: Premiere_Pizza
+  m_EditorClassIdentifier: 
+  title: "Votre premi\xE8re pizza !"
+  description: "Allez acheter les ingr\xE9dients necessaires \xE0 votre premi\xE8re
+    pizza au vendeur gr\xE2ce \xE0 l'argent que Mauricio vous a donner."
+  itemsReward:
+  - {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
+  expReward: 2
+  moneyReward: 0

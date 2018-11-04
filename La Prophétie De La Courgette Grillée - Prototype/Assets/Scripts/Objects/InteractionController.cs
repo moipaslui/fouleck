@@ -11,6 +11,8 @@ public class InteractionController : MonoBehaviour
     private GameObject oldFocus;
     private GameObject tempFocus;
     
+    private bool isInteracting;
+    
     void Update()
     {
         // On regarde s'il y a des interactible autour du player
@@ -42,12 +44,26 @@ public class InteractionController : MonoBehaviour
             // On termine l'interaction de l'ancien focus
             if (oldFocus != null)
                 oldFocus.GetComponent<Interactable>().EndOfInteraction();
+
+            isInteracting = false;
         }
 
         // Interact
         if (Input.GetButtonDown("Interact") && focus != null)
         {
-            focus.GetComponent<Interactable>().Interact();
+            Interactable[] interactables = focus.GetComponents<Interactable>();
+            foreach(Interactable interactable in interactables)
+            {
+                if(interactable.isActive)
+                {
+                    interactable.Interact();
+                    isInteracting = true;
+                    break;
+                }
+            }
+
+            // Si jamais l'objet bouge est supprimé par exemple, on refresh le hint
+            interactionHint.RefreshFocus(focus);
         }
     }
 

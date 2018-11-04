@@ -19,7 +19,7 @@ public class SellSlot : MonoBehaviour
             icon.sprite = itemToBuy.icon;
             icon.color = new Color(1, 1, 1, 1);
             button = GetComponent<Button>();
-            if (MoneyManager.instance.IsBuyable(itemToBuy))
+            if (GameManager.moneyManager.IsBuyable(itemToBuy))
             {
                 if (cross)
                 {

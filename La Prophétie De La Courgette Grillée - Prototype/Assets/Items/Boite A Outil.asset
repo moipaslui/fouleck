@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Boite A Outil
   icon: {fileID: 21300000, guid: c7ab51c3e7f05f34eb74318c842b696b, type: 3}
-  description: "Une super boite \xE0 outil ! Avec \xE7 tu peux r\xE9parer plein de
+  description: "Une super boite \xE0 outil ! Avec \xE7a tu peux r\xE9parer plein de
     choses !"
   floorHeight: 0
   cost: 0

@@ -4,8 +4,7 @@ public class InteractionHint : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private Animator anim;
-
-    private bool isActive;
+    
     private GameObject focus;
 
 	void Start ()
@@ -13,7 +12,6 @@ public class InteractionHint : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         spriteRenderer.enabled = false;
-        isActive = false;
     }
 
     public void RefreshFocus(GameObject foc)
@@ -23,13 +21,9 @@ public class InteractionHint : MonoBehaviour
         {
             // Le hint n'est pas visible si rien n'est focus
             spriteRenderer.enabled = false;
-            isActive = false;
         }
         else
         {
-            // On refresh en boucle la position du hint
-            isActive = true;
-
             // On affiche le bon sprite
             if(focus.tag == "NPC")
             {
@@ -39,6 +33,11 @@ public class InteractionHint : MonoBehaviour
             {
                 anim.SetBool("NPC", false);
             }
+            
+            // On actualise sa position une première fois pour éviter le "clignotement" (bug)
+            transform.position = new Vector3(focus.transform.position.x + focus.GetComponent<Interactable>().offsetIcon.x,
+                                               focus.transform.position.y + focus.GetComponent<Interactable>().offsetIcon.y,
+                                               focus.transform.position.z - 0.002f);
 
             // On le rend visible
             spriteRenderer.enabled = true;
@@ -47,12 +46,19 @@ public class InteractionHint : MonoBehaviour
 
     private void Update()
     {
-        if(isActive)
+        if(spriteRenderer.enabled)
         {
-            // On actualise sa position
-            transform.position = new Vector3(focus.transform.position.x + focus.GetComponent<Interactable>().offsetIcon.x,
-                                               focus.transform.position.y + focus.GetComponent<Interactable>().offsetIcon.y,
-                                               focus.transform.position.z - 0.002f);
+            if (focus == null)
+            {
+                spriteRenderer.enabled = false;
+            }
+            else
+            {
+                // On actualise sa position
+                transform.position = new Vector3(focus.transform.position.x + focus.GetComponent<Interactable>().offsetIcon.x,
+                                                   focus.transform.position.y + focus.GetComponent<Interactable>().offsetIcon.y,
+                                                   focus.transform.position.z - 0.002f);
+            }
         }
     }
 }

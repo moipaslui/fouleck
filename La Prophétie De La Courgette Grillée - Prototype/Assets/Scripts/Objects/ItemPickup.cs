@@ -1,47 +1,19 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
 [RequireComponent(typeof(IsometricObject))]
+[RequireComponent(typeof(ItemOnObject))]
 public class ItemPickup : Interactable
-{
-    [Header("Item")]
-    public Item item;
-
-    /* --- EXECUTED IN EDITOR --- */
-
-    private void Update()
+{    
+    public override bool Interact()
     {
-        if (item != null && !Application.isPlaying)
-        {
-            Refresh();
-        }
-    }
+        if (!base.Interact())
+            return false;
 
-    /* -------------------------- */
-
-    public override void Interact()
-    {
-        base.Interact();
-
-        bool wasPickedUp = Inventory.instance.Add(item);
+        bool wasPickedUp = GameManager.inventory.Add(GetComponent<ItemOnObject>().item);
 
         if (wasPickedUp)
             Destroy(gameObject);
-    }
 
-    public void ChangeItem(Item item)
-    {
-        this.item = item;
-        Refresh();
-    }
-
-    private void Refresh()
-    {
-        GetComponent<SpriteRenderer>().sprite = item.icon;
-        offsetIcon = item.offsetIcon;
-        IsometricObject iso = GetComponent<IsometricObject>();
-        iso.RefreshSprite();
-        iso.floorHeight = item.floorHeight;
-        iso.PlaceInZ();
+        return true;
     }
 }

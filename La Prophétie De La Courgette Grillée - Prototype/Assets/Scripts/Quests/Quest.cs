@@ -2,21 +2,28 @@
 
 public class Quest : MonoBehaviour
 {
-    public bool isStarted;
+    public QuestData questData;
 
-    public virtual void StartQuest()
+    public void StartQuest()
     {
-        isStarted = true;
-        // Add quest to questList
+        GameManager.questManager.activeQuests.Add(this);
+
+
+        /// UI
     }
 
-    public virtual void RefreshQuest()
+    public void EndQuest()
     {
-        // Refresh datas
-    }
+        GameManager.questManager.activeQuests.Remove(this);
 
-    public virtual void EndQuest()
-    {
-        // Remove quest from questList
+        // Rewards
+        foreach (Item item in questData.itemsReward)
+            GameManager.inventory.Add(item);
+
+        GameManager.moneyManager.AddMoney(questData.moneyReward);
+        /// add exp
+
+
+        /// UI
     }
 }

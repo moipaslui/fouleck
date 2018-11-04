@@ -146,4 +146,11 @@ public class PlayerHealthManager : MonoBehaviour
         isBlinking = false;
         GetComponent<PlayerControllerIsometric>().canMove = true;
     }
+
+
+    public void MangeRepas(Repas repas)
+    {
+        HealPlayer(repas.heal);
+        /// Ajouter les "resistances"
+    }
 }

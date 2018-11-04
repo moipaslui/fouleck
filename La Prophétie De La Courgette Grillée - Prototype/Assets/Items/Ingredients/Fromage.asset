@@ -16,6 +16,6 @@ MonoBehaviour:
   description: "Aaah, du bon fromage. Un ingredient indispensable \xE0 toute bonne
     pizza de Fouleck qui se respecte !"
   floorHeight: 0.14
-  cost: 3
+  cost: 1
   offsetIcon: {x: 0.25, y: 0.14}
   quality: 3

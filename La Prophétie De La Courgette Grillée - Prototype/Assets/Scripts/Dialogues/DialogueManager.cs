@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -8,49 +7,57 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
-    private Queue<DialogueSentence> sentences;
+    private int count;
+
+    private Dialogue currentDialogue;
 
     [HideInInspector]
     public bool isDialoguing;
 
-    void Start()
+    public bool ShowDialogue(Dialogue dialogue)
     {
-        sentences = new Queue<DialogueSentence>();
-    }
-
-    public bool StartDialogue(Dialogue dialogue)
-    {
-        dialoguePanel.SetActive(true);
-        isDialoguing = true;
-
-        sentences.Clear();
-        foreach(DialogueSentence sentence in dialogue.sentences)
+        if (!isDialoguing || currentDialogue != dialogue)
         {
-            sentences.Enqueue(sentence);
-        }
+            // On change la variable de dialogue
+            currentDialogue = dialogue;
 
+            // On affiche le nom de la personne qui parle
+            nameText.text = dialogue.speaker;
+
+            // On remet le compteur de phrase à 0
+            count = 0;
+
+            // On affiche le panel
+            dialoguePanel.SetActive(true);
+
+            // Cette variable montre qu'un dialogue est activé
+            isDialoguing = true;
+        }
+        
+        // On affiche la prochaine phrase
         return DisplayNextSentence();
     }
 
-    public bool DisplayNextSentence()
+    private bool DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        // Si c'était la dernière phrase, on arrête tout
+        if(count >= currentDialogue.sentences.Length)
         {
             EndDialogue();
             return true;
         }
-
-        DialogueSentence sentence = sentences.Dequeue();
-        nameText.text = sentence.speaker;
-        dialogueText.text = sentence.text;
+        
+        // Sinon on affiche la prochaine
+        dialogueText.text = currentDialogue.sentences[count++];
         return false;
     }
 
     public void EndDialogue()
     {
-        sentences.Clear();
+        // On affiche plus le panel
         dialoguePanel.SetActive(false);
+
+        // On est plus entrain de dialoguer
         isDialoguing = false;
-        Debug.Log("End of conversation");
     }
 }

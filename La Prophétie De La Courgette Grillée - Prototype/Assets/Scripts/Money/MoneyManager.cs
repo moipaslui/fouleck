@@ -3,23 +3,6 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    #region Singleton
-
-    public static MoneyManager instance;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of money manager found !");
-            return;
-        }
-
-        instance = this;
-    }
-
-    #endregion
-
     public int currentMoney;
 
     public TextMeshProUGUI moneyTextUI;

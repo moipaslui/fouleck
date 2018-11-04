@@ -1,36 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour
 {
-    #region Singleton
-
-    public static Inventory instance;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of inventory found !");
-            return;
-        }
-
-        instance = this;
-    }
-
-    #endregion
-
     public GameObject itemPrefab;
 
     public int space = 5;
     public int spacePerSlot = 10;
     public List<Item> items = new List<Item>();
     public List<int> countItems = new List<int>();
-
-    public GameObject itemGameobject;
-
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallback;
 
     public bool Add(Item item)
     {
@@ -42,9 +21,6 @@ public class Inventory : MonoBehaviour
                 {
                     countItems[i] += 1;
 
-                    if (onItemChangedCallback != null)
-                        onItemChangedCallback.Invoke();
-
                     return true;
                 }
             }
@@ -55,8 +31,7 @@ public class Inventory : MonoBehaviour
             items.Add(item);
             countItems.Add(1);
 
-            if (onItemChangedCallback != null)
-                onItemChangedCallback.Invoke();
+            UpdateUI();
 
             return true;
         }
@@ -93,15 +68,28 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if (onItemChangedCallback != null)
-            onItemChangedCallback.Invoke();
+        UpdateUI();
 
         if (instanciate)
         {
-            GameObject clone = Instantiate(itemGameobject, FindObjectOfType<PlayerControllerIsometric>().transform.position, FindObjectOfType<PlayerControllerIsometric>().transform.rotation);
-            clone.GetComponent<ItemPickup>().ChangeItem(item);
+            GameObject clone = Instantiate(itemPrefab, FindObjectOfType<PlayerControllerIsometric>().transform.position, FindObjectOfType<PlayerControllerIsometric>().transform.rotation);
+            clone.GetComponent<ItemOnObject>().ChangeItem(item);
         }
     }
+    
+    public void ClickOnItem()
+    {
+        Item selectedItem = FindObjectOfType<EventSystem>().currentSelectedGameObject.GetComponent<InventorySlot>().item;
+
+        if(selectedItem.GetType() == typeof(Repas))
+        {
+            FindObjectOfType<PlayerHealthManager>().MangeRepas((Repas)selectedItem);
+        }
+
+        Remove(selectedItem, true);
+    }
+
+    #region Craft
 
     public bool IsCraftable(Craftable itemToCraft)
     {
@@ -127,4 +115,34 @@ public class Inventory : MonoBehaviour
             Add(itemToCraft);
         }
     }
+
+    #endregion
+
+    #region UI
+
+    [Header("UI")]
+    public Transform slotsPanel;
+    private InventorySlot[] slots;
+
+    void Start()
+    {
+        slots = slotsPanel.GetComponentsInChildren<InventorySlot>();
+    }
+
+    public void UpdateUI()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i < items.Count)
+            {
+                slots[i].AddItem(items[i], countItems[i]);
+            }
+            else
+            {
+                slots[i].ClearSlot();
+            }
+        }
+    }
+
+    #endregion
 }

@@ -10,12 +10,16 @@ public class Seller : Interactable
     public List<Item> itemsToSell;
     public int currentMoney;
 
+    [Header("Dialogue Before Selling")]
+    public Dialogue dialogue;
+
     [Header("UI")]
     
     public GameObject sellerMenu;
     public GameObject slotsPanel;
     public TextMeshProUGUI TMP;
 
+    private bool isMenuOpen;
 
     private Animator anim;
 
@@ -24,16 +28,34 @@ public class Seller : Interactable
         anim = GetComponent<Animator>();
     }
 
-    override public void Interact()
+    override public bool Interact()
     {
-        base.Interact();
-        
-        sellerMenu.SetActive(true);
-        RefreshUI();
+        if (!isMenuOpen)
+        {
+            if (!base.Interact())
+                return false;
+
+            if (GameManager.dialogueManager.ShowDialogue(dialogue))
+            {
+                Time.timeScale = 0;
+                sellerMenu.SetActive(true);
+                isMenuOpen = true;
+                RefreshUI();
+            }
+        }
+        else
+        {
+            Time.timeScale = 1;
+            EndOfInteraction();
+            isMenuOpen = false;
+        }
+
+        return true;
     }
 
     override public void EndOfInteraction()
     {
+        GameManager.dialogueManager.EndDialogue();
         sellerMenu.SetActive(false);
 
         base.EndOfInteraction();
@@ -42,11 +64,11 @@ public class Seller : Interactable
     public void SellItem()
     {
         Item i = FindObjectOfType<EventSystem>().currentSelectedGameObject.GetComponent<SellSlot>().itemToBuy;
-        if(Inventory.instance.items.Count < 5 && MoneyManager.instance.currentMoney >= i.cost)
+        if(GameManager.inventory.items.Count < 5 && GameManager.moneyManager.currentMoney >= i.cost)
         {
             itemsToSell.Remove(i);
-            Inventory.instance.Add(i);
-            MoneyManager.instance.AddMoney(-i.cost);
+            GameManager.inventory.Add(i);
+            GameManager.moneyManager.AddMoney(-i.cost);
             currentMoney += i.cost;
             RefreshUI();
             anim.SetTrigger("Give");
