@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
 public class WeaponOnPlayer : MonoBehaviour
 {
     public Weapon arme;
@@ -15,28 +14,6 @@ public class WeaponOnPlayer : MonoBehaviour
     public bool isMakingNewCollider;
 
     private Vector2[] handPoints;
-
-    public void Update()
-    {
-        if(!Application.isPlaying)
-        {
-            if(isMakingNewCollider)
-            {
-                if(arme != null)
-                {
-                     arme.colliderPoints = polygonCollider.points;
-                }
-                else
-                {
-                    handPoints = polygonCollider.points;
-                }
-            }
-            else
-            {
-                ChangeWeapon(arme);
-            }
-        }
-    }
 
     public void ChangeWeapon(Weapon arme)
     {
