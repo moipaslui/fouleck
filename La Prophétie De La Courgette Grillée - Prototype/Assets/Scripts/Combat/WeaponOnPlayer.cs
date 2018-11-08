@@ -11,8 +11,6 @@ public class WeaponOnPlayer : MonoBehaviour
 
     public PolygonCollider2D polygonCollider;
 
-    public bool isMakingNewCollider;
-
     private Vector2[] handPoints;
 
     public void ChangeWeapon(Weapon arme)
