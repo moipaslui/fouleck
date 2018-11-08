@@ -3,6 +3,8 @@
 public class Quest : MonoBehaviour
 {
     public QuestData questData;
+    public QuestTrigger startQuestTrigger;
+    public QuestTrigger endQuestTrigger;
 
     public void StartQuest()
     {
