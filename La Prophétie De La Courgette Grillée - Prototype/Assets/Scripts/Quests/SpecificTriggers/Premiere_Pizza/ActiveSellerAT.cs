@@ -4,6 +4,7 @@ public class ActiveSellerAT : ActionTrigger
 {
     public Seller seller;
     public List<Item> itemsToAdd;
+    public int money;
 
     public override void Trigger()
     {
@@ -13,6 +14,8 @@ public class ActiveSellerAT : ActionTrigger
         {
             seller.itemsToSell.Add(item);
         }
+
+        seller.currentMoney = money;
 
         base.Trigger();
     }

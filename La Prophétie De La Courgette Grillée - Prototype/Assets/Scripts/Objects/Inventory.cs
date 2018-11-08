@@ -11,6 +11,10 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
     public List<int> countItems = new List<int>();
 
+    [Header("Others")]
+    public WeaponOnPlayer weaponOnPlayer;
+    public GameObject sellerMenu;
+
     public bool Add(Item item)
     {
         for(int i = 0; i < items.Count; i++)
@@ -81,12 +85,24 @@ public class Inventory : MonoBehaviour
     {
         Item selectedItem = FindObjectOfType<EventSystem>().currentSelectedGameObject.GetComponent<InventorySlot>().item;
 
-        if(selectedItem.GetType() == typeof(Repas))
+        if (sellerMenu.activeSelf)
+        {
+            Seller.currentSeller.BuyItem(selectedItem);
+        }
+        else if(selectedItem.GetType() == typeof(Repas))
         {
             FindObjectOfType<PlayerHealthManager>().MangeRepas((Repas)selectedItem);
+            Remove(selectedItem, false);
         }
-
-        Remove(selectedItem, true);
+        else if(selectedItem.GetType() == typeof(Weapon))
+        {
+            weaponOnPlayer.ChangeWeapon((Weapon)selectedItem);
+            Remove(selectedItem, false);
+        }
+        else
+        {
+            Remove(selectedItem, true);
+        }
     }
 
     #region Craft

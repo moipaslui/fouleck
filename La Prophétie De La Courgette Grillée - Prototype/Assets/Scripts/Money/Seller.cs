@@ -7,8 +7,12 @@ public class Seller : Interactable
 {
     [Header("Seller")]
 
+    [HideInInspector]
+    public static Seller currentSeller;
     public List<Item> itemsToSell;
-    public int currentMoney;
+    public float currentMoney;
+    [Range(0, 1)]
+    public float buyMargin = 0.9f;
 
     [Header("Dialogue Before Selling")]
     public Dialogue dialogue;
@@ -39,15 +43,14 @@ public class Seller : Interactable
             {
                 Time.timeScale = 0;
                 sellerMenu.SetActive(true);
+                currentSeller = this;
                 isMenuOpen = true;
                 RefreshUI();
             }
         }
         else
         {
-            Time.timeScale = 1;
             EndOfInteraction();
-            isMenuOpen = false;
         }
 
         return true;
@@ -55,8 +58,11 @@ public class Seller : Interactable
 
     override public void EndOfInteraction()
     {
+        Time.timeScale = 1;
         GameManager.dialogueManager.EndDialogue();
         sellerMenu.SetActive(false);
+        currentSeller = null;
+        isMenuOpen = false;
 
         base.EndOfInteraction();
     }
@@ -75,21 +81,23 @@ public class Seller : Interactable
         }
     }
 
-    /*public bool BuyItem(Item item)
+    public bool BuyItem(Item item)
     {
-        if (!Inventory.instance.items.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost)
+        if (!GameManager.inventory.items.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost * buyMargin)
         {
             return false;
         }
         else
         {
             itemsToSell.Add(item);
-            Inventory.instance.Remove(item, false);
-            MoneyManager.instance.currentMoney += item.cost;
-            currentMoney -= item.cost;
+            GameManager.inventory.Remove(item, false);
+            GameManager.moneyManager.AddMoney(item.cost * buyMargin);
+            currentMoney -= item.cost * buyMargin;
+            RefreshUI();
+            anim.SetTrigger("Give");
             return true;
         }
-    }*/
+    }
 
     private void RefreshUI()
     {

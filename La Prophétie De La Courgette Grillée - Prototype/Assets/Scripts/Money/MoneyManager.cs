@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    public int currentMoney;
+    public float currentMoney;
 
     public TextMeshProUGUI moneyTextUI;
 
@@ -12,7 +12,7 @@ public class MoneyManager : MonoBehaviour
         UpdateUI();
     }
 
-    public void AddMoney(int dif)
+    public void AddMoney(float dif)
     {
         currentMoney += dif;
         if (currentMoney < 0)

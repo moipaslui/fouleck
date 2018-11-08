@@ -15,7 +15,17 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: b3adc321641d1444d977e5695bef9b6e, type: 3}
   description: Cette roulette a pizza tranche aussi bien les pizzas que ... les veines
     de vos ennemies, faites-en donc bon usage !
-  floorHeight: 0.26
+  floorHeight: 0.132
   cost: 10
   offsetIcon: {x: 0.31, y: -0.07}
-  damage: 0
+  damage: 5
+  colliderPoints:
+  - {x: 1.4254794, y: 0.887171}
+  - {x: 1.4801149, y: 0.8088292}
+  - {x: 1.6968428, y: 0.91652715}
+  - {x: 1.8644657, y: 0.8084069}
+  - {x: 1.808802, y: 0.5994032}
+  - {x: 1.5999639, y: 0.5294543}
+  - {x: 1.5891039, y: 0.42451164}
+  - {x: 0.04674964, y: -0.24709126}
+  - {x: -0.146662, y: 0.17095296}

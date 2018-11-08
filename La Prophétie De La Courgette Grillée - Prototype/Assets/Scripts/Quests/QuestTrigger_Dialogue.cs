@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class QuestTrigger_Dialogue : QuestTrigger
+﻿public class QuestTrigger_Dialogue : QuestTrigger
 {
     public Dialogue dialogue;
 

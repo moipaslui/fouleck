@@ -8,7 +8,7 @@ public class Item : ScriptableObject
     public Sprite icon;
     [TextArea] public string description;
     public float floorHeight = 0f;
-    public int cost;
+    public float cost;
 
     [Header("Interactable")]
     public Vector2 offsetIcon;

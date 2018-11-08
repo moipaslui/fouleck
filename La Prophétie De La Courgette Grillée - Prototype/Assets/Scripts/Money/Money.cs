@@ -2,7 +2,7 @@
 
 public class Money : MonoBehaviour
 {
-    public int amount;
+    public float amount;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
