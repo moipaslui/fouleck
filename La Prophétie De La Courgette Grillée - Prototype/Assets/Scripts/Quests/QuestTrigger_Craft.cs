@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class QuestTrigger_Craft : QuestTrigger
 {
-    public Item[] itemsToCraft;
+    public List<Item> itemsToCraft;
 
     private void Update()
     {

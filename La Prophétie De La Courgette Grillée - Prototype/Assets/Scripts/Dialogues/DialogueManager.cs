@@ -41,7 +41,7 @@ public class DialogueManager : MonoBehaviour
     private bool DisplayNextSentence()
     {
         // Si c'était la dernière phrase, on arrête tout
-        if(count >= currentDialogue.sentences.Length)
+        if(count >= currentDialogue.sentences.Count)
         {
             EndDialogue();
             return true;

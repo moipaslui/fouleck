@@ -11,8 +11,6 @@ public class InteractionController : MonoBehaviour
     private GameObject oldFocus;
     private GameObject tempFocus;
     
-    private bool isInteracting;
-    
     void Update()
     {
         // On regarde s'il y a des interactible autour du player
@@ -44,8 +42,6 @@ public class InteractionController : MonoBehaviour
             // On termine l'interaction de l'ancien focus
             if (oldFocus != null)
                 oldFocus.GetComponent<Interactable>().EndOfInteraction();
-
-            isInteracting = false;
         }
 
         // Interact
@@ -57,7 +53,6 @@ public class InteractionController : MonoBehaviour
                 if(interactable.isActive)
                 {
                     interactable.Interact();
-                    isInteracting = true;
                     break;
                 }
             }

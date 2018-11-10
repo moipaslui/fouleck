@@ -1,4 +1,6 @@
-﻿public class DialogueTrigger : Interactable
+﻿using System;
+
+public class DialogueTrigger : Interactable
 {
     public Dialogue dialogue;
 
