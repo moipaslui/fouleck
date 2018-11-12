@@ -3,15 +3,26 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
+public enum TRIGGER_TYPES
+{
+    BUY = 0,
+    CRAFT = 1,
+    DIALOGUE = 2,
+    ITEM_PICKUP = 3,
+    ZONE = 4
+}
+
 public class QuestEditor : EditorWindow
 {
     public Quest selectedQuest;
-    List<Node> nodes;
-    List<Connector> connectors;
+    static List<Node> nodes;
+    static List<Connector> connectors;
 
     [MenuItem("Window/Quest Editor")]
     public static void ShowWindow()
     {
+        nodes = new List<Node>();
+        connectors = new List<Connector>();
         GetWindow<QuestEditor>();
     }
 
@@ -39,10 +50,20 @@ public class QuestEditor : EditorWindow
     {
         BeginWindows();
 
+        for(int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].rect = GUILayout.Window(nodes[i].id, nodes[i].rect, DisplayNode, nodes[i].title);
+        }
 
         EndWindows();
 
         DisplayToolbars();
+    }
+
+    private void DisplayNode(int id)
+    {
+        GUI.DragWindow();
+        GUILayout.Label(Node.NodeAtID(nodes, id).trigger.gameObject.name);
     }
 
     private void DisplayToolbars()
@@ -54,7 +75,7 @@ public class QuestEditor : EditorWindow
 
         if(GUILayout.Button(" + ", EditorStyles.toolbarButton))
         {
-            // When click Add
+            PopupWindow.Show(new Rect(0, 15, 100, 0), new Popup());
         }
 
         if(GUILayout.Button(" - ", EditorStyles.toolbarButton))
@@ -74,7 +95,33 @@ public class QuestEditor : EditorWindow
     }
 
 
+    public static void CreateNode(GameObject gameObject, TRIGGER_TYPES triggerType)
+    {
+        nodes.Add(new Node(gameObject, translateType(triggerType)));
+    }
 
+    private static System.Type translateType(TRIGGER_TYPES type)
+    {
+        switch(type)
+        {
+            case TRIGGER_TYPES.BUY:
+                return typeof(QuestTrigger_Buy);
+
+            case TRIGGER_TYPES.CRAFT:
+                return typeof(QuestTrigger_Craft);
+
+            case TRIGGER_TYPES.ITEM_PICKUP:
+                return typeof(QuestTrigger_ItemPickup);
+
+            case TRIGGER_TYPES.DIALOGUE:
+                return typeof(QuestTrigger_Dialogue);
+
+            case TRIGGER_TYPES.ZONE:
+                return typeof(QuestTrigger_Zone);
+        }
+
+        return null;
+    }
 
 
     void DisplayQuests()

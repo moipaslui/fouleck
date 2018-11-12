@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class Node : MonoBehaviour
+public class Node
 {
     public QuestTrigger trigger;
     public string title = "";
