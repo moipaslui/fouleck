@@ -6,6 +6,83 @@ using System.Collections.Generic;
 public class QuestEditor : EditorWindow
 {
     public Quest selectedQuest;
+    List<Node> nodes;
+    List<Connector> connectors;
+
+    [MenuItem("Window/Quest Editor")]
+    public static void ShowWindow()
+    {
+        GetWindow<QuestEditor>();
+    }
+
+    public void OnGUI()
+    {
+        if (selectedQuest != null)
+        {
+            DisplayQuestEditor();
+        }
+        else
+        {
+            DisplayQuests();
+        }
+    }
+
+    void DisplayQuestEditor()
+    {
+
+
+
+        ShowEverything();
+    }
+
+    private void ShowEverything()
+    {
+        BeginWindows();
+
+
+        EndWindows();
+
+        DisplayToolbars();
+    }
+
+    private void DisplayToolbars()
+    {
+        GUILayout.BeginHorizontal(EditorStyles.toolbar);
+
+
+        GUILayout.Label("Quête : " + selectedQuest.questData.title);
+
+        if(GUILayout.Button(" + ", EditorStyles.toolbarButton))
+        {
+            // When click Add
+        }
+
+        if(GUILayout.Button(" - ", EditorStyles.toolbarButton))
+        {
+            // When click Remove
+        }
+
+        GUILayout.FlexibleSpace();
+
+        if(GUILayout.Button("Revenir aux quêtes", EditorStyles.toolbarButton))
+        {
+            selectedQuest = null;
+        }
+
+
+        GUILayout.EndHorizontal();
+    }
+
+
+
+
+
+    void DisplayQuests()
+    {
+        selectedQuest = (Quest)EditorGUILayout.ObjectField("Quest", selectedQuest, typeof(Quest), true);
+    }
+
+    /*public Quest selectedQuest;
 
     private Rect triggerEditorRect = new Rect(100, 100, 250, 250);
 
@@ -49,7 +126,7 @@ public class QuestEditor : EditorWindow
         // Display nodes
         foreach(Node node in nodes)
         {
-            node.Paint();
+            //node.Paint();
         }
 
         // Display trigger editor
@@ -61,7 +138,7 @@ public class QuestEditor : EditorWindow
         EndWindows();
 
         DisplayToolbars();
-        
+
         // Temporary
         if(selectedNode != null)
             selectedNode.trigger = (QuestTrigger)EditorGUILayout.ObjectField("Quest Trigger", selectedNode.trigger, typeof(QuestTrigger), true);
@@ -231,5 +308,5 @@ public class QuestEditor : EditorWindow
 
     #endregion
 
-    #endregion
+    #endregion*/
 }

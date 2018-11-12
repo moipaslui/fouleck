@@ -6,6 +6,33 @@ using UnityEditor;
 public class Node : MonoBehaviour
 {
     public QuestTrigger trigger;
+    public string title = "";
+    public int id;
+    public Rect rect;
+    public bool desactiveSelf;
+    private static int lastId = 2;
+
+
+    public Node(GameObject gameObject, System.Type type)
+    {
+        trigger = (QuestTrigger)gameObject.AddComponent(type);
+        id = lastId++;
+        rect = new Rect(100, 100, 150, 100);
+    }
+
+
+    public static Node NodeAtID(List<Node> nodes, int id)
+    {
+        foreach(Node node in nodes)
+        {
+            if(node.id == id)
+                return node;
+        }
+        return null;
+    }
+
+
+    /*public QuestTrigger trigger;
     string title = "";
     private Rect rect;
     private static int lastId = 2;
@@ -16,6 +43,11 @@ public class Node : MonoBehaviour
         QuestTrigger temp = quest.gameObject.AddComponent<QuestTrigger>();
 
         rect = new Rect(100, 100, 150, 100);
+    }
+
+    public Node()
+    {
+
     }
 
     private void HandleEvent(Event e)
@@ -74,5 +106,5 @@ public class Node : MonoBehaviour
             title = "Craft";
         else
             title = "Trigger";
-    }
+    }*/
 }
