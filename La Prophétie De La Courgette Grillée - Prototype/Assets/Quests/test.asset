@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1beda00664546145b84cc565bf9e45a, type: 3}
   m_Name: test
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  itemsReward: []
-  expReward: 0
-  moneyReward: 0
+  title: Test
+  description: "Voici une qu\xEAte de test.\nCette description a plusieurs ligne."
+  itemsReward:
+  - {fileID: 11400000, guid: 0db2cf23ab68a0b479714e797f46fa3e, type: 2}
+  expReward: 50
+  moneyReward: 5

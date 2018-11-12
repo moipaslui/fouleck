@@ -5545,7 +5545,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87695253}
-  m_LocalRotation: {x: -0.0026222123, y: -0.9999966, z: 0.000000030915725, w: 0.0000004012596}
+  m_LocalRotation: {x: -0.0024350542, y: -0.9999971, z: 0.000000030840628, w: 0.00000040126537}
   m_LocalPosition: {x: -0.14, y: -0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16778,12 +16778,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320450613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c9a34fed276a84799f932329f0dae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   offsetIcon: {x: 0, y: 1.65}
   itemsToSell: []
   currentMoney: 0
@@ -16810,8 +16810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: -0.68
   isStatic: 0
-  spriteLowerBound: 0.46120313
-  spriteHalfWidth: 0.37258208
+  spriteLowerBound: 0.41934368
+  spriteHalfWidth: 0.33879557
 --- !u!4 &320450620
 Transform:
   m_ObjectHideFlags: 0
@@ -28321,7 +28321,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616733535}
-  m_LocalRotation: {x: 0.00000034439736, y: 0.0000037993136, z: 0.09979098, w: 0.9950084}
+  m_LocalRotation: {x: 0.00000034447658, y: 0.0000037993068, z: 0.099811725, w: 0.9950064}
   m_LocalPosition: {x: 0.000000052619725, y: 0.12434072, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
@@ -72510,7 +72510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: 5acba7e200e8ee24b91adb53ba2b3514, type: 2}
-  startQuestTrigger: {fileID: 0}
+  startQuestTrigger: {fileID: 1323281098}
   endQuestTrigger: {fileID: 1323281096}
 --- !u!1 &1594645441
 GameObject:
@@ -78382,7 +78382,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693450000}
-  m_LocalRotation: {x: -0.000000110076726, y: 0.000000336803, z: 0.24817212, w: -0.96871597}
+  m_LocalRotation: {x: -0.00000010996086, y: 0.00000033684088, z: 0.24783885, w: -0.9688013}
   m_LocalPosition: {x: 0.000000052154064, y: 0.27587762, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
   m_Children:
@@ -82798,8 +82798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorHeight: -0.135
   isStatic: 0
-  spriteLowerBound: 0.6091355
-  spriteHalfWidth: 0.64333266
+  spriteLowerBound: 0.6091384
+  spriteHalfWidth: 0.64333546
 --- !u!114 &1794243706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82836,7 +82836,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1794243700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.14, y: 5.1, z: 2.5148594}
+  m_LocalPosition: {x: 9.14, y: 5.1, z: 2.5148578}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1674455436}
@@ -97987,7 +97987,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133069150}
-  m_LocalRotation: {x: 0.10781738, y: -0.9941707, z: 0.0000002863509, w: -0.0000037620423}
+  m_LocalRotation: {x: 0.107801266, y: -0.99417245, z: 0.00000028629074, w: -0.0000037620466}
   m_LocalPosition: {x: 0.098, y: 0.588, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
