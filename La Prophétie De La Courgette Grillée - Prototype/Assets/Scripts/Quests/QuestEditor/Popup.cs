@@ -11,6 +11,7 @@ public class Popup : PopupWindowContent
     }
     public override void OnGUI(Rect rect)
     {
+        gameObject = Selection.activeGameObject;
         GUILayout.Label("Créer un noeud (trigger) :", EditorStyles.boldLabel);
 		gameObject = (GameObject)EditorGUILayout.ObjectField("GameObject", gameObject, typeof(GameObject), true);
 		triggerType = (TRIGGER_TYPES)EditorGUILayout.EnumPopup("Type du trigger :", triggerType);
