@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class QuestTrigger_Craft : QuestTrigger
 {
-    public List<Item> itemsToCraft;
+    public List<Item> itemsToCraft = new List<Item>();
 
     private void Update()
     {

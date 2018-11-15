@@ -1,6 +1,6 @@
 ﻿public class QuestTrigger_Dialogue : QuestTrigger
 {
-    public Dialogue dialogue;
+    public Dialogue dialogue = new Dialogue();
 
     override public void Trigger()
     {

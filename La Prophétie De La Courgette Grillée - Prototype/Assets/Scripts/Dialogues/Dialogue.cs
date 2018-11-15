@@ -5,6 +5,6 @@ using UnityEngine;
 public class Dialogue
 {
     [TextArea(3, 10)]
-    public List<string> sentences;
+    public List<string> sentences = new List<string>();
     public string speaker;
 }

@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public class QuestTrigger_Zone : QuestTrigger
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ça marche !");
         base.Trigger();
     }
 }
