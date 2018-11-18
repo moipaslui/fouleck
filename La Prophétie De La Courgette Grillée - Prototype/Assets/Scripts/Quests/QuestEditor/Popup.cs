@@ -16,8 +16,8 @@ public class Popup : PopupWindowContent
 		gameObject = (GameObject)EditorGUILayout.ObjectField("GameObject", gameObject, typeof(GameObject), true);
 		triggerType = (TRIGGER_TYPES)EditorGUILayout.EnumPopup("Type du trigger :", triggerType);
 		if(GUILayout.Button("Créer le trigger") && gameObject != null)
-		{
-			QuestEditor.CreateNode(gameObject, triggerType);
-		}
+        {
+            new Node(gameObject, QuestEditor.TranslateType(triggerType));
+        }
     }
 }

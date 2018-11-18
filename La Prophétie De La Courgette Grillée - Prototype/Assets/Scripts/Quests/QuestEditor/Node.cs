@@ -18,7 +18,9 @@ public class Node
         trigger = questTrigger;
         ChangeTitle(questTrigger.GetType());
         id = lastId++;
-        rect = new Rect(100, 100, 150, 100);
+        rect = new Rect(100, 100, 120, 50);
+        QuestEditor.nodes.Add(this);
+        QuestEditor.selectedNode = id;
     }
 
     public Node(GameObject gameObject, System.Type type)
@@ -26,18 +28,10 @@ public class Node
         trigger = (QuestTrigger)gameObject.AddComponent(type);
         ChangeTitle(trigger.GetType());
         id = lastId++;
-        rect = new Rect(100, 100, 150, 60);
-    }
-
-
-    public static Node NodeAtID(List<Node> nodes, int id)
-    {
-        foreach(Node node in nodes)
-        {
-            if(node.id == id)
-                return node;
-        }
-        return null;
+        rect = new Rect(100, 100, 120, 50);
+        QuestEditor.nodes.Add(this);
+        QuestEditor.selectedQuest.questTriggers.Add(trigger);
+        QuestEditor.selectedNode = id;
     }
     
     public void DisplayNode(int id)
@@ -52,29 +46,45 @@ public class Node
 
     public void ChangeScript(System.Type type)
     {
-        QuestTrigger temp = (QuestTrigger)trigger.gameObject.AddComponent(type);
-        Object.DestroyImmediate(trigger);
-        trigger = temp;
-        ChangeTitle(type);
+        if (type != QuestEditor.TranslateType(TRIGGER_TYPES.START) && type != QuestEditor.TranslateType(TRIGGER_TYPES.END) &&
+            trigger.GetType() != QuestEditor.TranslateType(TRIGGER_TYPES.START) && trigger.GetType() != QuestEditor.TranslateType(TRIGGER_TYPES.END))
+        {
+            QuestEditor.selectedQuest.questTriggers.Remove(trigger);
+            QuestTrigger temp = (QuestTrigger)trigger.gameObject.AddComponent(type);
+            Object.DestroyImmediate(trigger);
+            trigger = temp;
+            ChangeTitle(type);
+            QuestEditor.selectedQuest.questTriggers.Add(trigger);
+        }
     }
 
     public void ChangeGameObject(GameObject gameObject)
     {
+        QuestEditor.selectedQuest.questTriggers.Remove(trigger);
         QuestTrigger temp = (QuestTrigger)gameObject.AddComponent(trigger.GetType());
         Object.DestroyImmediate(trigger);
         trigger = temp;
+        QuestEditor.selectedQuest.questTriggers.Add(trigger);
     }
 
     private void ChangeTitle(System.Type type)
     {
-        if (type == typeof(QuestTrigger_Dialogue))
+        if (type == QuestEditor.TranslateType(TRIGGER_TYPES.DIALOGUE))
             title = "Dialogue";
-        else if (type == typeof(QuestTrigger_ItemPickup))
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.ITEM_PICKUP))
             title = "Item Pickup";
-        else if (type == typeof(QuestTrigger_Buy))
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.BUY))
             title = "Buy";
-        else if (type == typeof(QuestTrigger_Craft))
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.CRAFT))
             title = "Craft";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.START))
+            title = "Start Dialogue";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.END))
+            title = "End Dialogue";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REMOVE_ITEM))
+            title = "Remove Item";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REWARD))
+            title = "Reward";
         else
             title = "Trigger";
     }
@@ -82,5 +92,44 @@ public class Node
     public void DestroyNode()
     {
         Object.DestroyImmediate(trigger);
+    }
+
+    
+
+    public static Node NodeAtID(List<Node> nodes, int id)
+    {
+        foreach (Node node in nodes)
+        {
+            if (node.id == id)
+                return node;
+        }
+        return null;
+    }
+
+    public static void LoadNodes(List<Node> nodes, Quest quest)
+    {
+        bool hasStartTrigger = false;
+        bool hasEndTrigger = false;
+
+        foreach (QuestTrigger trigger in quest.questTriggers)
+        {
+            new Node(trigger);
+            
+            if (trigger.GetType() == QuestEditor.TranslateType(TRIGGER_TYPES.START))
+                hasStartTrigger = true;
+            if (trigger.GetType() == QuestEditor.TranslateType(TRIGGER_TYPES.END))
+                hasEndTrigger = true;
+        }
+
+        if(!hasStartTrigger)
+        {
+            Debug.Log("no start trigger");
+            new Node(quest.gameObject, QuestEditor.TranslateType(TRIGGER_TYPES.START));
+        }
+        if (!hasEndTrigger)
+        {
+            Debug.Log("no end trigger");
+            new Node(quest.gameObject, QuestEditor.TranslateType(TRIGGER_TYPES.END));
+        }
     }
 }

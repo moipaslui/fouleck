@@ -5545,7 +5545,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87695253}
-  m_LocalRotation: {x: -0.0026093374, y: -0.9999966, z: 0.00000003091054, w: 0.00000040125997}
+  m_LocalRotation: {x: -0.0026222123, y: -0.9999966, z: 0.000000030915725, w: 0.0000004012596}
   m_LocalPosition: {x: -0.14, y: -0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -22629,8 +22629,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: 44a1d3f53d0e0b946be4c3c76e491f61, type: 2}
-  startQuestTrigger: {fileID: 1605681258}
-  endQuestTrigger: {fileID: 1605681270}
+  isActive: 0
+  questTriggers:
+  - {fileID: 458883892}
+  - {fileID: 458883891}
+  - {fileID: 458883894}
+  - {fileID: 458883893}
+  - {fileID: 458883895}
+  - {fileID: 1605681258}
+  - {fileID: 1605681266}
+  - {fileID: 1605681261}
+  - {fileID: 1605681267}
+  - {fileID: 1605681268}
+  - {fileID: 1605681269}
+  - {fileID: 1605681270}
+  - {fileID: 320450621}
+  - {fileID: 320450622}
 --- !u!114 &458883891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22693,7 +22707,8 @@ MonoBehaviour:
   - {fileID: 1605681269}
   triggersToActive:
   - {fileID: 1605681270}
-  itemsToCraft: []
+  itemsToCraft:
+  - {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
 --- !u!114 &458883894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28321,7 +28336,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616733535}
-  m_LocalRotation: {x: 0.0000003444822, y: 0.0000037993061, z: 0.099813126, w: 0.9950062}
+  m_LocalRotation: {x: 0.00000034439736, y: 0.0000037993136, z: 0.09979098, w: 0.9950084}
   m_LocalPosition: {x: 0.000000052619725, y: 0.12434072, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
@@ -59595,7 +59610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1323281099}
-  - component: {fileID: 1323281098}
+  - component: {fileID: 1323281097}
   - component: {fileID: 1323281096}
   m_Layer: 0
   m_Name: QueteDeBase
@@ -59615,16 +59630,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2ad2cc65e44a64bb966172760aaf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
+  isActive: 1
   offsetIcon: {x: 0, y: 0}
-  isInteractable: 1
-  triggersToDesactive: []
+  isInteractable: 0
+  triggersToDesactive:
+  - {fileID: 1323281096}
   triggersToActive: []
   dialogue:
     sentences: []
     speaker: 
-  quest: {fileID: 0}
---- !u!114 &1323281098
+--- !u!114 &1323281097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59637,14 +59652,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   offsetIcon: {x: 0, y: 0}
-  isInteractable: 1
-  triggersToDesactive: []
-  triggersToActive: []
+  isInteractable: 0
+  triggersToDesactive:
+  - {fileID: 1323281097}
+  triggersToActive:
+  - {fileID: 0}
+  - {fileID: 1323281096}
   dialogue:
-    sentences:
-    - Salut
+    sentences: []
     speaker: 
-  quest: {fileID: 0}
 --- !u!4 &1323281099
 Transform:
   m_ObjectHideFlags: 0
@@ -61765,7 +61781,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376704286}
-  m_LocalRotation: {x: 0.38192254, y: -0.92419434, z: 0.000000088666155, w: -0.0000003030238}
+  m_LocalRotation: {x: 0.38190624, y: -0.9242011, z: 0.000000088660826, w: -0.00000030302533}
   m_LocalPosition: {x: 0.228, y: -0.016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -63275,7 +63291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f4d077adbbd15429c9ea7084d54281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeQuests: []
+  quests:
+  - {fileID: 1594138148}
+  - {fileID: 1504908455}
+  - {fileID: 458883890}
 --- !u!114 &1414631528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67951,20 +67970,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: 4e1b02f9ad103b645b1e621cb040a29f, type: 2}
-  startQuestTrigger: {fileID: 1605681264}
-  endQuestTrigger: {fileID: 1605681263}
+  isActive: 0
+  questTriggers:
+  - {fileID: 1605681264}
+  - {fileID: 1605681265}
+  - {fileID: 1605681263}
+  - {fileID: 1990380485}
+  - {fileID: 1504908456}
 --- !u!114 &1504908456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504908453}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36056e7502c1f1d4fb631d6968fda12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
+  isActive: 1
   offsetIcon: {x: 0, y: 0}
   isInteractable: 0
   triggersToDesactive: []
@@ -72489,8 +72513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questData: {fileID: 11400000, guid: 5acba7e200e8ee24b91adb53ba2b3514, type: 2}
-  startQuestTrigger: {fileID: 1323281098}
-  endQuestTrigger: {fileID: 1323281096}
+  isActive: 0
+  questTriggers:
+  - {fileID: 1323281097}
+  - {fileID: 1323281096}
 --- !u!1 &1594645441
 GameObject:
   m_ObjectHideFlags: 0
@@ -72950,7 +72976,6 @@ MonoBehaviour:
     - "Va donc acheter les ingr\xE9dients n\xE9cessaires pour faire la base chez le
       vendeur !"
     speaker: Mauricio
-  quest: {fileID: 458883890}
 --- !u!114 &1605681259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73043,14 +73068,13 @@ MonoBehaviour:
   triggersToDesactive:
   - {fileID: 1605681263}
   triggersToActive:
-  - {fileID: 1504908456}
   - {fileID: 1605681258}
+  - {fileID: 1504908456}
   dialogue:
     sentences:
     - C'est bien mon Fouleck !
     - Revient donc me parler si tu veux que je t'apprennes l'art des pizzas !
     speaker: Mauricio
-  quest: {fileID: 1504908455}
 --- !u!114 &1605681264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73077,7 +73101,6 @@ MonoBehaviour:
     - "Je te r\xE9compenserais comme il se doit."
     - Aller va maintenant.
     speaker: Mauricio
-  quest: {fileID: 1504908455}
 --- !u!114 &1605681265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73214,7 +73237,6 @@ MonoBehaviour:
       \xEAtre fier !\nTiens, je te l'offre."
     - Reviens me voir quand tu veux !
     speaker: Mauricio
-  quest: {fileID: 458883890}
 --- !u!1 &1606562165
 GameObject:
   m_ObjectHideFlags: 0
@@ -78361,7 +78383,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693450000}
-  m_LocalRotation: {x: -0.000000110075135, y: 0.0000003368036, z: 0.2481675, w: -0.96871716}
+  m_LocalRotation: {x: -0.000000110076726, y: 0.000000336803, z: 0.24817212, w: -0.96871597}
   m_LocalPosition: {x: 0.000000052154064, y: 0.27587762, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
   m_Children:
@@ -95398,7 +95420,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2086562312}
-  m_LocalRotation: {x: 0.00000003217046, y: -0.00000033608447, z: 0.0067249346, w: -0.9999774}
+  m_LocalRotation: {x: 0.00000003217825, y: -0.00000033608373, z: 0.0067480607, w: -0.99997723}
   m_LocalPosition: {x: -0.0000000037252903, y: 0.3393478, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -97966,7 +97988,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133069150}
-  m_LocalRotation: {x: 0.107801504, y: -0.99417245, z: 0.00000028629228, w: -0.0000037620466}
+  m_LocalRotation: {x: 0.10781738, y: -0.9941707, z: 0.0000002863509, w: -0.0000037620423}
   m_LocalPosition: {x: 0.098, y: 0.588, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

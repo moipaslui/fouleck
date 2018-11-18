@@ -12,16 +12,17 @@ public enum TRIGGER_TYPES
     ITEM_PICKUP = 3,
     ZONE = 4,
     START = 5,
-    END = 6
+    END = 6,
+    AT_REMOVE_ITEM = 7,
+    AT_REWARD = 8
 };
 
 public class QuestEditor : EditorWindow
 {
-    public Quest selectedQuest;
-    static List<Node> nodes;
+    public static Quest selectedQuest;
+    public static List<Node> nodes;
     static List<Connector> connectors;
     public static int selectedNode;
-    private bool isAnyNodeSelected;
     private TriggerEditor triggerEditor;
 
     [MenuItem("Window/Quest Editor")]
@@ -45,10 +46,13 @@ public class QuestEditor : EditorWindow
 
         if (selectedQuest != null)
         {
+            if (nodes.Count == 0)
+                Node.LoadNodes(nodes, selectedQuest);
             DisplayQuestEditor();
         }
         else
         {
+            nodes.Clear();
             DisplayQuests();
         }
     }
@@ -56,7 +60,7 @@ public class QuestEditor : EditorWindow
     void DisplayQuestEditor()
     {
         BeginWindows();
-
+        
         for (int i = 0; i < nodes.Count; i++)
         {
             nodes[i].rect = GUILayout.Window(nodes[i].id, nodes[i].rect, nodes[i].DisplayNode, nodes[i].trigger.gameObject.name);
@@ -92,10 +96,18 @@ public class QuestEditor : EditorWindow
         {
             if (selectedNode != -1)
             {
-                Node nodeToDestroy = Node.NodeAtID(nodes, selectedNode);
-                nodeToDestroy.DestroyNode();
-                nodes.Remove(nodeToDestroy);
-                selectedNode = -1;
+                if(Node.NodeAtID(nodes, selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.START) && Node.NodeAtID(nodes, selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.END))
+                {
+                    Node nodeToDestroy = Node.NodeAtID(nodes, selectedNode);
+                    selectedQuest.questTriggers.Remove(nodeToDestroy.trigger);
+                    nodes.Remove(nodeToDestroy);
+                    nodeToDestroy.DestroyNode();
+                    selectedNode = -1;
+                }
+                else
+                {
+                    Debug.Log("Vous ne pouvrez pas supprimer un start ou end trigger.");
+                }
             }
             else
             {
@@ -118,13 +130,6 @@ public class QuestEditor : EditorWindow
     {
         triggerEditor.Display(Node.NodeAtID(nodes, selectedNode));
         GUI.DragWindow();
-    }
-
-    public static void CreateNode(GameObject gameObject, TRIGGER_TYPES triggerType)
-    {
-        Node nodeToAdd = new Node(gameObject, TranslateType(triggerType));
-        nodes.Add(nodeToAdd);
-        selectedNode = nodeToAdd.id;
     }
 
     public static System.Type TranslateType(TRIGGER_TYPES type)
@@ -151,6 +156,12 @@ public class QuestEditor : EditorWindow
 
             case TRIGGER_TYPES.END:
                 return typeof(EndQuest_Dialogue);
+                
+            case TRIGGER_TYPES.AT_REMOVE_ITEM:
+                return typeof(RemoveItemAT);
+
+            case TRIGGER_TYPES.AT_REWARD:
+                return typeof(RewardTriggerAT);
         }
 
         return null;
