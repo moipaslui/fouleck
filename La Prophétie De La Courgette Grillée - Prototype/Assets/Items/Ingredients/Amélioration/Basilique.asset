@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Basilique
   icon: {fileID: 21300000, guid: fdab19f52520f2c4ea6dcaf7a5a1e27a, type: 3}
-  description: "un ingr\xE9dient magique, qui peut se rajouter a une pizza pour l'am\xE9liorer
-    !"
+  description: un ingredient magique, qui peut se rajouter a une pizza pour l'ameliorer
+    !
   floorHeight: 0.085
   cost: 0
   offsetIcon: {x: 0.15, y: 0.11}

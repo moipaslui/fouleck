@@ -10,11 +10,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: "V\xE9g\xE9tarienne_miel"
-  m_EditorClassIdentifier:
-  name: "V\xE9g\xE9tarien (+miel)"
+  m_EditorClassIdentifier: 
+  name: Vegetarien (+miel)
   icon: {fileID: 21300000, guid: 396d02990b57df74697c479fd8514acf, type: 3}
-  description: "Une v\xE9g\xE9tarienne en version miel, pour les amoureux des insectes
-    ray\xE9s."
+  description: Une vegetarienne en version miel, pour les amoureux des insectes rayes.
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

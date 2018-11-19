@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Tomate
   icon: {fileID: 21300000, guid: 4cafccd95db308d458b3b6d4f449331b, type: 3}
-  description: "Une superbe tomate ! L'ingr\xE9dient de base de toute bonne pizza."
+  description: Une superbe tomate ! L'ingredient de base de toute bonne pizza.
   floorHeight: 0.03
   cost: 1
   offsetIcon: {x: 0.16, y: 0.09}

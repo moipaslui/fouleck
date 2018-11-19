@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SellSlot : MonoBehaviour
+public class SellSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Item itemToBuy;
     public Image icon;
     public Image cross;
     public Image bigCross;
+    public SlotInfos slotInfos;
 
     [HideInInspector]
     public Button button;
@@ -44,5 +46,18 @@ public class SellSlot : MonoBehaviour
             cross.enabled = false;
             button.interactable = false;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (itemToBuy != null)
+        {
+            slotInfos.DisplayInfos(itemToBuy);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        slotInfos.HideInfos();
     }
 }

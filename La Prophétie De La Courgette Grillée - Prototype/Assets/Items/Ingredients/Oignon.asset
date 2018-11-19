@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Oignon
   icon: {fileID: 21300000, guid: fbf975f06cf39904199db4b839cb35ff, type: 3}
-  description: "Parfait pour les rencards romantiques, cet aliment rel\xE8vera vos
-    plats les plus fades !"
+  description: Parfait pour les rencards romantiques, cet aliment relevera vos plats
+    les plus fades !
   floorHeight: 0
   cost: 0
   offsetIcon: {x: 0.19, y: 0.14}

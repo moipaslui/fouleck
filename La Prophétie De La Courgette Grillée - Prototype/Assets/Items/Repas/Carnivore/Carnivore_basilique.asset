@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Carnivore (+basilique)
   icon: {fileID: 21300000, guid: a34e7bfa43ec2df459cbc7d4ccb3ed3a, type: 3}
-  description: "Une petite touche d'\xE9pices pour att\xE9nuer l'odeur du sang provenant
-    du dessus de la pizza !"
+  description: Une petite touche d'epices pour attenuer l'odeur du sang provenant
+    du dessus de la pizza !
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

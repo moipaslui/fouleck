@@ -14,8 +14,8 @@ MonoBehaviour:
   name: Peppe (+miel)
   icon: {fileID: 21300000, guid: 2532c6cfa72ac254988a51598be7d4d7, type: 3}
   description: Les abeilles nous offrent ici leur petite touche naturel pour ameliorer
-    la Peppe national. Mais les Italiens n'aime pas trop cette pizza, peut-etre en
-    raison de leur haine envers les abeilles, allez savoir !
+    la Peppe national. Mais les Italiens n'aiment pas trop cette pizza, peut-etre
+    en raison de leur haine envers les abeilles, allez savoir !
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

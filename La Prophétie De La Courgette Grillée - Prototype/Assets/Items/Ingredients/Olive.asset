@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Olive
   icon: {fileID: 21300000, guid: fd814b0075e2bd44185402575541143c, type: 3}
-  description: "Ce fruit, inconnu de l'occident, poss\xE8derait des vertus incroyable
-    si pr\xE9par\xE9 d'une mani\xE8re bien particuli\xE8re !"
+  description: Ce fruit, inconnu de l'occident, possederait des vertus incroyable
+    si prepare d'une maniere bien particuliere !
   floorHeight: 0.06
   cost: 0
   offsetIcon: {x: 0.17, y: 0.09}

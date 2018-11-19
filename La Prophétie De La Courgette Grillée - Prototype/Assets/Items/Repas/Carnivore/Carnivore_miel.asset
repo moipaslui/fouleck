@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Carnivore (+miel)
   icon: {fileID: 21300000, guid: b2167b4dc65ab1e4ea800dcee9f58ee3, type: 3}
-  description: "Qui donc refuserait un bon poulet au meil ? Le fantasme est enfin
-    r\xE9alis\xE9, le poulet-miel m\xEAl\xE9 avec le savoir-faire Italien est une
-    merveille de notre culture culinaire !"
+  description: Qui donc refuserait un bon poulet au meil ? Le fantasme est enfin realise,
+    le poulet-miel mele avec le savoir-faire Italien est une merveille de notre culture
+    culinaire !
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Parisienne (+oeuf)
   icon: {fileID: 21300000, guid: 126c28976f08658448db67b6cf2f8145, type: 3}
-  description: "Certains disent que la Parisienne manque de prot\xE9\xEFnes, nous
-    comprenons leur probl\xE8me, et y apportons notre solution, la Parisienne-oeuf
-    !"
+  description: Certains disent que la Parisienne manque de proteines, nous comprenons
+    leur probleme, et y apportons notre solution, la Parisienne-oeuf !
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

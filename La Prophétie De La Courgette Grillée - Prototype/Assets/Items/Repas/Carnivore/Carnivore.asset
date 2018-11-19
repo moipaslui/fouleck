@@ -13,8 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Carnivore
   icon: {fileID: 21300000, guid: ca55973c0cf4af74595d53befe0c74d5, type: 3}
-  description: "Une pizza sp\xE9cialement con\xE7u pour les gros mangeur de viande
-    !"
+  description: "Une pizza specialement con\xE7u pour les gros mangeur de viande !"
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

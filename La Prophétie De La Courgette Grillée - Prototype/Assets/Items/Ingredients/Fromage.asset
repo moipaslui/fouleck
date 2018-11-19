@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fromage
   icon: {fileID: 21300000, guid: eb4c81a6761fa12409f6a76c0d9e847b, type: 3}
-  description: "Aaah, du bon fromage. Un ingredient indispensable \xE0 toute bonne
-    pizza de Fouleck qui se respecte !"
+  description: Aaah, du bon fromage. Un ingredient indispensable a toute bonne pizza
+    de Fouleck qui se respecte !
   floorHeight: 0.14
   cost: 1
   offsetIcon: {x: 0.25, y: 0.14}

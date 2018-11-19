@@ -13,9 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Peppe (+oeuf)
   icon: {fileID: 21300000, guid: 42439aedecab8e34d84849bb52f2852e, type: 3}
-  description: "Les \xE9leveurs de poule ne sont pas l\xE9gion en Italie, Mauricio
-    fait donc importer les oeufs d'autre pays plus cl\xE9ment avec ces b\xEAtes d\xE9pourvus
-    de dent."
+  description: Les eleveurs de poule ne sont pas legion en Italie, Mauricio fait donc
+    importer les oeufs d'autre pays plus clement avec ces betes depourvus de dent.
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

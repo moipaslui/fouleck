@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Parisienne (+basilique)
   icon: {fileID: 21300000, guid: fa9ba3d3c2651ec43bbede249480f697, type: 3}
-  description: "Une am\xE9lioration de la Parisienne classique, bien mieux appr\xE9ci\xE9
-    des parisiens que sa grande soeur"
+  description: Une amelioration de la Parisienne classique, bien mieux apprecie des
+    parisiens que sa grande soeur
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

@@ -14,7 +14,7 @@ MonoBehaviour:
   name: Peppe
   icon: {fileID: 21300000, guid: d874eb57b7b0f8548b988bced1c3cffe, type: 3}
   description: "L'une des plus classique car venant tout droit du pays d'origine de
-    la pizza, les ognions sont ici d\xE9pos\xE9 cru apr\xE8s la cuisson de la pizza."
+    la pizza, les ognions sont ici d\xE9pose cru apres la cuisson de la pizza."
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

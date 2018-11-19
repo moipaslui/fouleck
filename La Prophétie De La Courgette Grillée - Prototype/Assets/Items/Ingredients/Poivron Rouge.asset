@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Poivron Rouge
   icon: {fileID: 21300000, guid: 69fd8194988af804d825426daa082947, type: 3}
-  description: "C'est bien connu, chez Fouleck Pizza, l'ingr\xE9dient secret, c'est
-    le poivron, et celui-ci est rouge en l'occurence !"
+  description: C'est bien connu, chez Fouleck Pizza, l'ingredient secret, c'est le
+    poivron, et celui-ci est rouge en l'occurence !
   floorHeight: 0
   cost: 0
   offsetIcon: {x: 0.18, y: 0.24}

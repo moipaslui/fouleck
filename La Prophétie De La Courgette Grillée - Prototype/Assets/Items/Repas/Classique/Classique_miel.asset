@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Classique (+miel)
   icon: {fileID: 21300000, guid: 92081f5c909bf2c40a0c17ab662cbf18, type: 3}
-  description: "Cette pizza d\xE9chaine les passions, certain pensent que le miel
-    d\xE9nature le nom de la pizza, d'autre l'adore, tout simplement."
+  description: Cette pizza dechaine les passions, certain pensent que le miel denature
+    le nom de la pizza, d'autre l'adore, tout simplement.
   floorHeight: 0.31
   cost: 0
   offsetIcon: {x: 0.33, y: 0.27}

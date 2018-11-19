@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: "V\xE9g\xE9tarienne_basilique"
   m_EditorClassIdentifier: 
-  name: "V\xE9g\xE9tarienne (+basilique)"
+  name: Vegetarienne (+basilique)
   icon: {fileID: 21300000, guid: d739c41680b8e174b9978e66ff401210, type: 3}
-  description: "Une superbe pizza qui saura raviver vos papilles de v\xE9g\xE9tariens,
-    une touche de basilique pour faire fondre vos papilles."
+  description: Une superbe pizza qui saura raviver vos papilles de vegetariens, une
+    touche de basilique pour faire fondre vos papilles.
   floorHeight: 0.3
   cost: 10
   offsetIcon: {x: 0.74, y: 0.33}

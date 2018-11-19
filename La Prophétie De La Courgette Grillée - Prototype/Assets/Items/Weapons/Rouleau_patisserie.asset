@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rouleau a patisserie
   icon: {fileID: 21300000, guid: 2d50ea5db86cb02429fb47324259fb02, type: 3}
-  description: "Utilis\xE9 par Mauricio pour pr\xE9par\xE9 ses pates a pizzas, il
-    s'av\xE8re tr\xE8s utilie pour occasioner des dommages aux ennemies."
+  description: "Utilise par Mauricio pour preparer ses pates a pizzas, il s'av\xE8re
+    tr\xE8s utile pour occasioner des dommages aux ennemies."
   floorHeight: 0.19
   cost: 2
   offsetIcon: {x: 1, y: 0.44}
