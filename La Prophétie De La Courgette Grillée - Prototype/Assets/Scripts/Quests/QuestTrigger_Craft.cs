@@ -11,7 +11,7 @@ public class QuestTrigger_Craft : QuestTrigger
             bool hasAllCrafted = true;
             foreach(Item item in itemsToCraft)
             {
-                if(!GameManager.inventory.items.Contains(item))
+                if(!GameManager.inventory.Contains(item))
                 {
                     hasAllCrafted = false;
                 }

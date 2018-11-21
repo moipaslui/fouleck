@@ -8,8 +8,12 @@ public class QuestTrigger_ItemPickup : QuestTrigger
         base.Trigger();
 
         // A modifier pour ajouter dans les objets de quêtes
-        GameManager.inventory.Add(GetComponent<ItemOnObject>().item);
+        bool wasPickedUp = GameManager.inventory.Add(GetComponent<ItemOnObject>().item);
 
-        Destroy(gameObject);
+
+        if (wasPickedUp)
+        {
+            Destroy(gameObject);
+        }
     }
 }

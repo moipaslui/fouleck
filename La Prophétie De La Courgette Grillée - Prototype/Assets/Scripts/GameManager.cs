@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static DialogueManager dialogueManager;
     public static QuestManager questManager;
     public static MoneyManager moneyManager;
+    public static SaveManager saveManager;
     
     private void Awake()
     {
@@ -13,5 +14,6 @@ public class GameManager : MonoBehaviour
         dialogueManager = GetComponent<DialogueManager>();
         questManager = GetComponent<QuestManager>();
         moneyManager = GetComponent<MoneyManager>();
+        saveManager = GetComponent<SaveManager>();
     }
 }

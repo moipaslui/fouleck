@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [ExecuteInEditMode]
 [CreateAssetMenu(fileName = "New Repas", menuName = "Item/Craftable/Repas")]

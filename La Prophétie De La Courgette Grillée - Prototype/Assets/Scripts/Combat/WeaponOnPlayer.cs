@@ -3,6 +3,7 @@
 public class WeaponOnPlayer : MonoBehaviour
 {
     public Weapon arme;
+    public int handDamage = 1;
     public float knockbackForce = 3f;
 
     [Header("UI")]
@@ -36,7 +37,10 @@ public class WeaponOnPlayer : MonoBehaviour
         {
             Debug.Log("Ennemi touché.");
             Vector2 knockback = ((Vector2)other.transform.position - (Vector2)transform.position).normalized * knockbackForce;
-            other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage, knockback);
+            if(arme != null)
+                other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage, knockback);
+            else
+                other.GetComponent<EnemyHealthManager>().HurtEnemy(handDamage, knockback);
         }
     }
 }

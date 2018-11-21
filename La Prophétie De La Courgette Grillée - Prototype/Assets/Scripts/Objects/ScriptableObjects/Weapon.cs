@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Item/Weapon")]
 public class Weapon : Item

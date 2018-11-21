@@ -12,7 +12,9 @@ public class ItemPickup : Interactable
         bool wasPickedUp = GameManager.inventory.Add(GetComponent<ItemOnObject>().item);
 
         if (wasPickedUp)
+        {
             Destroy(gameObject);
+        }
 
         return true;
     }

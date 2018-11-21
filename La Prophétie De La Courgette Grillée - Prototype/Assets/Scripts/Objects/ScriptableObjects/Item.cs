@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [ExecuteInEditMode]
-[CreateAssetMenu(fileName = "New Item", menuName = "Item/Others")]
+[CreateAssetMenu(fileName = "New Item", menuName = "Item/other")]
 public class Item : ScriptableObject
 {
     public new string name;

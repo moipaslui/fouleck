@@ -11,6 +11,7 @@ public class PlayerHealthManager : MonoBehaviour
     
     public int numberOfBlink;
     public float blinkTime;
+    public float currentHP;
 
     public Image[] healthImages;
 
@@ -23,7 +24,6 @@ public class PlayerHealthManager : MonoBehaviour
     private int totalHearts;
     private int healthPerHeart = 2;
     private int maxHearts = 10;
-    private float currentHP;
     private bool isBlinking = false;
 
     void Start () 

@@ -83,7 +83,7 @@ public class Seller : Interactable
 
     public bool BuyItem(Item item)
     {
-        if (!GameManager.inventory.items.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost * buyMargin)
+        if (!GameManager.inventory.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost * buyMargin)
         {
             return false;
         }

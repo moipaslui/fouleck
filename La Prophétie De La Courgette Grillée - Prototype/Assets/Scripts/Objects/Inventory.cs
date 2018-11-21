@@ -1,6 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+
+[Serializable]
+public class ItemInventory
+{
+    public Item item;
+    public int count;
+
+    public ItemInventory(Item item, int count)
+    {
+        this.item = item;
+        this.count = count;
+    }
+}
 
 public class Inventory : MonoBehaviour
 {
@@ -8,8 +22,7 @@ public class Inventory : MonoBehaviour
 
     public int space = 5;
     public int spacePerSlot = 10;
-    public List<Item> items = new List<Item>();
-    public List<int> countItems = new List<int>();
+    public List<ItemInventory> items = new List<ItemInventory>();
 
     [Header("Others")]
     public WeaponOnPlayer weaponOnPlayer;
@@ -19,12 +32,12 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < items.Count; i++)
         {
-            if(item == items[i])
+            if(item == items[i].item)
             {
-                if (countItems[i] < spacePerSlot)
+                if (items[i].count < spacePerSlot)
                 {
-                    countItems[i] += 1;
-
+                    items[i].count += 1;
+                    UpdateUI();
                     return true;
                 }
             }
@@ -32,9 +45,7 @@ public class Inventory : MonoBehaviour
 
         if (items.Count < space)
         {
-            items.Add(item);
-            countItems.Add(1);
-
+            items.Add(new ItemInventory(item, 1));
             UpdateUI();
 
             return true;
@@ -51,24 +62,22 @@ public class Inventory : MonoBehaviour
         int itemPos = -1;
         for (int i = 0; i < items.Count; i++)
         {
-            if (item == items[i])
+            if (item == items[i].item)
             {
-                if (countItems[i] > 1)
+                if (itemPos != -1) // On équilibre aves les autres slots contenants le même Item
                 {
-                    countItems[i] -= 1;
+                    items[itemPos].count++;
+                }
+
+                if (items[i].count > 1)
+                {
+                    items[i].count -= 1;
+                    itemPos = i;
                 }
                 else
                 {
                     items.RemoveAt(i);
-                    countItems.RemoveAt(i);
                 }
-
-                if (itemPos != -1) // On équilibre aves les autres slots contenants le même Item
-                {
-                    countItems[itemPos] += 1;
-                }
-
-                itemPos = i;
             }
         }
 
@@ -79,6 +88,22 @@ public class Inventory : MonoBehaviour
             GameObject clone = Instantiate(itemPrefab, FindObjectOfType<PlayerControllerIsometric>().transform.position, FindObjectOfType<PlayerControllerIsometric>().transform.rotation);
             clone.GetComponent<ItemOnObject>().ChangeItem(item);
         }
+    }
+
+    public bool Contains(Item item)
+    {
+        foreach(ItemInventory itemInventory in items)
+        {
+            if (item == itemInventory.item)
+                return true;
+        }
+        return false;
+    }
+
+    public void RemoveAll()
+    {
+        items.Clear();
+        UpdateUI();
     }
     
     public void ClickOnItem()
@@ -111,7 +136,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (Item item in itemToCraft.craftNeed)
         {
-            if (!items.Contains(item))
+            if (!Contains(item))
             {
                 return false;
             }
@@ -151,7 +176,7 @@ public class Inventory : MonoBehaviour
         {
             if (i < items.Count)
             {
-                slots[i].AddItem(items[i], countItems[i]);
+                slots[i].AddItem(items[i].item, items[i].count);
             }
             else
             {
