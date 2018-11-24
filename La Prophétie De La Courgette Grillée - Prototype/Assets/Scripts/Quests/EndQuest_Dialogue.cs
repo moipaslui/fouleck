@@ -6,7 +6,7 @@
 
         if (!GameManager.dialogueManager.isDialoguing)
         {
-            GameManager.questManager.FindQuest(this).StartQuest();
+            GameManager.questManager.FindQuest(this).EndQuest();
         }
     }
 }

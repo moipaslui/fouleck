@@ -5545,7 +5545,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87695253}
-  m_LocalRotation: {x: -0.0026222123, y: -0.9999966, z: 0.000000030915725, w: 0.0000004012596}
+  m_LocalRotation: {x: -0.0024350542, y: -0.9999971, z: 0.000000030840628, w: 0.00000040126537}
   m_LocalPosition: {x: -0.14, y: -0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16742,6 +16742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  offsetIcon: {x: 0, y: 1.65}
   patrolSpots:
   - {fileID: 1392054234}
   - {fileID: 1181109213}
@@ -16842,7 +16843,6 @@ MonoBehaviour:
   offsetIcon: {x: 0, y: 1.65}
   isInteractable: 1
   triggersToDesactive:
-  - {fileID: 320450621}
   - {fileID: 1605681266}
   triggersToActive:
   - {fileID: 1605681261}
@@ -16863,13 +16863,12 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 1.65}
   isInteractable: 1
-  triggersToDesactive:
-  - {fileID: 320450622}
+  triggersToDesactive: []
   triggersToActive:
   - {fileID: 458883893}
   itemsToBuy:
-  - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
   - {fileID: 11400000, guid: 3e1691295eb1e7f428a01a73455589ab, type: 2}
+  - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
 --- !u!1 &320933416
 GameObject:
   m_ObjectHideFlags: 0
@@ -22592,8 +22591,8 @@ GameObject:
   m_Component:
   - component: {fileID: 458883889}
   - component: {fileID: 458883890}
+  - component: {fileID: 458883896}
   - component: {fileID: 458883892}
-  - component: {fileID: 458883891}
   - component: {fileID: 458883894}
   - component: {fileID: 458883893}
   - component: {fileID: 458883895}
@@ -22632,7 +22631,6 @@ MonoBehaviour:
   isActive: 0
   questTriggers:
   - {fileID: 458883892}
-  - {fileID: 458883891}
   - {fileID: 458883894}
   - {fileID: 458883893}
   - {fileID: 458883895}
@@ -22645,30 +22643,6 @@ MonoBehaviour:
   - {fileID: 1605681270}
   - {fileID: 320450621}
   - {fileID: 320450622}
---- !u!114 &458883891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 458883888}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c837e3d2a6190e40a3c0fd5d0acfae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  offsetIcon: {x: 0, y: 0}
-  isInteractable: 0
-  triggersToDesactive: []
-  triggersToActive: []
-  seller: {fileID: 320450618}
-  itemsToAdd:
-  - {fileID: 11400000, guid: ab66051eb003f6f47a59a8a2f32f355b, type: 2}
-  - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
-  - {fileID: 11400000, guid: 0db2cf23ab68a0b479714e797f46fa3e, type: 2}
-  - {fileID: 11400000, guid: bf14c12dead85c24ea9f35a13549f54f, type: 2}
-  - {fileID: 11400000, guid: c673ba34473828148a6d6d001924d154, type: 2}
-  money: 100
 --- !u!114 &458883892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22703,7 +22677,6 @@ MonoBehaviour:
   offsetIcon: {x: 0, y: 0}
   isInteractable: 0
   triggersToDesactive:
-  - {fileID: 458883893}
   - {fileID: 1605681269}
   triggersToActive:
   - {fileID: 1605681270}
@@ -22724,7 +22697,6 @@ MonoBehaviour:
   offsetIcon: {x: 0, y: 0}
   isInteractable: 0
   triggersToDesactive:
-  - {fileID: 458883894}
   - {fileID: 1605681267}
   triggersToActive:
   - {fileID: 1605681268}
@@ -22747,6 +22719,25 @@ MonoBehaviour:
   triggersToDesactive: []
   triggersToActive: []
   item: {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
+--- !u!114 &458883896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 458883888}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1404a26871c7ab4981e835c9baeefb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  offsetIcon: {x: 0, y: 0}
+  isInteractable: 0
+  triggersToDesactive: []
+  triggersToActive: []
+  items: []
+  money: 2
+  exp: 0
 --- !u!1 &459076182
 GameObject:
   m_ObjectHideFlags: 0
@@ -28336,7 +28327,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616733535}
-  m_LocalRotation: {x: 0.00000034439736, y: 0.0000037993136, z: 0.09979098, w: 0.9950084}
+  m_LocalRotation: {x: 0.00000034446555, y: 0.0000037993073, z: 0.0998088, w: 0.9950067}
   m_LocalPosition: {x: 0.000000052619725, y: 0.12434072, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
@@ -59602,78 +59593,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317691968}
   m_CullTransparentMesh: 0
---- !u!1 &1323281095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1323281099}
-  - component: {fileID: 1323281097}
-  - component: {fileID: 1323281096}
-  m_Layer: 0
-  m_Name: QueteDeBase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1323281096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323281095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2ad2cc65e44a64bb966172760aaf32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 1
-  offsetIcon: {x: 0, y: 0}
-  isInteractable: 0
-  triggersToDesactive:
-  - {fileID: 1323281096}
-  triggersToActive: []
-  dialogue:
-    sentences: []
-    speaker: 
---- !u!114 &1323281097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323281095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560f594e82eb2b8408843dea316ba0ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 1
-  offsetIcon: {x: 0, y: 0}
-  isInteractable: 0
-  triggersToDesactive:
-  - {fileID: 1323281097}
-  triggersToActive:
-  - {fileID: 0}
-  - {fileID: 1323281096}
-  dialogue:
-    sentences: []
-    speaker: 
---- !u!4 &1323281099
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323281095}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.91, y: 3.4, z: 3.183556}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328092970
 GameObject:
   m_ObjectHideFlags: 0
@@ -60312,7 +60231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154.05, y: -44.185}
+  m_AnchoredPosition: {x: 154.05, y: -44.18506}
   m_SizeDelta: {x: 308.09, y: 88.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343190596
@@ -63292,7 +63211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
-  - {fileID: 1594138148}
   - {fileID: 1504908455}
   - {fileID: 458883890}
 --- !u!114 &1414631528
@@ -67977,6 +67895,7 @@ MonoBehaviour:
   - {fileID: 1605681263}
   - {fileID: 1990380485}
   - {fileID: 1504908456}
+  - {fileID: 0}
 --- !u!114 &1504908456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72472,51 +72391,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1594138146
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1594138147}
-  - component: {fileID: 1594138148}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1594138147
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594138146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1708264640}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594138148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594138146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bb2ca996a9fe84781ec995181cdb3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questData: {fileID: 11400000, guid: 5acba7e200e8ee24b91adb53ba2b3514, type: 2}
-  isActive: 0
-  questTriggers:
-  - {fileID: 1323281097}
-  - {fileID: 1323281096}
 --- !u!1 &1594645441
 GameObject:
   m_ObjectHideFlags: 0
@@ -72963,8 +72837,7 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
-  triggersToDesactive:
-  - {fileID: 1605681258}
+  triggersToDesactive: []
   triggersToActive:
   - {fileID: 320450621}
   - {fileID: 458883892}
@@ -73003,6 +72876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  offsetIcon: {x: 0, y: 2.23}
   patrolSpots:
   - {fileID: 1078751782}
   - {fileID: 776876077}
@@ -73028,8 +72902,7 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
-  triggersToDesactive:
-  - {fileID: 1605681261}
+  triggersToDesactive: []
   triggersToActive:
   - {fileID: 1605681267}
   - {fileID: 458883894}
@@ -73081,12 +72954,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605681254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 560f594e82eb2b8408843dea316ba0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
   triggersToDesactive:
@@ -73179,10 +73052,9 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
-  triggersToDesactive:
-  - {fileID: 1605681268}
+  triggersToDesactive: []
   triggersToActive:
-  - {fileID: 458883892}
+  - {fileID: 458883896}
   - {fileID: 320450622}
   - {fileID: 1605681269}
   dialogue:
@@ -73227,8 +73099,7 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
-  triggersToDesactive:
-  - {fileID: 1605681270}
+  triggersToDesactive: []
   triggersToActive:
   - {fileID: 458883895}
   dialogue:
@@ -78383,7 +78254,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693450000}
-  m_LocalRotation: {x: -0.000000110076726, y: 0.000000336803, z: 0.24817212, w: -0.96871597}
+  m_LocalRotation: {x: -0.00000010996086, y: 0.00000033684088, z: 0.24783885, w: -0.9688013}
   m_LocalPosition: {x: 0.000000052154064, y: 0.27587762, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
   m_Children:
@@ -79246,7 +79117,6 @@ Transform:
   m_Children:
   - {fileID: 1504908454}
   - {fileID: 458883889}
-  - {fileID: 1594138147}
   m_Father: {fileID: 1414631525}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97988,7 +97858,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133069150}
-  m_LocalRotation: {x: 0.10781738, y: -0.9941707, z: 0.0000002863509, w: -0.0000037620423}
+  m_LocalRotation: {x: 0.10779178, y: -0.99417347, z: 0.00000028625556, w: -0.0000037620493}
   m_LocalPosition: {x: 0.098, y: 0.588, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

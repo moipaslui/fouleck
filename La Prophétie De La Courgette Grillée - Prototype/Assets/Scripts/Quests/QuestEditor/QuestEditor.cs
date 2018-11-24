@@ -21,14 +21,23 @@ public class QuestEditor : EditorWindow
 {
     public static Quest selectedQuest;
     public static List<Node> nodes;
-    static List<Connector> connectors;
     public static int selectedNode;
-    private TriggerEditor triggerEditor;
+    private int oldSelectedNode = -1;
+    private static TriggerEditor triggerEditor;
 
-    [MenuItem("Window/Quest Editor")]
+    private bool newActive;
+    private bool newDesactive;
+    private bool destroy;
+
+    [MenuItem("Quest Editor/Quest Editor")]
     public static void ShowWindow()
     {
-        GetWindow<QuestEditor>();
+        GetWindow<QuestEditor>().Show();
+
+        nodes = new List<Node>();
+        triggerEditor = new TriggerEditor();
+        Node.guiStyle = new GUIStyle { fontSize = 15, alignment = TextAnchor.MiddleCenter };
+        selectedNode = -1;
     }
 
     public void OnGUI()
@@ -37,7 +46,6 @@ public class QuestEditor : EditorWindow
         if(nodes == null)
         {
             nodes = new List<Node>();
-            connectors = new List<Connector>();
             triggerEditor = new TriggerEditor();
             Node.guiStyle = new GUIStyle { fontSize = 15, alignment = TextAnchor.MiddleCenter };
             selectedNode = -1;
@@ -47,7 +55,13 @@ public class QuestEditor : EditorWindow
         if (selectedQuest != null)
         {
             if (nodes.Count == 0)
-                Node.LoadNodes(nodes, selectedQuest);
+            {
+                Node.LoadNodes(selectedQuest);
+                foreach(Node node in nodes)
+                {
+                    node.CreateConnections();
+                }
+            }
             DisplayQuestEditor();
         }
         else
@@ -64,6 +78,10 @@ public class QuestEditor : EditorWindow
         for (int i = 0; i < nodes.Count; i++)
         {
             nodes[i].rect = GUILayout.Window(nodes[i].id, nodes[i].rect, nodes[i].DisplayNode, nodes[i].trigger.gameObject.name);
+        }
+        foreach(Node node in nodes)
+        {
+            node.DrawConnections();
         }
 
         if (selectedNode != -1)
@@ -89,18 +107,23 @@ public class QuestEditor : EditorWindow
 
         if(GUILayout.Button(" + ", EditorStyles.toolbarButton))
         {
-            PopupWindow.Show(new Rect(0, 15, 100, 0), new Popup());
+            PopupWindow.Show(new Rect(0, 15, 100, 0), new PopupCreateTrigger());
         }
 
         if(GUILayout.Button(" - ", EditorStyles.toolbarButton))
         {
             if (selectedNode != -1)
             {
-                if(Node.NodeAtID(nodes, selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.START) && Node.NodeAtID(nodes, selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.END))
-                {
-                    Node nodeToDestroy = Node.NodeAtID(nodes, selectedNode);
+                if(Node.NodeAtID(selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.START) && Node.NodeAtID(selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.END))
+                { 
+                    Node nodeToDestroy = Node.NodeAtID(selectedNode);
                     selectedQuest.questTriggers.Remove(nodeToDestroy.trigger);
                     nodes.Remove(nodeToDestroy);
+                    foreach(Node node in nodes)
+                    {
+                        node.trigger.triggersToActive.Remove(nodeToDestroy.trigger);
+                        node.trigger.triggersToDesactive.Remove(nodeToDestroy.trigger);
+                    }
                     nodeToDestroy.DestroyNode();
                     selectedNode = -1;
                 }
@@ -112,6 +135,89 @@ public class QuestEditor : EditorWindow
             else
             {
                 Debug.Log("Aucun trigger n'est selectionné. Ne vous fiez pas à l'apparence des blocs et cliquez droit et gauche en même temps pour en selectionner un.");
+            }
+        }
+
+        GUILayout.Space(10);
+
+        if(newActive = GUILayout.Toggle(newActive, "Active", EditorStyles.toolbarButton))
+        {
+            newDesactive = false;
+            destroy = false;
+
+            if(selectedNode == -1)
+            {
+                newActive = false;
+                oldSelectedNode = -1;
+            }
+            else
+            {
+                if (oldSelectedNode == -1)
+                    oldSelectedNode = selectedNode;
+
+                if(oldSelectedNode != selectedNode)
+                {
+                    Node.NodeAtID(oldSelectedNode).trigger.triggersToActive.Add(Node.NodeAtID(selectedNode).trigger);
+                    Node.NodeAtID(oldSelectedNode).connectActive.Add(new Connector(Node.NodeAtID(oldSelectedNode), Node.NodeAtID(selectedNode), true));
+
+                    newActive = false;
+                    oldSelectedNode = -1;
+                    selectedNode = -1;
+                }
+            }
+        }
+
+        if (newDesactive = GUILayout.Toggle(newDesactive, "Desactive", EditorStyles.toolbarButton))
+        {
+            newActive = false;
+            destroy = false;
+
+            if (selectedNode == -1)
+            {
+                newDesactive = false;
+                oldSelectedNode = -1;
+            }
+            else
+            {
+                if (oldSelectedNode == -1)
+                    oldSelectedNode = selectedNode;
+
+                if (oldSelectedNode != selectedNode)
+                {
+                    Node.NodeAtID(oldSelectedNode).trigger.triggersToDesactive.Add(Node.NodeAtID(selectedNode).trigger);
+                    Node.NodeAtID(oldSelectedNode).connectDesactive.Add(new Connector(Node.NodeAtID(oldSelectedNode), Node.NodeAtID(selectedNode), false));
+
+                    newDesactive = false;
+                    oldSelectedNode = -1;
+                    selectedNode = -1;
+                }
+            }
+        }
+
+        if (destroy = GUILayout.Toggle(destroy, "Destroy", EditorStyles.toolbarButton))
+        {
+            newActive = false;
+            newDesactive = false;
+
+            if (selectedNode == -1)
+            {
+                destroy = false;
+                oldSelectedNode = -1;
+            }
+            else
+            {
+                if (oldSelectedNode == -1)
+                    oldSelectedNode = selectedNode;
+
+                if (oldSelectedNode != selectedNode)
+                {
+                    Node.NodeAtID(oldSelectedNode).DestroyConnector(selectedNode);
+
+                    destroy = false;
+                    oldSelectedNode = -1;
+                    selectedNode = -1;
+                }
+
             }
         }
 
@@ -128,7 +234,7 @@ public class QuestEditor : EditorWindow
 
     public void DisplayTriggerEditor(int id)
     {
-        triggerEditor.Display(Node.NodeAtID(nodes, selectedNode));
+        triggerEditor.Display(Node.NodeAtID(selectedNode));
         GUI.DragWindow();
     }
 

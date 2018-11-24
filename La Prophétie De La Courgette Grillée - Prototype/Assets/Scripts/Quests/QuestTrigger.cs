@@ -4,9 +4,9 @@ using UnityEngine;
 public class QuestTrigger : Interactable
 {
     [Header("Quest Trigger")]
-    public bool isInteractable;
-    public List<QuestTrigger> triggersToDesactive;
-    public List<QuestTrigger> triggersToActive;
+    public bool isInteractable = true;
+    public List<QuestTrigger> triggersToDesactive = new List<QuestTrigger>();
+    public List<QuestTrigger> triggersToActive = new List<QuestTrigger>();
 
     private Interactable oldActive;
 

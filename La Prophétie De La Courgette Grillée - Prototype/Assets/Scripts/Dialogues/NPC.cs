@@ -3,6 +3,7 @@
 public class NPC : MonoBehaviour
 {
     public float speed;
+    public Vector2 offsetIcon; // For interactable scripts
     
     [Header("Spots")]
     public Transform[] patrolSpots;

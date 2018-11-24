@@ -13,6 +13,9 @@ public class Node
     private static int lastId = 2;
     public static GUIStyle guiStyle;
 
+    public List<Connector> connectActive;
+    public List<Connector> connectDesactive;
+
     public Node(QuestTrigger questTrigger)
     {
         trigger = questTrigger;
@@ -21,10 +24,12 @@ public class Node
         rect = new Rect(100, 100, 120, 50);
         QuestEditor.nodes.Add(this);
         QuestEditor.selectedNode = id;
+        connectActive = new List<Connector>();
+        connectDesactive = new List<Connector>();
     }
 
     public Node(GameObject gameObject, System.Type type)
-    {
+    { 
         trigger = (QuestTrigger)gameObject.AddComponent(type);
         ChangeTitle(trigger.GetType());
         id = lastId++;
@@ -32,8 +37,10 @@ public class Node
         QuestEditor.nodes.Add(this);
         QuestEditor.selectedQuest.questTriggers.Add(trigger);
         QuestEditor.selectedNode = id;
+        connectActive = new List<Connector>();
+        connectDesactive = new List<Connector>();
     }
-    
+
     public void DisplayNode(int id)
     {
         GUI.DragWindow();
@@ -41,6 +48,24 @@ public class Node
         if (Event.current.type == EventType.MouseUp)
         {
             QuestEditor.selectedNode = id;
+        }
+        ChangeTitle(trigger.GetType());
+    }
+
+    public void CreateConnections()
+    {
+        foreach (QuestTrigger trig in trigger.triggersToActive)
+        {
+            Node victim = FindNode(trig);
+            if(victim != null)
+                connectActive.Add(new Connector(this, victim, true));
+        }
+
+        foreach (QuestTrigger trig in trigger.triggersToDesactive)
+        {
+            Node victim = FindNode(trig);
+            if (victim != null && victim != this)
+                connectDesactive.Add(new Connector(this, victim, false));
         }
     }
 
@@ -69,24 +94,32 @@ public class Node
 
     private void ChangeTitle(System.Type type)
     {
+        title = "";
+
+        if (QuestEditor.selectedNode == id)
+            title += "* ";
+
         if (type == QuestEditor.TranslateType(TRIGGER_TYPES.DIALOGUE))
-            title = "Dialogue";
+            title += "Dialogue";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.ITEM_PICKUP))
-            title = "Item Pickup";
+            title += "Item Pickup";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.BUY))
-            title = "Buy";
+            title += "Buy";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.CRAFT))
-            title = "Craft";
+            title += "Craft";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.START))
-            title = "Start Dialogue";
+            title += "Start Dialogue";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.END))
-            title = "End Dialogue";
+            title += "End Dialogue";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REMOVE_ITEM))
-            title = "Remove Item";
+            title += "Remove Item";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REWARD))
-            title = "Reward";
+            title += "Reward";
         else
             title = "Trigger";
+
+        if (QuestEditor.selectedNode == id)
+            title += " *";
     }
 
     public void DestroyNode()
@@ -94,11 +127,66 @@ public class Node
         Object.DestroyImmediate(trigger);
     }
 
-    
-
-    public static Node NodeAtID(List<Node> nodes, int id)
+    public Node FindNode(QuestTrigger trigger)
     {
-        foreach (Node node in nodes)
+        foreach(Node node in QuestEditor.nodes)
+        {
+            if (node.trigger == trigger)
+                return node;
+        }
+        return null;
+    }
+
+
+    public void DrawConnections()
+    {
+        for (int i = 0; i < connectActive.Count; i++)
+        {
+            if (!connectActive[i].Draw(true))
+            {
+                connectActive.Remove(connectActive[i]);
+                i--;
+            }
+        }
+
+        for(int i = 0; i < connectDesactive.Count; i++)
+        {
+            if (!connectDesactive[i].Draw(false))
+            {
+                connectDesactive.Remove(connectDesactive[i]);
+                i--;
+            }
+        }
+    }
+
+    public void DestroyConnector(int victim)
+    {
+        for(int i = 0; i < connectActive.Count; i++)
+        {
+            if (connectActive[i].nodeVictim == victim)
+            {
+                trigger.triggersToActive.Remove(NodeAtID(victim).trigger);
+                connectActive.RemoveAt(i);
+                return;
+            }
+        }
+
+        for (int i = 0; i < connectDesactive.Count; i++)
+        {
+            if (connectDesactive[i].nodeVictim == victim)
+            {
+                trigger.triggersToDesactive.Remove(NodeAtID(victim).trigger);
+                connectDesactive.RemoveAt(i);
+                return;
+            }
+        }
+    }
+
+    #region static_functions
+
+    public static Node NodeAtID(int id)
+    {
+        foreach (Node node in QuestEditor.nodes)
         {
             if (node.id == id)
                 return node;
@@ -106,7 +194,7 @@ public class Node
         return null;
     }
 
-    public static void LoadNodes(List<Node> nodes, Quest quest)
+    public static void LoadNodes(Quest quest)
     {
         bool hasStartTrigger = false;
         bool hasEndTrigger = false;
@@ -132,4 +220,6 @@ public class Node
             new Node(quest.gameObject, QuestEditor.TranslateType(TRIGGER_TYPES.END));
         }
     }
+
+    #endregion
 }
