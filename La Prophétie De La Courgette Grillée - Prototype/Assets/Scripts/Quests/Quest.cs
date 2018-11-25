@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
     public QuestData questData;
+    public bool isActive;
+    public List<QuestTrigger> questTriggers;
 
     public void StartQuest()
     {
-        GameManager.questManager.activeQuests.Add(this);
+        isActive = true;
 
 
         /// UI
@@ -14,7 +17,7 @@ public class Quest : MonoBehaviour
 
     public void EndQuest()
     {
-        GameManager.questManager.activeQuests.Remove(this);
+        isActive = false;
 
         // Rewards
         foreach (Item item in questData.itemsReward)

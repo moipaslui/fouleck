@@ -2,11 +2,9 @@
 
 public class StartQuest_Dialogue : QuestTrigger_Dialogue
 {
-    public Quest quest;
-
     public override void Trigger()
     {
-        quest.StartQuest();
+        GameManager.questManager.FindQuest(this).StartQuest();
 
         base.Trigger();
     }

@@ -7,7 +7,7 @@ public class QuestTrigger_Buy : QuestTrigger
     private bool wasActive;
     private bool hasBoughtAll;
 
-    public List<Item> itemsToBuy;
+    public List<Item> itemsToBuy = new List<Item>();
 
     public override void ActiveTrigger()
     {

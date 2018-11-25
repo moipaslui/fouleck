@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class RewardTriggerAT : ActionTrigger
 {
     [Header("Rewards")]
-    public Item[] items;
+    public List<Item> items = new List<Item>();
     public int money;
     public int exp;
 

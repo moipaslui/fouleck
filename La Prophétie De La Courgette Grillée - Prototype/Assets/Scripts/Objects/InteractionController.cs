@@ -10,7 +10,7 @@ public class InteractionController : MonoBehaviour
     public GameObject focus;
     private GameObject oldFocus;
     private GameObject tempFocus;
-
+    
     void Update()
     {
         // On regarde s'il y a des interactible autour du player
