@@ -3,9 +3,14 @@ guid: de6f0f3e56eeae74783be96348e64e44
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - joueur: {instanceID: 0}
+  - vendeur: {instanceID: 0}
+  - listItems: {fileID: 11400000, guid: 26d1debfcdec69e4b8ac2c15c0ab099f, type: 2}
+  - itemPrefab: {fileID: 1683215840461406, guid: d99b64b3a7362414aa4292c0202abcc2,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

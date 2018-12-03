@@ -34,6 +34,8 @@ class GameData
     public JoueurData joueurData;
     public GameManagerData gameManagerData;
     public VendeurData vendeurData;
+    public List<bool> quests;
+    public List<List<bool>> questTriggers;
 
     public GameData()
     {
@@ -47,5 +49,8 @@ class GameData
             countItems = new List<int>()
         };
         joueurData = new JoueurData();
+
+        quests = new List<bool>();
+        questTriggers = new List<List<bool>>();
     }
 }

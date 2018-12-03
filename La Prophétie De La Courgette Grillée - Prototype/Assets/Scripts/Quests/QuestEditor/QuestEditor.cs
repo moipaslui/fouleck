@@ -78,10 +78,7 @@ public class QuestEditor : EditorWindow
         for (int i = 0; i < nodes.Count; i++)
         {
             nodes[i].rect = GUILayout.Window(nodes[i].id, nodes[i].rect, nodes[i].DisplayNode, nodes[i].trigger.gameObject.name);
-        }
-        foreach(Node node in nodes)
-        {
-            node.DrawConnections();
+            nodes[i].DrawConnections();
         }
 
         if (selectedNode != -1)

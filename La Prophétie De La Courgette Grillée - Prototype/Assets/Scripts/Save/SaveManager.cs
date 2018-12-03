@@ -59,6 +59,17 @@ public class SaveManager : MonoBehaviour
             }
         }
 
+        foreach(Quest quest in GetComponent<QuestManager>().quests)
+        {
+            data.quests.Add(quest.isActive);
+
+            data.questTriggers.Add(new List<bool>());
+            foreach(QuestTrigger trigger in quest.questTriggers)
+            {
+                data.questTriggers[data.questTriggers.Count - 1].Add(trigger.isActive);
+            }
+        }
+
         bf.Serialize(file, data);
         file.Close();
 
@@ -97,6 +108,8 @@ public class SaveManager : MonoBehaviour
             {
                 vendeur.itemsToSell.Add(listItems.items[data.vendeurData.items[i]]);
             }
+
+            GetComponent<QuestManager>().LoadQuests(data.quests, data.questTriggers);
 
             Debug.Log("Loaded !");
         }

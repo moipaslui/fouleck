@@ -14,4 +14,23 @@ public class QuestManager : MonoBehaviour
         }
         return null;
     }
+
+    public void LoadQuests(List<bool> activeQuests, List<List<bool>> triggers)
+    {
+        for(int i = 0; i < quests.Count; i++)
+        {
+            quests[i].isActive = activeQuests[i];
+            
+            for(int y = 0; y < quests[i].questTriggers.Count; y++)
+            {
+                if (quests[i].questTriggers[y] != null)
+                {
+                    if (triggers[i][y] == true)
+                        quests[i].questTriggers[y].ActiveTrigger();
+                    else
+                        quests[i].questTriggers[y].DesactiveTrigger();
+                }
+            }
+        }
+    }
 }
