@@ -8,8 +8,8 @@ public class PlayerHealthManager : MonoBehaviour
     public int startingTotalHearts = 3;
     [Range(0, 10)]
     public int startingHearts = 3;
-    
-    public int numberOfBlink;
+
+    public float timeStunned;
     public float blinkTime;
     public float currentHP;
 
@@ -94,11 +94,9 @@ public class PlayerHealthManager : MonoBehaviour
         {
             currentHP -= damage;
             Debug.Log("Joueur touché !");
-
-            GetComponent<Rigidbody2D>().velocity = knockback;
-
-            StartCoroutine("Blink");
-
+            StartCoroutine(Knockback(knockback, damage / 2));
+            StartCoroutine(Blink(damage / 2f));
+            GetComponent<Animator>().SetBool("isAttacking", false);
             UpdateUIHearts();
 
             if (currentHP <= 0)
@@ -116,33 +114,51 @@ public class PlayerHealthManager : MonoBehaviour
         UpdateUIHearts();
     }
 
-    private IEnumerator Blink()
+    private IEnumerator Knockback(Vector2 knockbackDirection, float knockbackForce)
+    {
+        Vector2 initalPosition = transform.position;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        while (Vector2.Distance(initalPosition, transform.position) < 0.8f)
+        {
+            rb.MovePosition(transform.position + (Vector3)knockbackDirection * 5 * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+        rb.velocity = Vector2.zero;
+    }
+
+    private IEnumerator Blink(float knockbackForce)
     {
         GetComponent<PlayerControllerIsometric>().canMove = false;
         isBlinking = true;
         SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
 
-        for (int nbBlink = 0; nbBlink < numberOfBlink; nbBlink++)
+        for (float time = 0f; time < timeStunned * knockbackForce; time += Time.deltaTime)
         {
             for (float countDown = blinkTime; countDown >= 0; countDown -= Time.deltaTime)
             {
+                if (time > timeStunned * knockbackForce)
+                    break;
+
                 foreach (SpriteRenderer sprite in enemySprites)
                 {
                     sprite.enabled = false;
                 }
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
 
             for (float countDown = 0; countDown <= blinkTime; countDown += Time.deltaTime)
             {
+                if (time > timeStunned * knockbackForce)
+                    break;
+
                 foreach (SpriteRenderer sprite in enemySprites)
                 {
                     sprite.enabled = true;
                 }
-
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
         }
+
         isBlinking = false;
         GetComponent<PlayerControllerIsometric>().canMove = true;
     }

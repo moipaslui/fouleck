@@ -4,7 +4,6 @@ public class WeaponOnPlayer : MonoBehaviour
 {
     public Weapon arme;
     public int handDamage = 1;
-    public float knockbackForce = 3f;
 
     [Header("UI")]
     public SpriteRenderer weaponSprite;
@@ -13,6 +12,7 @@ public class WeaponOnPlayer : MonoBehaviour
     public PolygonCollider2D polygonCollider;
 
     private Vector2[] handPoints;
+    private float knockbackForce = 0.8f;
 
     public void ChangeWeapon(Weapon arme)
     {
@@ -33,14 +33,22 @@ public class WeaponOnPlayer : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if(other.tag == "ennemi")
+        if (polygonCollider.IsTouching(other))
         {
-            Debug.Log("Ennemi touché.");
-            Vector2 knockback = ((Vector2)other.transform.position - (Vector2)transform.position).normalized * knockbackForce;
-            if(arme != null)
-                other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage, knockback);
-            else
-                other.GetComponent<EnemyHealthManager>().HurtEnemy(handDamage, knockback);
+            if (other.tag == "ennemi")
+            {
+                Debug.Log("Ennemi touché.");
+                if (arme != null)
+                {
+                    Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
+                    other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage, knockbackDirection, arme.knockbackForce);
+                }
+                else
+                {
+                    Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
+                    other.GetComponent<EnemyHealthManager>().HurtEnemy(handDamage, knockbackDirection, knockbackForce);
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int enemyDamage;
     public float knockbackForce = 2f;
 
-    public int numberOfBlink;
+    public float timeStunned;
     public float blinkTime;
 
     public GameObject itemPrefab;
@@ -16,14 +16,16 @@ public class EnemyHealthManager : MonoBehaviour
 
     private bool isBlinking = false;
 
-    public void HurtEnemy(int damage, Vector2 knockback)
+    public void HurtEnemy(int damage, Vector2 knockbackDirection, float knockbackForce)
     {
         if (!isBlinking)
         {
             GetComponent<EnnemiController>().ennemiFace.sprite = GetComponent<EnnemiController>().hurtFace;
+            GetComponent<Animator>().SetBool("isWalking", false);
+            GetComponent<Animator>().SetBool("isAttacking", false);
             health -= damage;
-            GetComponent<Rigidbody2D>().velocity = knockback;
-            StartCoroutine("Blink");
+            StartCoroutine(Knockback(knockbackDirection, knockbackForce));
+            StartCoroutine(Blink(knockbackForce));
             if (health <= 0)
             {
                 Die();
@@ -35,38 +37,60 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (other.tag == "player")
         {
-            Vector2 knockback = ((Vector2)other.transform.position - (Vector2)transform.position).normalized * knockbackForce;
-            other.GetComponent<PlayerHealthManager>().HurtPlayer(enemyDamage, knockback);
+            Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
+            other.GetComponent<PlayerHealthManager>().HurtPlayer(enemyDamage, knockbackDirection);
         }
     }
 
-    private IEnumerator Blink()
+    private IEnumerator Knockback(Vector2 knockbackDirection, float knockbackForce)
+    {
+        Vector2 initalPosition = transform.position;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        while(Vector2.Distance(initalPosition, transform.position) < 0.8f)
+        {
+            rb.MovePosition(transform.position + (Vector3)knockbackDirection * 5 * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator Blink(float knockbackForce)
     {
         GetComponent<EnnemiController>().canMove = false;
         isBlinking = true;
         SpriteRenderer[] enemySprites = GetComponentsInChildren<SpriteRenderer>();
 
-        for (int nbBlink = 0; nbBlink < numberOfBlink; nbBlink++)
+        for(float time = 0f; time < timeStunned * knockbackForce; time += Time.deltaTime)
         {
             for (float countDown = blinkTime; countDown >= 0; countDown -= Time.deltaTime)
             {
+                if(time > timeStunned * knockbackForce)
+                    break;
+
                 foreach (SpriteRenderer sprite in enemySprites)
                 {
                     sprite.enabled = false;
                 }
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
 
             for (float countDown = 0; countDown <= blinkTime; countDown += Time.deltaTime)
             {
+                if (time > timeStunned * knockbackForce)
+                    break;
+
                 foreach (SpriteRenderer sprite in enemySprites)
                 {
                     sprite.enabled = true;
                 }
-
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForEndOfFrame();
             }
         }
+
+        foreach (SpriteRenderer sprite in enemySprites)
+        {
+            sprite.enabled = true;
+        }
+
         isBlinking = false;
         GetComponent<EnnemiController>().canMove = true;
     }

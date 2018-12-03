@@ -18,7 +18,7 @@ MonoBehaviour:
   floorHeight: 0.132
   cost: 10
   offsetIcon: {x: 0.31, y: -0.07}
-  damage: 5
+  damage: 1
   colliderPoints:
   - {x: 0.50696415, y: 0.32729244}
   - {x: 0.5461911, y: 0.43038633}
@@ -43,3 +43,4 @@ MonoBehaviour:
   - {x: 0.6779968, y: 0.14683448}
   - {x: -0.08092427, y: -0.11713442}
   - {x: -0.13927838, y: 0.08714951}
+  knockbackForce: 1.8
