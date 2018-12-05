@@ -12464,6 +12464,7 @@ MonoBehaviour:
   craftAmeliorations: {fileID: 1743769675}
   AmeliorationsMenu: {fileID: 1057991723}
   AmeliorationsPizzas: {fileID: 371894187}
+  isQuest: 0
 --- !u!1 &225530813
 GameObject:
   m_ObjectHideFlags: 0
@@ -15777,6 +15778,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: 523903ee4ea1a67469cf3771fcc2ea72, type: 2}
   icon: {fileID: 712256866}
   cross: {fileID: 1907579652}
+  isQuest: 0
 --- !u!114 &287032441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18168,6 +18170,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
   icon: {fileID: 125992059}
   cross: {fileID: 1584604220}
+  isQuest: 0
 --- !u!114 &339342500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20317,6 +20320,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
   icon: {fileID: 608055682}
   cross: {fileID: 1837840653}
+  isQuest: 0
 --- !u!95 &391831870
 Animator:
   serializedVersion: 3
@@ -24028,6 +24032,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: bf13f3ce68efe96409ea5cfa083b405d, type: 2}
   icon: {fileID: 1312974979}
   cross: {fileID: 417134766}
+  isQuest: 0
 --- !u!114 &465163497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29333,7 +29338,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616733535}
-  m_LocalRotation: {x: 0.00000034413097, y: 0.000003799337, z: 0.099721245, w: 0.99501544}
+  m_LocalRotation: {x: 0.00000034462528, y: 0.0000037992927, z: 0.0998507, w: 0.99500245}
   m_LocalPosition: {x: 0.000000052619725, y: 0.12434072, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
@@ -34933,6 +34938,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
   icon: {fileID: 684676355}
   cross: {fileID: 145642884}
+  isQuest: 0
 --- !u!95 &748409433
 Animator:
   serializedVersion: 3
@@ -64353,6 +64359,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
   icon: {fileID: 1363687746}
   cross: {fileID: 379769096}
+  isQuest: 0
 --- !u!114 &1379943205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67435,6 +67442,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
   icon: {fileID: 1870423801}
   cross: {fileID: 537601777}
+  isQuest: 0
 --- !u!114 &1452722678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74636,6 +74644,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: d2de6367b12076143831d040a49c757e, type: 2}
   icon: {fileID: 2086044925}
   cross: {fileID: 237891084}
+  isQuest: 0
 --- !u!95 &1592975814
 Animator:
   serializedVersion: 3
@@ -75602,7 +75611,8 @@ MonoBehaviour:
   isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
-  triggersToDesactive: []
+  triggersToDesactive:
+  - {fileID: 1605681270}
   triggersToActive:
   - {fileID: 458883895}
   dialogue:
@@ -82573,6 +82583,7 @@ MonoBehaviour:
   itemToCraft: {fileID: 11400000, guid: 3adeaeb7e691a7f43914da191afa2a59, type: 2}
   icon: {fileID: 530848851}
   cross: {fileID: 1257240343}
+  isQuest: 0
 --- !u!114 &1735904250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100983,7 +100994,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133069150}
-  m_LocalRotation: {x: 0.10773585, y: -0.9941796, z: 0.0000002860423, w: -0.000003762066}
+  m_LocalRotation: {x: 0.10782828, y: -0.99416953, z: 0.00000028639263, w: -0.0000037620391}
   m_LocalPosition: {x: 0.098, y: 0.588, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

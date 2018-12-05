@@ -9,11 +9,14 @@ public class CraftSlot : MonoBehaviour
 
     private Button button;
 
+    [HideInInspector]
+    public bool isQuest;
+
     public void RefreshUI()
     {
         icon.sprite = itemToCraft.icon;
         button = GetComponent<Button>();
-        if (GameManager.inventory.IsCraftable(itemToCraft) || GameManager.inventory.IsCraftable(itemToCraft, isQuestItem:true))
+        if (GameManager.inventory.IsCraftable(itemToCraft) || (GameManager.inventory.IsCraftable(itemToCraft, isQuestItem:true) && isQuest))
         {
             if(cross)
             {

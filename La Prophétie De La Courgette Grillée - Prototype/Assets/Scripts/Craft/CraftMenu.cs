@@ -13,6 +13,9 @@ public class CraftMenu : MonoBehaviour
     private CraftSlot[] craftSlots;
     private CraftSlot[] ameliorationCraftSlots;
 
+    [HideInInspector]
+    public bool isQuest;
+
     private void Start()
     {
         craftBases.SetActive(true);
@@ -61,11 +64,13 @@ public class CraftMenu : MonoBehaviour
     {
         foreach (CraftSlot cs in craftSlots)
         {
+            cs.isQuest = isQuest;
             cs.RefreshUI();
         }
 
         foreach(CraftSlot cs in ameliorationCraftSlots)
         {
+            cs.isQuest = isQuest;
             cs.RefreshUI();
         }
     }
