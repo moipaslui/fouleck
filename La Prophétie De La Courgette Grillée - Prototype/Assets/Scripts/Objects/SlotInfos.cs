@@ -1,14 +1,13 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class SlotInfos : MonoBehaviour
 {
-    private RectTransform rectTransform;
+    public bool isInventory;
     public TextMeshProUGUI infosText;
     public TextMeshProUGUI infosTitle;
+    private RectTransform rectTransform;
 
     private void Start()
     {
@@ -42,21 +41,47 @@ public class SlotInfos : MonoBehaviour
             infosText.text += "\nSoin : " + ((Repas)itemToBuy).heal;
         infosText.text += "\nPrix : " + itemToBuy.cost;
 
-        float xPos = rectTransform.localPosition.x;
-        for (; xPos < 226; xPos += 10)
+        if (isInventory)
         {
-            rectTransform.localPosition = new Vector3(xPos, -27, 0);
-            yield return null;
+            float xScale = rectTransform.localScale.x;
+            for (; xScale <= 1; xScale += 0.04f)
+            {
+                rectTransform.localPosition = new Vector3(- xScale * 130f, 0, 0);
+                rectTransform.localScale = new Vector3(xScale, rectTransform.localScale.y, rectTransform.localScale.z);
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else
+        {
+            float xPos = rectTransform.localPosition.x;
+            for (; xPos < 226; xPos += 10)
+            {
+                rectTransform.localPosition = new Vector3(xPos, rectTransform.localPosition.y);
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 
     private IEnumerator HideInfosCoroutine()
     {
-        float xPos = rectTransform.localPosition.x;
-        for (; xPos > 40; xPos -= 10)
+        if (isInventory)
         {
-            rectTransform.localPosition = new Vector3(xPos, -27, 0);
-            yield return null;
+            float xScale = rectTransform.localScale.x;
+            for (; xScale >= 0; xScale -= 0.04f)
+            {
+                rectTransform.localPosition = new Vector3(-xScale * 100f, 0, 0);
+                rectTransform.localScale = new Vector3(xScale, rectTransform.localScale.y, rectTransform.localScale.z);
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else
+        {
+            float xPos = rectTransform.localPosition.x;
+            for (; xPos > 40; xPos -= 10)
+            {
+                rectTransform.localPosition = new Vector3(xPos, rectTransform.localPosition.y);
+                yield return new WaitForEndOfFrame();
+            }
         }
         
         infosTitle.gameObject.SetActive(false);
