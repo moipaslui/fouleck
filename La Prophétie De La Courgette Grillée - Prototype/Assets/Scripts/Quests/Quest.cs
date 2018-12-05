@@ -24,7 +24,7 @@ public class Quest : MonoBehaviour
             GameManager.inventory.Add(item);
 
         GameManager.moneyManager.AddMoney(questData.moneyReward);
-        /// add exp
+        GameManager.expManager.AddExperience(questData.expReward);
 
 
         /// UI

@@ -15,5 +15,5 @@ MonoBehaviour:
   description: "Mauricio a besoin de cette bo\xEEte \xE0 outil ! Il faut que vous
     alliez la chercher, quoi qu'il en co\xFBte !"
   itemsReward: []
-  expReward: 1
+  expReward: 5
   moneyReward: 0
