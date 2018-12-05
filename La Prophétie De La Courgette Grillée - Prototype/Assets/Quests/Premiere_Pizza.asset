@@ -16,5 +16,5 @@ MonoBehaviour:
     pizza au vendeur gr\xE2ce \xE0 l'argent que Mauricio vous a donner."
   itemsReward:
   - {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
-  expReward: 2
+  expReward: 25
   moneyReward: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
 {
-    public int health;
+    public float health;
     public int enemyDamage;
     public float knockbackForce = 2f;
 
@@ -16,7 +16,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     private bool isBlinking = false;
 
-    public void HurtEnemy(int damage, Vector2 knockbackDirection, float knockbackForce)
+    public void HurtEnemy(float damage, Vector2 knockbackDirection, float knockbackForce)
     {
         if (!isBlinking)
         {
@@ -103,6 +103,7 @@ public class EnemyHealthManager : MonoBehaviour
             GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
             clone.GetComponent<ItemOnObject>().ChangeItem(itemToPop);
         }
+        GameManager.expManager.AddExperience(15);
         Destroy(gameObject);
     }
 }

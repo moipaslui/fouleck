@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : Item
 {
     [Header("Weapon")]
-    public int damage;
+    public float damage;
     public Vector2[] colliderPoints;
     public float knockbackForce;
 }
