@@ -24,6 +24,7 @@ public class QuestTrigger_Buy : QuestTrigger
     public override void Trigger()
     {
         seller = GetComponent<Seller>();
+        seller.isNextInteractionQuest = true;
         seller.ChangeActivation(true);
         seller.Interact();
 

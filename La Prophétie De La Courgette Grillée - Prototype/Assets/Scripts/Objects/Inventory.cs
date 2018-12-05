@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -23,30 +24,35 @@ public class Inventory : MonoBehaviour
     public int space = 5;
     public int spacePerSlot = 10;
     public List<ItemInventory> items = new List<ItemInventory>();
+    public List<ItemInventory> questItems = new List<ItemInventory>();
 
     [Header("Others")]
     public WeaponOnPlayer weaponOnPlayer;
     public GameObject sellerMenu;
 
-    public bool Add(Item item)
+    public bool Add(Item item, bool isQuestItem = false)
     {
-        for(int i = 0; i < items.Count; i++)
+        List<ItemInventory> tempItems = items;
+        if (isQuestItem)
+            tempItems = questItems;
+
+        foreach(ItemInventory itemInventory in tempItems)
         {
-            if(item == items[i].item)
+            if(item == itemInventory.item)
             {
-                if (items[i].count < spacePerSlot)
+                if (itemInventory.count < spacePerSlot)
                 {
-                    items[i].count += 1;
-                    UpdateUI();
+                    itemInventory.count += 1;
+                    UpdateUI(isQuestItem);
                     return true;
                 }
             }
         }
 
-        if (items.Count < space)
+        if (tempItems.Count < space)
         {
-            items.Add(new ItemInventory(item, 1));
-            UpdateUI();
+            tempItems.Add(new ItemInventory(item, 1));
+            UpdateUI(isQuestItem);
 
             return true;
         }
@@ -57,31 +63,35 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void Remove(Item item, bool instanciate)
+    public void Remove(Item item, bool instanciate, bool isQuestItem = false)
     {
+        List<ItemInventory> tempItems = items;
+        if (isQuestItem)
+            tempItems = questItems;
+
         int itemPos = -1;
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < tempItems.Count; i++)
         {
-            if (item == items[i].item)
+            if (item == tempItems[i].item)
             {
                 if (itemPos != -1) // On équilibre aves les autres slots contenants le même Item
                 {
-                    items[itemPos].count++;
+                    tempItems[itemPos].count++;
                 }
 
-                if (items[i].count > 1)
+                if (tempItems[i].count > 1)
                 {
-                    items[i].count -= 1;
+                    tempItems[i].count -= 1;
                     itemPos = i;
                 }
                 else
                 {
-                    items.RemoveAt(i);
+                    tempItems.RemoveAt(i);
                 }
             }
         }
 
-        UpdateUI();
+        UpdateUI(isQuestItem);
 
         if (instanciate)
         {
@@ -90,9 +100,13 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool Contains(Item item)
+    public bool Contains(Item item, bool isQuestItem = false)
     {
-        foreach(ItemInventory itemInventory in items)
+        List<ItemInventory> tempItems = items;
+        if (isQuestItem)
+            tempItems = questItems;
+
+        foreach (ItemInventory itemInventory in tempItems)
         {
             if (item == itemInventory.item)
                 return true;
@@ -100,10 +114,10 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public void RemoveAll()
+    public void RemoveAll(bool isQuestItem = false)
     {
         items.Clear();
-        UpdateUI();
+        UpdateUI(isQuestItem);
     }
     
     public void ClickOnItem()
@@ -132,11 +146,11 @@ public class Inventory : MonoBehaviour
 
     #region Craft
 
-    public bool IsCraftable(Craftable itemToCraft)
+    public bool IsCraftable(Craftable itemToCraft, bool isQuestItem = false)
     {
         foreach (Item item in itemToCraft.craftNeed)
         {
-            if (!Contains(item))
+            if (!Contains(item, isQuestItem))
             {
                 return false;
             }
@@ -146,15 +160,21 @@ public class Inventory : MonoBehaviour
 
     public void CraftItem(Craftable itemToCraft)
     {
-        if (IsCraftable(itemToCraft))
-        {
-            foreach (Item item in itemToCraft.craftNeed)
-            {
-                Remove(item, false);
-            }
+        bool isQuest;
 
-            Add(itemToCraft);
+        if (IsCraftable(itemToCraft))
+            isQuest = false;
+        else if (IsCraftable(itemToCraft, isQuestItem: true))
+            isQuest = true;
+        else
+            return;
+
+        foreach (Item item in itemToCraft.craftNeed)
+        {
+            Remove(item, false, isQuest);
         }
+
+        Add(itemToCraft, isQuest);
     }
 
     #endregion
@@ -162,26 +182,54 @@ public class Inventory : MonoBehaviour
     #region UI
 
     [Header("UI")]
-    public Transform slotsPanel;
+    public RectTransform slotsPanel;
     private InventorySlot[] slots;
+    public RectTransform questSlotsPanel;
+    private InventorySlot[] questSlots;
 
     void Start()
     {
         slots = slotsPanel.GetComponentsInChildren<InventorySlot>();
+        questSlots = questSlotsPanel.GetComponentsInChildren<InventorySlot>();
     }
 
-    public void UpdateUI()
+    public void UpdateUI(bool isQuestItem)
     {
-        for (int i = 0; i < slots.Length; i++)
+        List<ItemInventory> tempItems = items;
+        InventorySlot[] tempSlots = slots;
+        if (isQuestItem)
         {
-            if (i < items.Count)
+            tempItems = questItems;
+            tempSlots = questSlots;
+        }
+
+        for (int i = 0; i < tempSlots.Length; i++)
+        {
+            if (i < tempItems.Count)
             {
-                slots[i].AddItem(items[i].item, items[i].count);
+                tempSlots[i].AddItem(tempItems[i].item, tempItems[i].count);
             }
             else
             {
-                slots[i].ClearSlot();
+                tempSlots[i].ClearSlot();
             }
+        }
+
+        if(isQuestItem)
+        {
+            StartCoroutine(QuestSlotsPanelMove());
+        }
+    }
+
+    private IEnumerator QuestSlotsPanelMove()
+    {
+        while (Mathf.Abs(questSlotsPanel.localPosition.x - (-55 * questItems.Count)) > 5f)
+        {
+            if(questSlotsPanel.localPosition.x < -55 * questItems.Count)
+                questSlotsPanel.localPosition = new Vector3(questSlotsPanel.localPosition.x + Time.deltaTime * 100, 0);
+            else
+                questSlotsPanel.localPosition = new Vector3(questSlotsPanel.localPosition.x - Time.deltaTime * 100, 0);
+            yield return new WaitForEndOfFrame();
         }
     }
 

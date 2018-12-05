@@ -23,6 +23,9 @@ public class Seller : Interactable
     public GameObject slotsPanel;
     public TextMeshProUGUI TMP;
 
+    [HideInInspector]
+    public bool isNextInteractionQuest;
+
     private bool isMenuOpen;
 
     private Animator anim;
@@ -58,6 +61,7 @@ public class Seller : Interactable
 
     override public void EndOfInteraction()
     {
+        isNextInteractionQuest = false;
         Time.timeScale = 1;
         GameManager.dialogueManager.EndDialogue();
         sellerMenu.SetActive(false);
@@ -73,7 +77,7 @@ public class Seller : Interactable
         if(GameManager.inventory.items.Count < 5 && GameManager.moneyManager.currentMoney >= i.cost)
         {
             itemsToSell.Remove(i);
-            GameManager.inventory.Add(i);
+            GameManager.inventory.Add(i, isNextInteractionQuest);
             GameManager.moneyManager.AddMoney(-i.cost);
             currentMoney += i.cost;
             RefreshUI();
@@ -83,7 +87,7 @@ public class Seller : Interactable
 
     public bool BuyItem(Item item)
     {
-        if (!GameManager.inventory.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost * buyMargin)
+        if (!GameManager.inventory.Contains(item) || itemsToSell.Count >= 9 || currentMoney < item.cost * buyMargin || isNextInteractionQuest)
         {
             return false;
         }
