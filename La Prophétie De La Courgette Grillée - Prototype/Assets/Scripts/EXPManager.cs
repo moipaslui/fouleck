@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
 
 public class EXPManager : MonoBehaviour
 {
@@ -10,6 +9,10 @@ public class EXPManager : MonoBehaviour
 
 	public WeaponOnPlayer weaponOnPlayer;
 
+    [Header("UI")]
+    public TextMeshProUGUI xpText;
+    public TextMeshProUGUI lvlText;
+
 	public void AddExperience(int xp)
 	{
 		joueurXP += xp;
@@ -17,13 +20,23 @@ public class EXPManager : MonoBehaviour
 		{
 			AddLevel();
 		}
+
+        UpdateUI();
 	}
 
-	public void AddLevel()
+	private void AddLevel()
 	{
 		joueurXP = joueurXP - plafondXP;
-		plafondXP = 20 + 10 * level;
-		level = level + 1;
+		plafondXP += 10 * level;
+		level++;
+
+        // Upgrades
 		weaponOnPlayer.damage *= 1.2f;
 	}
+
+    private void UpdateUI()
+    {
+        xpText.text = "" + joueurXP + "/" + plafondXP;
+        lvlText.text = "" + level;
+    }
 }
