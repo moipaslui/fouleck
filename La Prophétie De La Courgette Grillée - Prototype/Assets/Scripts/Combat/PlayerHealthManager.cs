@@ -12,12 +12,14 @@ public class PlayerHealthManager : MonoBehaviour
     public float timeStunned;
     public float blinkTime;
     public float currentHP;
+    public float currentShield;
 
     public Image[] healthImages;
-
     public Sprite healthSpriteEmpty;
     public Sprite healthSpriteHalf;
     public Sprite healthSpriteFull;
+
+    public Image[] shieldImages;
 
     // 1 HEART = 2 HPs
 
@@ -36,9 +38,7 @@ public class PlayerHealthManager : MonoBehaviour
         }
 
         currentHP = startingHearts * healthPerHeart;
-
         totalHearts = startingTotalHearts;
-
         UpdateUIHearts();
 	}
 
@@ -50,13 +50,13 @@ public class PlayerHealthManager : MonoBehaviour
             {
                 healthImages[i].enabled = true;
 
-                if (i+1 <= (float)currentHP / 2)
+                if (i+1 <= currentHP / 2)
                 {
                     healthImages[i].sprite = healthSpriteFull;
                 }
                 else
                 {
-                    if ((float)(i+1) - (float)currentHP / 2 == 0.5f) // If there is not a full heart
+                    if ((float)(i+1) - currentHP / 2 == 0.5f) // If there is not a full heart
                     {
                         healthImages[i].sprite = healthSpriteHalf;
                     }
@@ -110,8 +110,26 @@ public class PlayerHealthManager : MonoBehaviour
     public void HealPlayer(int heal)
     {
         currentHP += heal;
-        Debug.Log("Joueur soigné !");
         UpdateUIHearts();
+    }
+
+    public IEnumerator AutoHeal(float timeBeforeHeal, float timeToHeal)
+    {
+        if(timeToHeal == 0)
+        {
+            while(true)
+            {
+                HealPlayer(1);
+                yield return new WaitForSeconds(timeBeforeHeal);
+            }
+        }
+
+        float limitTime = timeToHeal + Time.time;
+        while(Time.time < limitTime)
+        {
+            HealPlayer(1);
+            yield return new WaitForSeconds(timeBeforeHeal);
+        }
     }
 
     private IEnumerator Knockback(Vector2 knockbackDirection, float knockbackForce)
@@ -161,12 +179,5 @@ public class PlayerHealthManager : MonoBehaviour
 
         isBlinking = false;
         GetComponent<PlayerControllerIsometric>().canMove = true;
-    }
-
-
-    public void MangeRepas(Repas repas)
-    {
-        HealPlayer(repas.heal);
-        /// Ajouter les "resistances"
     }
 }

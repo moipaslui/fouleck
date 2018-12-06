@@ -130,7 +130,7 @@ public class Inventory : MonoBehaviour
         }
         else if(selectedItem.GetType() == typeof(Repas))
         {
-            FindObjectOfType<PlayerHealthManager>().MangeRepas((Repas)selectedItem);
+            GetComponent<BuffManager>().MangerRepas((Repas)selectedItem);
             Remove(selectedItem, false);
         }
         else if(selectedItem.GetType() == typeof(Weapon))

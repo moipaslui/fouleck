@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Parfait pour les rencards romantiques, cet aliment relevera vos plats
     les plus fades !
   floorHeight: 0
-  cost: 0
+  cost: 2
   offsetIcon: {x: 0.19, y: 0.14}
   quality: 0

@@ -16,6 +16,6 @@ MonoBehaviour:
   description: C'est bien connu, chez Fouleck Pizza, l'ingredient secret, c'est le
     poivron, et celui-ci est rouge en l'occurence !
   floorHeight: 0
-  cost: 0
+  cost: 2
   offsetIcon: {x: 0.18, y: 0.24}
   quality: 0

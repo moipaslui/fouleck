@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Ce fruit, inconnu de l'occident, possederait des vertus incroyable
     si prepare d'une maniere bien particuliere !
   floorHeight: 0.06
-  cost: 0
+  cost: 3
   offsetIcon: {x: 0.17, y: 0.09}
   quality: 0

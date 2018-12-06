@@ -15,6 +15,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: bdaff800ee3b8864fad24c7188ab3480, type: 3}
   description: Du Pouleeeeeeeeeeeeeet !
   floorHeight: 0
-  cost: 0
+  cost: 2
   offsetIcon: {x: 0.07, y: 0.22}
   quality: 0
