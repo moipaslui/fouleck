@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Meme nous on sait pas ce que sait, si vous savez, envoyer nous un mail
     a regnierulysse@hotmail.fr
   floorHeight: 0.05
-  cost: 0
+  cost: 4
   offsetIcon: {x: -0.09, y: 0.18}
   quality: 0

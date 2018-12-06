@@ -22,3 +22,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3e1691295eb1e7f428a01a73455589ab, type: 2}
   - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
   heal: 1
+  shieldBuff: 0
+  damageBuff: 1.5
+  speedBuff: 3
+  lootBuff: 1
+  lifeBuff: 3
+  timeOfBuff: 20

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Jambon
   icon: {fileID: 21300000, guid: ff1ae014dc4b0be4ab17cc009dc9d2a8, type: 3}
-  description: 
+  description: "Le cochon est un animal pr\xE9cieux, tant sa viande est tendre et
+    nutritive ! Avec du jambon, votre pizza n'en sortira que meilleur !"
   floorHeight: 0.19
   cost: 1
   offsetIcon: {x: 0.34, y: 0.2}

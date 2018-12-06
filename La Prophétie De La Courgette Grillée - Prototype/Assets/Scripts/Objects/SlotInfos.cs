@@ -35,10 +35,22 @@ public class SlotInfos : MonoBehaviour
         infosText.text = itemToBuy.description + "\n";
         if (itemToBuy.GetType() == typeof(Weapon))
             infosText.text += "\nDamage : " + ((Weapon)itemToBuy).damage;
-        if (itemToBuy.GetType() == typeof(Ingredient))
-            infosText.text += "\nQualite : " + ((Ingredient)itemToBuy).quality;
         if (itemToBuy.GetType() == typeof(Repas))
+        {
             infosText.text += "\nSoin : " + ((Repas)itemToBuy).heal;
+            if(((Repas)itemToBuy).damageBuff != 1f)
+                infosText.text += "\nDegat  x  " + ((Repas)itemToBuy).damageBuff;
+            if(((Repas)itemToBuy).shieldBuff != 0)
+                infosText.text += "\nArmure + " + ((Repas)itemToBuy).shieldBuff;
+            if(((Repas)itemToBuy).speedBuff != 1f)
+                infosText.text += "\nVitesse  x  " + ((Repas)itemToBuy).speedBuff;
+            if(((Repas)itemToBuy).lootBuff != 1f)
+                infosText.text += "\nLoot  x  " + ((Repas)itemToBuy).lootBuff;
+            if(((Repas)itemToBuy).lifeBuff != 0f)
+                infosText.text += "\nVie + 1 / " + ((Repas)itemToBuy).lifeBuff + "s";
+            if(((Repas)itemToBuy).timeOfBuff != 0f)
+                infosText.text += "\nTemps : " + ((Repas)itemToBuy).timeOfBuff + " secs";
+        }
         infosText.text += "\nPrix : " + itemToBuy.cost;
 
         if (isInventory)

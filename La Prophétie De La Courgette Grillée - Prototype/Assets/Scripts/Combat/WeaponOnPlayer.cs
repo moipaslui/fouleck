@@ -5,6 +5,7 @@ public class WeaponOnPlayer : MonoBehaviour
     public Weapon arme;
     public float handDamage = 1f;
     public float damage = 1f;
+    public float damageBuff = 1f;
 
     [Header("UI")]
     public SpriteRenderer weaponSprite;
@@ -42,12 +43,12 @@ public class WeaponOnPlayer : MonoBehaviour
                 if (arme != null)
                 {
                     Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
-                    other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage * damage, knockbackDirection, arme.knockbackForce);
+                    other.GetComponent<EnemyHealthManager>().HurtEnemy(arme.damage * damage * damageBuff, knockbackDirection, arme.knockbackForce);
                 }
                 else
                 {
                     Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
-                    other.GetComponent<EnemyHealthManager>().HurtEnemy(handDamage * damage, knockbackDirection, knockbackForce);
+                    other.GetComponent<EnemyHealthManager>().HurtEnemy(handDamage * damage * damageBuff, knockbackDirection, knockbackForce);
                 }
             }
         }
