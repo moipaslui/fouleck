@@ -29,8 +29,8 @@ public class MenuManager : MonoBehaviour
 
     public void RetournerMenu()
     {
-        menu.SetActive(false);
-        options.SetActive(true);
+        menu.SetActive(true);
+        options.SetActive(false);
     }
 
     public void QuitMenu()
