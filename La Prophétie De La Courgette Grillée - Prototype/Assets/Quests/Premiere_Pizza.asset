@@ -16,7 +16,6 @@ MonoBehaviour:
   title: "Votre premi\xE8re pizza !"
   description: "Allez acheter les ingr\xE9dients necessaires \xE0 votre premi\xE8re
     pizza au vendeur gr\xE2ce \xE0 l'argent que Mauricio vous a donn\xE9."
-  itemsReward:
-  - {fileID: 11400000, guid: f450ecc5e10841d4c9c424cb0c1791ff, type: 2}
-  expReward: 25
+  itemsReward: []
+  expReward: 20
   moneyReward: 0

@@ -1,6 +1,4 @@
-﻿using System;
-
-public class DialogueTrigger : Interactable
+﻿public class DialogueTrigger : Interactable
 {
     public Dialogue dialogue;
 
@@ -9,7 +7,7 @@ public class DialogueTrigger : Interactable
         if (!base.Interact())
             return false;
 
-        if(GameManager.dialogueManager.ShowDialogue(dialogue))
+        if(GameManager.dialogueManager.ShowDialogue(dialogue, gameObject.name) == -1)
         {
             EndOfInteraction();
         }

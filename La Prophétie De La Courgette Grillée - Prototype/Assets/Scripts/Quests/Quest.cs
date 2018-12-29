@@ -6,6 +6,7 @@ public class Quest : MonoBehaviour
     public QuestData questData;
     public bool isActive;
     public List<QuestTrigger> questTriggers;
+    public int line;
 
     public void StartQuest()
     {

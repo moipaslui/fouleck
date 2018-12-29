@@ -50,7 +50,7 @@ public class InteractionController : MonoBehaviour
             Interactable[] interactables = focus.GetComponents<Interactable>();
             foreach(Interactable interactable in interactables)
             {
-                if(interactable.isActive)
+                if (interactable.isActive)
                 {
                     interactable.Interact();
                     break;

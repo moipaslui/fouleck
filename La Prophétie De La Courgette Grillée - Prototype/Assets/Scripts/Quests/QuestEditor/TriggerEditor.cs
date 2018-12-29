@@ -73,22 +73,64 @@ public class TriggerEditor
     }
 
     #region TriggerEditorDisplays
-
+    
+    private List<bool> active = new List<bool>();
+    private bool dialogueActive = false;
     void DisplayDialogue()
     {
-        QuestTrigger_Dialogue triggerD = (QuestTrigger_Dialogue)node.trigger;
-
-        GUILayout.Label("Dialogue");
-        for (int i = 0; i < triggerD.dialogue.sentences.Count; i++)
+        QuestDialogue dialogue = ((QuestTrigger_Dialogue)node.trigger).dialogue;
+        EditorGUILayout.Space();
+        dialogueActive = EditorGUILayout.Foldout(dialogueActive, "Dialogue");
+        if (dialogueActive)
         {
-            triggerD.dialogue.sentences[i] = EditorGUILayout.TextArea(triggerD.dialogue.sentences[i]);
-            if (triggerD.dialogue.sentences[i] == "" && i == triggerD.dialogue.sentences.Count - 1)
-                triggerD.dialogue.sentences.RemoveAt(i);
+            EditorGUI.indentLevel++;
+            for (int i = 0; i < dialogue.sentences.Count; i++)
+            {
+                if (dialogue.sentences[i].text == "")
+                    dialogue.sentences.RemoveAt(i--);
+                else
+                {
+                    EditorGUILayout.LabelField("Sentence");
+
+                    dialogue.sentences[i].text = EditorGUILayout.TextArea(dialogue.sentences[i].text);
+                    dialogue.sentences[i].line = EditorGUILayout.IntField(dialogue.sentences[i].line);
+
+                    if (active.Count < i + 1)
+                        active.Add(false);
+                    active[i] = EditorGUILayout.Foldout(active[i], "Responses");
+                    if (active[i])
+                    {
+                        EditorGUI.indentLevel++;
+                        for (int y = 0; y < dialogue.sentences[i].responses.Count; y++)
+                        {
+                            if (dialogue.sentences[i].responses[y].text == "")
+                                dialogue.sentences[i].responses.RemoveAt(y--);
+                            else
+                            {
+                                dialogue.sentences[i].responses[y].text = EditorGUILayout.TextField(dialogue.sentences[i].responses[y].text);
+                                dialogue.sentences[i].responses[y].line = EditorGUILayout.IntField(dialogue.sentences[i].responses[y].line);
+                                EditorGUILayout.Space();
+                            }
+                        }
+                        string newResponse = EditorGUILayout.TextField("");
+                        if (newResponse != "")
+                            dialogue.sentences[i].responses.Add(new Response(newResponse, 0));
+                        EditorGUI.indentLevel--;
+                    }
+                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+                }
+            }
+            string newSentence = EditorGUILayout.TextArea("");
+            if (newSentence != "")
+                dialogue.sentences.Add(new Sentence(newSentence, 0));
+
+            if (active.Count > dialogue.sentences.Count)
+            {
+                active.RemoveRange(dialogue.sentences.Count - 1, active.Count - 1);
+            }
+
+            EditorGUI.indentLevel--;
         }
-        string newText = EditorGUILayout.TextArea("");
-        if (newText != "")
-            triggerD.dialogue.sentences.Add(newText);
-        triggerD.dialogue.speaker = EditorGUILayout.TextField("Speaker", triggerD.dialogue.speaker);
     }
 
     void DisplayItemsToBuy()

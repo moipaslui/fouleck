@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using System.Collections.Generic;
-
 
 public enum TRIGGER_TYPES
 {
@@ -14,7 +12,8 @@ public enum TRIGGER_TYPES
     START = 5,
     END = 6,
     AT_REMOVE_ITEM = 7,
-    AT_REWARD = 8
+    AT_REWARD = 8,
+    AT_END_QUEST = 9
 };
 
 public class QuestEditor : EditorWindow
@@ -24,10 +23,14 @@ public class QuestEditor : EditorWindow
     public static int selectedNode;
     private int oldSelectedNode = -1;
     private static TriggerEditor triggerEditor;
+    public static int line = 0;
 
     private bool newActive;
     private bool newDesactive;
     private bool destroy;
+    private bool newActiveLine;
+    private bool newDesactiveLine;
+    private bool destroyLine;
 
     [MenuItem("Quest Editor/Quest Editor")]
     public static void ShowWindow()
@@ -102,7 +105,6 @@ public class QuestEditor : EditorWindow
     {
         GUILayout.BeginHorizontal(EditorStyles.toolbar);
 
-
         GUILayout.Label("Quête : " + selectedQuest.questData.title);
 
         if(GUILayout.Button(" + ", EditorStyles.toolbarButton))
@@ -114,27 +116,31 @@ public class QuestEditor : EditorWindow
         {
             if (selectedNode != -1)
             {
-                if(Node.NodeAtID(selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.START) && Node.NodeAtID(selectedNode).trigger.GetType() != TranslateType(TRIGGER_TYPES.END))
-                { 
-                    Node nodeToDestroy = Node.NodeAtID(selectedNode);
-                    selectedQuest.questTriggers.Remove(nodeToDestroy.trigger);
-                    nodes.Remove(nodeToDestroy);
-                    foreach(Node node in nodes)
-                    {
-                        node.trigger.triggersToActive.Remove(nodeToDestroy.trigger);
-                        node.trigger.triggersToDesactive.Remove(nodeToDestroy.trigger);
-                    }
-                    nodeToDestroy.DestroyNode();
-                    selectedNode = -1;
-                }
-                else
+                Node nodeToDestroy = Node.NodeAtID(selectedNode);
+                selectedQuest.questTriggers.Remove(nodeToDestroy.trigger);
+                nodes.Remove(nodeToDestroy);
+                foreach(Node node in nodes)
                 {
-                    Debug.Log("Vous ne pouvrez pas supprimer un start ou end trigger.");
+                    node.trigger.triggersToActive.Remove(nodeToDestroy.trigger);
+                    node.trigger.triggersToDesactive.Remove(nodeToDestroy.trigger);
+                    if(node.trigger.GetType() == typeof(QuestTrigger_Dialogue) || node.trigger.GetType() == typeof(StartQuest_Dialogue) || node.trigger.GetType() == typeof(EndQuest_Dialogue))
+                    {
+                        foreach(QuestDialogueData triggers in ((QuestTrigger_Dialogue)node.trigger).dialogue.triggers)
+                        {
+                            triggers.triggersToActiveToAdd.Remove(nodeToDestroy.trigger);
+                            triggers.triggersToDesactiveToAdd.Remove(nodeToDestroy.trigger);
+
+                            if (triggers.triggersToDesactiveToAdd.Count == 0 && triggers.triggersToActiveToAdd.Count == 0)
+                                ((QuestTrigger_Dialogue)node.trigger).dialogue.triggers.Remove(triggers);
+                        }
+                    }
                 }
+                nodeToDestroy.DestroyNode();
+                selectedNode = -1;
             }
             else
             {
-                Debug.Log("Aucun trigger n'est selectionné. Ne vous fiez pas à l'apparence des blocs et cliquez droit et gauche en même temps pour en selectionner un.");
+                Debug.Log("Aucun trigger n'est selectionné. Il faut cliquer sur droite et gauche en même temps pour séléctionner un trigger.");
             }
         }
 
@@ -144,6 +150,8 @@ public class QuestEditor : EditorWindow
         {
             newDesactive = false;
             destroy = false;
+            newActiveLine = false;
+            newDesactiveLine = false;
 
             if(selectedNode == -1)
             {
@@ -171,6 +179,8 @@ public class QuestEditor : EditorWindow
         {
             newActive = false;
             destroy = false;
+            newActiveLine = false;
+            newDesactiveLine = false;
 
             if (selectedNode == -1)
             {
@@ -198,6 +208,8 @@ public class QuestEditor : EditorWindow
         {
             newActive = false;
             newDesactive = false;
+            newActiveLine = false;
+            newDesactiveLine = false;
 
             if (selectedNode == -1)
             {
@@ -221,13 +233,114 @@ public class QuestEditor : EditorWindow
             }
         }
 
+        GUILayout.Space(20);
+
+        if (GUILayout.Button("-", EditorStyles.toolbarButton))
+        {
+            line--;
+        }
+
+        GUILayout.Label("" + line);
+
+        if(GUILayout.Button("+", EditorStyles.toolbarButton))
+        {
+            line++;
+        }
+
+        if (newActiveLine = GUILayout.Toggle(newActiveLine, "Active (Line)", EditorStyles.toolbarButton))
+        {
+            newActive = false;
+            newDesactive = false;
+            destroy = false;
+            newDesactiveLine = false;
+
+            if (selectedNode == -1)
+            {
+                newActiveLine = false;
+                oldSelectedNode = -1;
+            }
+            else
+            {
+                if (oldSelectedNode == -1)
+                    oldSelectedNode = selectedNode;
+                else if(Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(QuestTrigger_Dialogue) && Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(StartQuest_Dialogue) && Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(EndQuest_Dialogue))
+                {
+                    newActiveLine = false;
+                    oldSelectedNode = -1;
+                }
+                else if (oldSelectedNode != selectedNode)
+                {
+                    bool hasBeenAdded = false;
+                    foreach (QuestDialogueData qdd in ((QuestTrigger_Dialogue)Node.NodeAtID(oldSelectedNode).trigger).dialogue.triggers)
+                    {
+                        if (qdd.line == line)
+                        {
+                            qdd.triggersToActiveToAdd.Add(Node.NodeAtID(selectedNode).trigger);
+                            hasBeenAdded = true;
+                        }
+                    }
+                    if (!hasBeenAdded)
+                        ((QuestTrigger_Dialogue)Node.NodeAtID(oldSelectedNode).trigger).dialogue.triggers.Add(new QuestDialogueData(Node.NodeAtID(selectedNode).trigger, null, line));
+                    
+                    Node.NodeAtID(oldSelectedNode).connectActive.Add(new Connector(Node.NodeAtID(oldSelectedNode), Node.NodeAtID(selectedNode), true, line));
+
+                    newActiveLine = false;
+                    oldSelectedNode = -1;
+                    selectedNode = -1;
+                }
+            }
+        }
+
+        if (newDesactiveLine = GUILayout.Toggle(newDesactiveLine, "Desactive (Line)", EditorStyles.toolbarButton))
+        {
+            newActive = false;
+            newDesactive = false;
+            destroy = false;
+            newActiveLine = false;
+
+            if (selectedNode == -1)
+            {
+                newDesactiveLine = false;
+                oldSelectedNode = -1;
+            }
+            else
+            {
+                if (oldSelectedNode == -1)
+                    oldSelectedNode = selectedNode;
+                else if (Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(QuestTrigger_Dialogue) && Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(StartQuest_Dialogue) && Node.NodeAtID(oldSelectedNode).trigger.GetType() != typeof(EndQuest_Dialogue))
+                {
+                    newActiveLine = false;
+                    oldSelectedNode = -1;
+                }
+                else if (oldSelectedNode != selectedNode)
+                {
+                    bool hasBeenAdded = false;
+                    foreach (QuestDialogueData qdd in ((QuestTrigger_Dialogue)Node.NodeAtID(oldSelectedNode).trigger).dialogue.triggers)
+                    {
+                        if (qdd.line == line)
+                        {
+                            qdd.triggersToDesactiveToAdd.Add(Node.NodeAtID(selectedNode).trigger);
+                            hasBeenAdded = true;
+                        }
+                    }
+                    if (!hasBeenAdded)
+                        ((QuestTrigger_Dialogue)Node.NodeAtID(oldSelectedNode).trigger).dialogue.triggers.Add(new QuestDialogueData(null, Node.NodeAtID(selectedNode).trigger, line));
+
+                    Node.NodeAtID(oldSelectedNode).connectDesactive.Add(new Connector(Node.NodeAtID(oldSelectedNode), Node.NodeAtID(selectedNode), true, line));
+
+                    newDesactiveLine = false;
+                    oldSelectedNode = -1;
+                    selectedNode = -1;
+                }
+            }
+        }
+
         GUILayout.FlexibleSpace();
 
         if(GUILayout.Button("Revenir aux quêtes", EditorStyles.toolbarButton))
         {
             selectedQuest = null;
         }
-
 
         GUILayout.EndHorizontal();
     }
@@ -268,6 +381,9 @@ public class QuestEditor : EditorWindow
 
             case TRIGGER_TYPES.AT_REWARD:
                 return typeof(RewardTriggerAT);
+                
+            case TRIGGER_TYPES.AT_END_QUEST:
+                return typeof(EndQuestAT);
         }
 
         return null;

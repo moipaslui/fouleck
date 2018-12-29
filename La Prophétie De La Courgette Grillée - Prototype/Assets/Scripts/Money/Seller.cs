@@ -42,7 +42,7 @@ public class Seller : Interactable
             if (!base.Interact())
                 return false;
 
-            if (GameManager.dialogueManager.ShowDialogue(dialogue))
+            if (GameManager.dialogueManager.ShowDialogue(dialogue, "Vendeur") == -1)
             {
                 Time.timeScale = 0;
                 sellerMenu.SetActive(true);
