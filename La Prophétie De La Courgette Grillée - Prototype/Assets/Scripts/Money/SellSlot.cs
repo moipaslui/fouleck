@@ -41,6 +41,7 @@ public class SellSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         else
         {
             bigCross.enabled = true;
+            icon.sprite = null;
             icon.color = new Color(0, 0, 0, 0);
             button = GetComponent<Button>();
             cross.enabled = false;

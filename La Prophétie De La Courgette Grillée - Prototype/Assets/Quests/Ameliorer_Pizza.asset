@@ -14,8 +14,8 @@ MonoBehaviour:
   m_Name: Ameliorer_Pizza
   m_EditorClassIdentifier: 
   title: "Am\xE9liorer Votre Pizza !"
-  description: "Vous avez maintenant votre premi\xE8re pizza !\nVous pouvez l'am\xE9liorer
-    avec une am\xE9lioration de votre choix !\nQue choisirez-vous ?"
+  description: "Vous pouvez maintenant am\xE9liorer votre pizza avec une am\xE9lioration
+    de votre choix !\nQue choisirez-vous ?"
   itemsReward: []
   expReward: 30
   moneyReward: 5
