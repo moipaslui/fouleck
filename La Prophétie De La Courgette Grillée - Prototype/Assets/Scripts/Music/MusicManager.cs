@@ -9,7 +9,6 @@ public class MusicManager : MonoBehaviour
 	void Start()
     {
         source = GetComponent<AudioSource>();
-        DontDestroyOnLoad(source);
 	}
 
     public void AugmenterVolume()
