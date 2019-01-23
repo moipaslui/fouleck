@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
             
             for (int i = count+1; i < currentDialogue.sentences.Count; i++)
             {
-                if(currentDialogue.sentences[i].line == currentLine)
+                if(currentDialogue.sentences[i].line == currentLine || currentDialogue.sentences[i].line == 0)
                 {
                     count = i;
                     break;

@@ -9,7 +9,7 @@
             int index = -1;
             for (int i = 0; i < dialogue.triggers.Count; i++)
             {
-                if (dialogue.triggers[i].line == GameManager.questManager.FindQuest(this).line)
+                if (dialogue.triggers[i].line == GameManager.questManager.FindQuest(this).line || dialogue.triggers[i].line == 0)
                     index = i;
             }
 

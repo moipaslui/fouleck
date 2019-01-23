@@ -1,15 +1,11 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public AudioSource musicManager;
     public Text text;
     private bool isOpen;
-
 
     private void Start()
     {
@@ -18,7 +14,7 @@ public class PauseMenuManager : MonoBehaviour
 
     private void Update()
     {
-        double volume = System.Math.Round((double)musicManager.volume, 2);
+        double volume = System.Math.Round(GameManager.musicManager.source.volume, 2) * 100;
         text.text = volume.ToString();
         if (Input.GetButtonDown("Pause"))
         {
@@ -30,9 +26,7 @@ public class PauseMenuManager : MonoBehaviour
             }
             else
             {
-                isOpen = false;
-                Time.timeScale = 1;
-                pauseMenu.SetActive(false);
+                QuitterMenu();
             }
         }
     }

@@ -45,6 +45,7 @@ public class Seller : Interactable
             if (GameManager.dialogueManager.ShowDialogue(dialogue, "Vendeur") == -1)
             {
                 Time.timeScale = 0;
+                FindObjectOfType<PlayerControllerIsometric>().canMove = false;
                 sellerMenu.SetActive(true);
                 currentSeller = this;
                 isMenuOpen = true;
@@ -63,6 +64,7 @@ public class Seller : Interactable
     {
         isNextInteractionQuest = false;
         Time.timeScale = 1;
+        FindObjectOfType<PlayerControllerIsometric>().canMove = true;
         GameManager.dialogueManager.EndDialogue();
         sellerMenu.SetActive(false);
         currentSeller = null;
@@ -107,8 +109,8 @@ public class Seller : Interactable
     {
         TMP.SetText("Vendeur : " + currentMoney + "$");
 
-        List <SellSlot> sellSlots = new List<SellSlot>();
-        slotsPanel.GetComponentsInChildren<SellSlot>(false, sellSlots);
+        List<SellSlot> sellSlots = new List<SellSlot>();
+        slotsPanel.GetComponentsInChildren(false, sellSlots);
 
         for(int i = 0; i < sellSlots.Count; i++)
         {

@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    private AudioSource source;
+    public AudioSource source;
 
 	void Start()
     {
@@ -13,11 +11,11 @@ public class MusicManager : MonoBehaviour
 
     public void AugmenterVolume()
     {
-        source.volume = source.volume + 0.02f;
+        source.volume += 0.02f;
     }
 
     public void BaisserVolume()
     {
-        source.volume = source.volume - 0.02f;
+        source.volume -= 0.02f;
     }
 }
