@@ -1,4 +1,6 @@
-﻿public class QuestTrigger_Dialogue : QuestTrigger
+﻿using UnityEngine;
+
+public class QuestTrigger_Dialogue : QuestTrigger
 {
     public QuestDialogue dialogue = new QuestDialogue();
 

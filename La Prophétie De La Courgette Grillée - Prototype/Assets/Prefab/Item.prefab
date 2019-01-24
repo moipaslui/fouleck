@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorHeight: 0
-  isStatic: 0
+  isStatic: 1
   spriteLowerBound: 0.41666666
   spriteHalfWidth: 0.41666666
 --- !u!114 &114604185027564146

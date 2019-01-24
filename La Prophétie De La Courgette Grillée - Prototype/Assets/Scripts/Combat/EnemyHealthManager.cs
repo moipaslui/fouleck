@@ -9,8 +9,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     public float timeStunned;
     public float blinkTime;
-
-    public GameObject itemPrefab;
+    
     public Item itemToPop;
     public ParticleSystem effectOnDying;
 
@@ -35,7 +34,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "player")
+        if (other.tag == "player" && tag == "ennemi")
         {
             Vector2 knockbackDirection = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
             other.GetComponent<PlayerHealthManager>().HurtPlayer(enemyDamage, knockbackDirection);
@@ -98,11 +97,7 @@ public class EnemyHealthManager : MonoBehaviour
     private void Die()
     {
         Instantiate(effectOnDying, transform.position, transform.rotation);
-        if (itemToPop != null)
-        {
-            GameObject clone = Instantiate(itemPrefab, transform.position, transform.rotation);
-            clone.GetComponent<ItemOnObject>().ChangeItem(itemToPop);
-        }
+        GameManager.itemManager.Drop(itemToPop, transform);
         GameManager.expManager.AddExperience(15);
         Destroy(gameObject);
     }

@@ -10,8 +10,12 @@ public class BuffManager : MonoBehaviour
         phm.HealPlayer(repas.heal);
         FindObjectOfType<WeaponOnPlayer>().damageBuff += repas.damageBuff - 1;
         FindObjectOfType<PlayerControllerIsometric>().speedBuff += repas.speedBuff - 1;
+        GetComponent<ItemManager>().loot += repas.lootBuff;
+        phm.currentShield += repas.shieldBuff;
 		phm.StartCoroutine(phm.AutoHeal(repas.lifeBuff, repas.timeOfBuff));
-        StartCoroutine(WaitTimeOfBuff(repas));
+
+        if(repas.timeOfBuff != 0) // Infini
+            StartCoroutine(WaitTimeOfBuff(repas));
     }
 
     private IEnumerator WaitTimeOfBuff(Repas repas)
@@ -19,5 +23,6 @@ public class BuffManager : MonoBehaviour
         yield return new WaitForSeconds(repas.timeOfBuff);
         FindObjectOfType<WeaponOnPlayer>().damageBuff -= (repas.damageBuff - 1f);
         FindObjectOfType<PlayerControllerIsometric>().speedBuff -= (repas.speedBuff - 1f);
+        GetComponent<ItemManager>().loot -= repas.lootBuff;
     }
 }

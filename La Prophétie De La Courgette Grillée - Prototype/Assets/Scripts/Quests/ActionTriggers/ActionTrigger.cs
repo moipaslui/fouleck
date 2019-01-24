@@ -8,6 +8,6 @@ public class ActionTrigger : QuestTrigger
 
         Trigger();
 
-        base.DesactiveTrigger();
+        DesactiveTrigger();
     }
 }

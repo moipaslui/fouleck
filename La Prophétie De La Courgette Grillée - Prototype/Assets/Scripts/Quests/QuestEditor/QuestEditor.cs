@@ -13,7 +13,9 @@ public enum TRIGGER_TYPES
     END = 6,
     AT_REMOVE_ITEM = 7,
     AT_REWARD = 8,
-    AT_END_QUEST = 9
+    AT_END_QUEST = 9,
+    AT_INSTANTIATE = 10,
+    AT_ACTIVE_ENNEMI = 11
 };
 
 public class QuestEditor : EditorWindow
@@ -384,6 +386,12 @@ public class QuestEditor : EditorWindow
                 
             case TRIGGER_TYPES.AT_END_QUEST:
                 return typeof(EndQuestAT);
+                
+            case TRIGGER_TYPES.AT_INSTANTIATE:
+                return typeof(InstantiateAT);
+
+            case TRIGGER_TYPES.AT_ACTIVE_ENNEMI:
+                return typeof(ActiveEnnemiAT);
         }
 
         return null;

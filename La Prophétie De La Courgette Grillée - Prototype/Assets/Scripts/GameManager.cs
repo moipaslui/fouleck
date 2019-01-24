@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static SaveManager saveManager;
     public static EXPManager expManager;
     public static MusicManager musicManager;
+    public static ItemManager itemManager;
     
     private void Awake()
     {
@@ -19,5 +20,6 @@ public class GameManager : MonoBehaviour
         saveManager = GetComponent<SaveManager>();
         expManager = GetComponent<EXPManager>();
         musicManager = GetComponentInChildren<MusicManager>();
+        itemManager = GetComponent<ItemManager>();
     }
 }

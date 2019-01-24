@@ -56,6 +56,7 @@ public class TriggerEditor
             DisplayDialogue();
         else if (node.trigger.GetType() == typeof(QuestTrigger_ItemPickup))
         {
+            ((QuestTrigger_ItemPickup)node.trigger).isQuestItem = EditorGUILayout.Toggle("Is Quest Item ?", ((QuestTrigger_ItemPickup)node.trigger).isQuestItem);
             node.trigger.GetComponent<ItemOnObject>().item = (Item)EditorGUILayout.ObjectField("Item to pickup", node.trigger.GetComponent<ItemOnObject>().item, typeof(Item), false);
             node.trigger.offsetIcon = node.trigger.GetComponent<ItemOnObject>().item.offsetIcon;
             /*node.trigger.GetComponent<SpriteRenderer>().sprite = node.trigger.GetComponent<ItemOnObject>().item.icon;
@@ -70,6 +71,8 @@ public class TriggerEditor
             ((RemoveItemAT)node.trigger).item = (Item)EditorGUILayout.ObjectField("Item to remove", ((RemoveItemAT)node.trigger).item, typeof(Item), false);
         else if (node.trigger.GetType() == typeof(RewardTriggerAT))
             DisplayRewards();
+        else if (node.trigger.GetType() == typeof(InstantiateAT))
+            ((InstantiateAT)node.trigger).prefab = (GameObject)EditorGUILayout.ObjectField("Prefab to instantiate", ((InstantiateAT)node.trigger).prefab, typeof(GameObject), false);
     }
 
     #region TriggerEditorDisplays

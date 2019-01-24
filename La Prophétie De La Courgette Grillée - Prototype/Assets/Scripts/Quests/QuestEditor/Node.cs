@@ -133,12 +133,18 @@ public class Node
             title += "Start Dialogue";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.END))
             title += "End Dialogue";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.ZONE))
+            title += "Zone";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REMOVE_ITEM))
             title += "Remove Item (AT)";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_REWARD))
             title += "Reward (AT)";
         else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_END_QUEST))
             title += "End Quest (AT)";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_INSTANTIATE))
+            title += "Instantiate (AT)";
+        else if (type == QuestEditor.TranslateType(TRIGGER_TYPES.AT_ACTIVE_ENNEMI))
+            title += "Active Ennemi (AT)";
         else
             title = "Trigger";
 

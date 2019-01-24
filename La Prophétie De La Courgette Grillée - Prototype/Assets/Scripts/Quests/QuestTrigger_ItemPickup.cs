@@ -3,6 +3,8 @@
 [RequireComponent(typeof(ItemOnObject))]
 public class QuestTrigger_ItemPickup : QuestTrigger
 {
+    public bool isQuestItem = true;
+
     public override void ActiveTrigger()
     {
         base.ActiveTrigger();
@@ -13,7 +15,7 @@ public class QuestTrigger_ItemPickup : QuestTrigger
     {
         base.Trigger();
         
-        bool wasPickedUp = GameManager.inventory.Add(GetComponent<ItemOnObject>().item, isQuestItem:true);
+        bool wasPickedUp = GameManager.inventory.Add(GetComponent<ItemOnObject>().item, isQuestItem);
 
         if (wasPickedUp)
         {
