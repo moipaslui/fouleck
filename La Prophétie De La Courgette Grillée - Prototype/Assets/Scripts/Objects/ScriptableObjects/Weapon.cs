@@ -8,4 +8,5 @@ public class Weapon : Item
     public float damage;
     public Vector2[] colliderPoints;
     public float knockbackForce;
+    public int levelNeeded;
 }

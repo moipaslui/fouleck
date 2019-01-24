@@ -34,7 +34,10 @@ public class SlotInfos : MonoBehaviour
         infosText.gameObject.SetActive(true);
         infosText.text = itemToBuy.description + "\n";
         if (itemToBuy.GetType() == typeof(Weapon))
+        {
             infosText.text += "\nDamage : " + ((Weapon)itemToBuy).damage;
+            infosText.text += "\nNiveau : " + ((Weapon)itemToBuy).levelNeeded;
+        }
         if (itemToBuy.GetType() == typeof(Repas))
         {
             infosText.text += "\nSoin : " + ((Repas)itemToBuy).heal;

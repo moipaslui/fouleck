@@ -4,10 +4,12 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Carnivore_miel
   m_EditorClassIdentifier: 
@@ -23,3 +25,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 523903ee4ea1a67469cf3771fcc2ea72, type: 2}
   - {fileID: 11400000, guid: 414f5501b7f28ba43824c2455c38ad34, type: 2}
   heal: 0
+  shieldBuff: 0
+  damageBuff: 3
+  speedBuff: 1
+  lootBuff: 0
+  lifeBuff: 0
+  timeOfBuff: 30

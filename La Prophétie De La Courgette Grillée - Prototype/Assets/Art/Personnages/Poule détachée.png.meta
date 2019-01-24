@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 8bf2047e56b3b454294f099420f3e4ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2168421812309711196
+    second: Queue_Poule
+  - first:
+      213: -6036657845287137540
+    second: "Poule d\xE9tach\xE9e_1"
+  - first:
+      213: -1447552952008669592
+    second: Corps_Poule
+  - first:
+      213: 5476538757015403798
+    second: "Poule d\xE9tach\xE9e_3"
+  - first:
+      213: 75740280856505900
+    second: Avant_Aile
+  - first:
+      213: 389018362062494437
+    second: Patte_Poule_L
+  - first:
+      213: -5348415917131514952
+    second: Aile_Poule
+  - first:
+      213: -1575354026331930081
+    second: "Poule d\xE9tach\xE9e_7"
+  - first:
+      213: -3993192016503302169
+    second: Patte_Poule_R
+  - first:
+      213: -1994046764086575109
+    second: "Poule d\xE9tach\xE9e_9"
+  - first:
+      213: 266222958829660716
+    second: "Poule d\xE9tach\xE9e_10"
+  - first:
+      213: -39985280948028634
+    second: Visage_Vener_Poule
+  - first:
+      213: -8035782262047697854
+    second: "Poule d\xE9tach\xE9e_12"
+  - first:
+      213: 7258555667085186391
+    second: Visage_Gentil_Poule
+  - first:
+      213: -1811253336380657663
+    second: "Poule d\xE9tach\xE9e_14"
+  - first:
+      213: -8431830488416409634
+    second: "Visage_Touch\xE9_Poule"
+  - first:
+      213: -1303780871313630008
+    second: "Poule d\xE9tach\xE9e_16"
+  - first:
+      213: -7896478697451623016
+    second: "Poule d\xE9tach\xE9e_17"
+  - first:
+      213: 3711153438046628314
+    second: "Poule d\xE9tach\xE9e_18"
+  - first:
+      213: -2933670662023780071
+    second: Visage_Pas_Serein_Poule
+  - first:
+      213: -5259668156448422691
+    second: "Poule d\xE9tach\xE9e_20"
+  - first:
+      213: 3429617235494560572
+    second: "Poule d\xE9tach\xE9e_21"
+  externalObjects: {}
+  serializedVersion: 8
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Queue_Poule
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 273
+        height: 340
+      alignment: 9
+      pivot: {x: 0.77365285, y: 0.33363038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609b9c002d3ef0d488ff87779ed5b736
+      internalID: -2168421812309711196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corps_Poule
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 491
+        width: 347
+        height: 484
+      alignment: 9
+      pivot: {x: 0.41849327, y: 0.02416721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf93c22099add4458fa627c5191fc1f
+      internalID: -1447552952008669592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avant_Aile
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 484
+        width: 100
+        height: 109
+      alignment: 9
+      pivot: {x: 0.68181837, y: 0.74094105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f826a3415c765a7458992bfd25da40a0
+      internalID: 75740280856505900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Patte_Poule_L
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 321
+        width: 131
+        height: 161
+      alignment: 9
+      pivot: {x: 0.5000005, y: 0.6629194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee63ca12e7a1544a975e7478a80ef3
+      internalID: 389018362062494437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aile_Poule
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 326
+        width: 214
+        height: 153
+      alignment: 9
+      pivot: {x: 0.8776076, y: 0.47359192}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d7f0f1036f64643a4f36f6e4b7e27e
+      internalID: -5348415917131514952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Patte_Poule_R
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 301
+        width: 155
+        height: 181
+      alignment: 9
+      pivot: {x: 0.4608995, y: 0.8125172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4911e109896656a45a66ad12c7c91101
+      internalID: -3993192016503302169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visage_Vener_Poule
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 174
+        width: 187
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21697a1b7f92f964795a80dca9d4b238
+      internalID: -39985280948028634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visage_Gentil_Poule
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 166
+        width: 182
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64088ade048367e42950804157e9b0bf
+      internalID: 7258555667085186391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Visage_Touch\xE9_Poule"
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 33
+        width: 170
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0b888b4bd93094ab0aab90cc492b44
+      internalID: -8431830488416409634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visage_Pas_Serein_Poule
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 25
+        width: 177
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffae448b0165a84c9645f2f788ac189
+      internalID: -2933670662023780071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 20c97196e4fa66044b46278d179644d7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

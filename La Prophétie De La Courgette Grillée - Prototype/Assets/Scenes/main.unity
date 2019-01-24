@@ -32122,7 +32122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   enemyDamage: 1
-  knockbackForce: 2
+  knockbackForce: 5
   timeStunned: 0.08
   blinkTime: 0.05
   itemToPop: {fileID: 11400000, guid: ab66051eb003f6f47a59a8a2f32f355b, type: 2}
@@ -43518,6 +43518,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &852846344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852846345}
+  - component: {fileID: 852846346}
+  m_Layer: 0
+  m_Name: Tontons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852846345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852846344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1837133851}
+  m_Father: {fileID: 1708264640}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852846346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852846344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: d2bb2ca996a9fe84781ec995181cdb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questData: {fileID: 11400000, guid: a4b1f87f6ffb8ee40955b6cfe9309d5d, type: 2}
+  isActive: 0
+  questTriggers:
+  - {fileID: 1605681278}
+  - {fileID: 1605681277}
+  - {fileID: 1837133852}
+  line: 0
 --- !u!1 &853269062
 GameObject:
   m_ObjectHideFlags: 0
@@ -58504,7 +58556,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bc3b5b0b78afacf4aa97b669ce908708, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -73064,6 +73116,7 @@ MonoBehaviour:
   - {fileID: 458883890}
   - {fileID: 2143823113}
   - {fileID: 2128907092}
+  - {fileID: 852846346}
 --- !u!114 &1414631528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84226,6 +84279,8 @@ GameObject:
   - component: {fileID: 1605681274}
   - component: {fileID: 1605681276}
   - component: {fileID: 1605681275}
+  - component: {fileID: 1605681278}
+  - component: {fileID: 1605681277}
   m_Layer: 11
   m_Name: Mauricio
   m_TagString: NPC
@@ -84830,18 +84885,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605681254}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: fb2ad2cc65e44a64bb966172760aaf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
+  isActive: 1
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
   triggersToDesactive:
   - {fileID: 1605681275}
-  triggersToActive: []
+  triggersToActive:
+  - {fileID: 1605681278}
   dialogue:
     sentences:
     - text: "C'est tr\xE8s bien mon ami !\nJe te f\xE9licite !"
@@ -84866,13 +84922,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605681254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 560f594e82eb2b8408843dea316ba0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   offsetIcon: {x: 0, y: 2.23}
   isInteractable: 1
   triggersToDesactive:
@@ -84903,6 +84959,73 @@ MonoBehaviour:
       line: 0
     - text: "Attention Fouleck ! Cette fois-ci \xE7a pourrait \xEAtre dangeureux...\nPrend
         ceci avec toi pour t'aider !\nBonne chance."
+      responses: []
+      line: 0
+    triggers: []
+--- !u!114 &1605681277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605681254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: fb2ad2cc65e44a64bb966172760aaf32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  offsetIcon: {x: 0, y: 2.23}
+  isInteractable: 1
+  triggersToDesactive:
+  - {fileID: 1605681277}
+  triggersToActive: []
+  dialogue:
+    sentences:
+    - text: FAIT LA POULE FAIT LA POULE TU SERAS PLUS COOLEUH !
+      responses: []
+      line: 0
+    - text: "Oups d\xE9sol\xE9..."
+      responses: []
+      line: 0
+    - text: 'Merci de nous avoir sauver mon Fouleck...
+
+        T''es le meilleurs famille !'
+      responses: []
+      line: 0
+    triggers: []
+--- !u!114 &1605681278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605681254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 560f594e82eb2b8408843dea316ba0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  offsetIcon: {x: 0, y: 2.23}
+  isInteractable: 1
+  triggersToDesactive:
+  - {fileID: 1605681278}
+  triggersToActive:
+  - {fileID: 1837133852}
+  dialogue:
+    sentences:
+    - text: Les tontons flingueurs sont de retour !
+      responses: []
+      line: 0
+    - text: "Heureusement, ils ne sont pas l\xE0 pour des questions de dimensions
+        parall\xE8les...\n(et un peu de droits d'auteurs)"
+      responses: []
+      line: 0
+    - text: "Mais leur grosse Poulax est l\xE0 pour nous embeter...\nELLE ATTAQUE
+        LE FOULECK !\nSAUVE NOUS STARFALAH !"
       responses: []
       line: 0
     triggers: []
@@ -91063,6 +91186,7 @@ Transform:
   - {fileID: 458883889}
   - {fileID: 2143823112}
   - {fileID: 2128907091}
+  - {fileID: 852846345}
   m_Father: {fileID: 1414631525}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97392,6 +97516,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1390713861}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1837133850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837133851}
+  - component: {fileID: 1837133852}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837133851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837133850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.31, y: 12.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 852846345}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837133852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837133850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 4fc6fe0ef9263374ba795934ac920fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  offsetIcon: {x: 0, y: 0}
+  isInteractable: 0
+  triggersToDesactive:
+  - {fileID: 1837133852}
+  triggersToActive:
+  - {fileID: 1605681277}
+  prefab: {fileID: 2844678949430414624, guid: 8b2bcbbd4585f624d9fadd27668f3351, type: 3}
 --- !u!1 &1837840651
 GameObject:
   m_ObjectHideFlags: 0

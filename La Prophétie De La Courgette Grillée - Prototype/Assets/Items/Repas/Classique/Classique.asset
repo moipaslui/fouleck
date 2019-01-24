@@ -4,10 +4,12 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Classique
   m_EditorClassIdentifier: 
@@ -21,10 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
   - {fileID: 11400000, guid: 3e1691295eb1e7f428a01a73455589ab, type: 2}
   - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
-  heal: 1
+  heal: 2
   shieldBuff: 0
-  damageBuff: 1.5
-  speedBuff: 3
-  lootBuff: 1
-  lifeBuff: 3
+  damageBuff: 1
+  speedBuff: 1.1
+  lootBuff: 0
+  lifeBuff: 0
   timeOfBuff: 20

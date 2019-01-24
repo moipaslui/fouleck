@@ -135,8 +135,11 @@ public class Inventory : MonoBehaviour
         }
         else if(selectedItem.GetType() == typeof(Weapon))
         {
-            weaponOnPlayer.ChangeWeapon((Weapon)selectedItem);
-            Remove(selectedItem, false);
+            if (((Weapon)selectedItem).levelNeeded <= GetComponent<EXPManager>().level)
+            {
+                weaponOnPlayer.ChangeWeapon((Weapon)selectedItem);
+                Remove(selectedItem, false);
+            }
         }
         else
         {

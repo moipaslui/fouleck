@@ -4,10 +4,12 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: Parisienne_oeuf
   m_EditorClassIdentifier: 
@@ -21,4 +23,10 @@ MonoBehaviour:
   craftNeed:
   - {fileID: 11400000, guid: 3adeaeb7e691a7f43914da191afa2a59, type: 2}
   - {fileID: 11400000, guid: c670b5639e52a3141bc764e1f477b8fd, type: 2}
-  heal: 0
+  heal: 4
+  shieldBuff: 0
+  damageBuff: 1
+  speedBuff: 1
+  lootBuff: 2
+  lifeBuff: 0
+  timeOfBuff: 60

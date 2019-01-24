@@ -4,10 +4,12 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 250889ee8fbc9b24892e79375d47cbb2, type: 3}
   m_Name: "V\xE9g\xE9tarienne"
   m_EditorClassIdentifier: 
@@ -21,4 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
   - {fileID: 11400000, guid: dec7e6f2e1ecea5418d51f74a9ac4d8e, type: 2}
   - {fileID: 11400000, guid: 863316dd44aec5f4ba11b5ef06ccf511, type: 2}
-  heal: 5
+  heal: 3
+  shieldBuff: 0
+  damageBuff: 1
+  speedBuff: 1
+  lootBuff: 0
+  lifeBuff: 0
+  timeOfBuff: 120

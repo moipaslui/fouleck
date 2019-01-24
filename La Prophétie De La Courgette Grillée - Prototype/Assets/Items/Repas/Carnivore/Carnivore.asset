@@ -23,10 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 840c7c3a295b58e42bf94ee4e33fec96, type: 2}
   - {fileID: 11400000, guid: 78ce49cdb4aefab43a7395f88e7ca858, type: 2}
   - {fileID: 11400000, guid: 9a9354553004bdd44b861260ad213ddd, type: 2}
-  heal: 2
-  shieldBuff: 2
-  damageBuff: 2
-  speedBuff: 2
-  lootBuff: 2
-  lifeBuff: 2
+  heal: 3
+  shieldBuff: 0
+  damageBuff: 1.5
+  speedBuff: 1
+  lootBuff: 0
+  lifeBuff: 0
   timeOfBuff: 120
